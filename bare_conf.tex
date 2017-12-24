@@ -1,0 +1,131 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{color}
+\lstset{language=c++,numbers=right,firstnumber=0,}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newcommand{\todo}[1]{{\color{red}#1}}
+
+\begin{document}
+
+\title{A Projection-based Approach for Memory Leak Detection}
+
+\author{
+\IEEEauthorblockN{Xiaohui Sun\IEEEauthorrefmark{1},
+							   %Sihan Xu\IEEEauthorrefmark{2}
+                               Chenkai Guo\IEEEauthorrefmark{2},
+                               Naipeng Dong\IEEEauthorrefmark{3},
+                               Quanqi Ye\IEEEauthorrefmark{6},
+                              Jing Xu\IEEEauthorrefmark{4},
+                              Xiujuan Ji\IEEEauthorrefmark{5}
+                            }
+                            \\
+\begin{tabular}{c c c c}                 
+    \IEEEauthorrefmark{5}Department of Binhai & \IEEEauthorrefmark{1}\IEEEauthorrefmark{2}\IEEEauthorrefmark{4}Department of Computer and Control Engineering & \IEEEauthorrefmark{3}\IEEEauthorrefmark{6}School of Computing\\
+    Nankai University & Nankai University & National University of Singapore &\\
+    \IEEEauthorrefmark{5}jixiujuan@mail.nankai.edu.cn & \IEEEauthorrefmark{1}2120150397@mail.nankai.edu.cn & \IEEEauthorrefmark{3}dcsdn@nus.edu.sg\\
+                                                      & \IEEEauthorrefmark{2}guochenkai88@gmail.com & \IEEEauthorrefmark{6}yequanqi@u.nus.edu\\
+                                                      & \IEEEauthorrefmark{4}xujing@nankai.edu.cn &
+\end{tabular}
+}
+
+%\author{
+%\IEEEauthorblockN{Xiaohui Sun\IEEEauthorrefmark{1},
+%                               Chenkai Guo\IEEEauthorrefmark{2},
+%                               Naipeng Dong\IEEEauthorrefmark{3},
+%                              Jing Xu\IEEEauthorrefmark{4},
+%                              Xiujuan Ji\IEEEauthorrefmark{5}
+%                            }
+%\IEEEauthorblockA{\IEEEauthorrefmark{1,2,4}Department of Computer and Control Engineering, Nankai University}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}School of Computing, National University of Singapore}
+%\IEEEauthorblockA{\IEEEauthorrefmark{5}Department of Binhai, Nankai University}
+%\IEEEauthorblockA{Email: \IEEEauthorrefmark{1} 2120150397@mail.nankai.edu.cn,
+%\IEEEauthorrefmark{2}guochenkai88@gmail.com,
+%\IEEEauthorrefmark{3}dcsdn@nus.edu.sg,
+%\IEEEauthorrefmark{4}xujing@nankai.edu.cn,
+%\IEEEauthorrefmark{5}jixiujuan@mail.nankai.edu.cn}}
+
+
+%\author{
+%\IEEEauthorblockN{Xiaohui Sun\IEEEauthorrefmark{1},
+%                               Chenkai Guo\IEEEauthorrefmark{2},
+%                               Naipeng Dong\IEEEauthorrefmark{3},
+%                              Jing Xu\IEEEauthorrefmark{4},
+%                              Xiujuan Ji\IEEEauthorrefmark{5}}\and
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}\IEEEauthorrefmark{2}\IEEEauthorrefmark{4}Department of Computer and Control Engineering\\
+%    Nankai University\\
+%\IEEEauthorrefmark{1}2120150397@mail.nankai.edu.cn\\
+%\IEEEauthorrefmark{2}guochenkai88@gmail.com\\
+%\IEEEauthorrefmark{4}xujing@nankai.edu.cn}
+%\and
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}School of Computing\\
+%    National University of Singapore\\
+%\IEEEauthorrefmark{3}dcsdn@nus.edu.sg}
+%\and
+%\IEEEauthorblockA{\IEEEauthorrefmark{5}Department of Binhai\\
+%    Nankai University\\
+%\IEEEauthorrefmark{5}jixiujuan@mail.nankai.edu.cn}}
+
+%\author{Xiaohui Sun}
+%\affiliation{
+%\institution{Department of Computer and Control Engineering, Nankai University}
+%\city{Tianjin, China}
+%\postcode{300350}
+%}
+%\author{Chenkai Guo}
+%\affiliation{
+%\institution{Department of Computer and Control Engineering, Nankai University}
+%\city{Tianjin, China}
+%\postcode{300350}
+%}
+%\author{Naipeng Dong}
+%\affiliation{
+%\institution{School of Computing, National University of Singapore}
+%\city{Singapore}
+%\postcode{117417}
+%}
+%\author{Jing Xu}
+%\affiliation{
+%\institution{Department of Computer and Control Engineering, Nankai University}
+%\city{Tianjin, China}
+%\postcode{300350}
+%}
+%\author{Xiujuan Ji}
+%\affiliation{
+%\institution{Department of Binhai, Nankai University}
+%\city{Tianjin, China}
+%\postcode{300350}
+%}
+
+\maketitle
+
+\begin{abstract}
+One of the major causes of software safety issues is memory leak; and the safety issues caused by memory leak are highly hazardous. Therefore, in order to ensure the software quality, memory leak detection is necessary so that it can be corrected. However, detecting memory leak vulnerabilities is challenging in program analysis, as they are well concealed. Particularly, existing detection tools are weak in efficiency and accuracy especially when the targeted program contains multiple branches with complex control flows. In this paper, we propose a projection-based approach to detect memory leaks in the source code of programs with multiple control flow branches. This approach projects the original control flow graph to a simpler one according to the features of memory allocation and deallocation in C/C++ source code, which reduces the analysis complexity.  
+
+We implemented a memory leak detection tool PML\_Checker and evaluated the tool by comparing with three other static detection tools like CppCheck on both public benchmarks and some specific test cases. The detection results show that PML\_Checker reported the most memory leak vulnerabilities among the other tools in source code of programs with complex control flow and complex data types, and PML\_Checker obtained higher efficiency and accuracy on public benchmarks.
+\end{abstract}
+
+%\keywords{ memory leak; projection algorithm; static analysis}
+
+\input{introduction}
+\input{description}
+\input{approach}
+\input{experiments}
+\input{related}
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{Mdetection}
+
+\end{document}
+
+

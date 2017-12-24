@@ -1,0 +1,385 @@
+%!TEX root=bare_conf.tex
+\section{Experiments}\label{sec:experiments}
+
+To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
+%we experimentally compare our approach and existing approaches for memory leak static analysis. We 
+we compared our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. For the sake of fairness, in the results of our experiments, we considered the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a CFG with more than one control flow branches of the procedure $P$ is called a complex control flow. Data structure like linked list, struct, array and the combination of these data types are called complex data types. Furthermore, we adopt SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and some test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach.
+
+In general, we investigate the following research questions in our experiments:
+\begin{description}
+\item[RQ1:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex control flows? 
+\item[RQ2:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex data types? 
+\item[RQ3:] How does our approach perform compared with existing approaches under the public benchmarks in terms of accuracy and run time analysis? 
+\end{description}
+
+\subsection{Setup}
+In the rest of this section, we present detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
+
+\subsubsection{Test Subjects}\label{ssec:ts}
+We evaluated our approach on a number of small programs with memory leaks that have different complex control flows and complex data types. In addition, a collection of larger programs is tested in our experiments, which include all the C programs from SPEC CPU $2000$ $15$ in total, all the C programs from SIR $15$ in total, and $40$ test cases about memory errors from SARD.
+\subsubsection{Selected Approaches}\label{ssec:ca}
+Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
+%
+\begin{table}[!h]
+\center
+\caption{Information of approaches}\label{tab:1}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{No.} & \textbf{Abbreviation} & \textbf{Description} & \textbf{Tool}\\
+\hline
+A1 & exp-mat & expression matching & CppCheck\\
+\hline
+A2 & stl-not & style and notation &	Splint\\
+\hline
+A3 & steam-slic & resources streamlined slices & RL\_Detector\\
+\hline
+A4 & pro-grap &	CFG projection &	PML\_Checker\\
+\hline
+\end{tabular}
+\end{table}
+%
+Regular matching and style, notation based detection are common approaches adopt in source code static detection. Both CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.} and Splint\footnote{Splint. http://www.splint.org/. 2010.} are open source static detection tools used in Windows operating system. Apart from this, both tools can detect memory leaks in C programming language. In details, Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes.
+ 
+RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. We compare our tool PML\_Checker which implements the presented approach with the above tools.
+
+\subsubsection{Parameters and Metrics}\label{ssec:pm}
+There are some parameters and metrics used in our experiments for evaluation.
+\begin{itemize}
+\item \textit{TW:} The total number of the reported memory leaks.
+\item \textit{TL:} The total number of memory leaks contained in a program, and it takes the number of pointers pointing to memory blocks as the measurement standard.
+\item \textit{FP:} The number of false positives.
+\item \textit{MLF:} The difference of \textit{TW} and \textit{FP}, which denotes the number of real memory leaks in the test results.
+\item \textit{FPR:} The false positive rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FPR}=$\frac{\textit{FP}}{\textit{TW}}$.
+\item \textit{FNR:} The false negative rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FNR}=1-$\frac{\textit{TW}}{\textit{TL}}$.
+\item \textit{Time:} The run time of each tool for C program.
+\end{itemize}
+
+\subsection{Experimental Results}
+
+\noindent RQ1: \textit{Effectiveness for Complex Control Flow}
+
+The first research question is to compare the effectiveness achieved by the $4$ tools with respect to complex control flows. Table~\ref{tab:2} lists the test results on $9$ small programs and Fig.~\ref{fig:8} shows the number of the $4$ tools reported memory leaks in each control flow structure. Comparing our approach with other approaches, we have the following observations.
+
+\begin{table}[!h]
+\center
+\caption{Test results on complex control flows}\label{tab:2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Test Case No.} & \textbf{Test Cases} & \textbf{A1} & \textbf{A2} & \textbf{A}3 & \textbf{A4}\\
+\hline
+C\_case1	& Simple\_branch &	YES & NO & YES & YES\\
+\hline
+%C\_case2 & Simple\_branch\_2 & \textendash & \textendash & \textendash & \textendash\\
+%\hline
+C\_case2	& Simple\_loop\_1 & NO &	NO & YES & YES\\
+\hline
+C\_case3	& Simple\_loop\_2	& YES &	NO & YES & YES\\
+\hline
+C\_case4	& Chain\_branch\_1 & NO & NO & YES & YES\\
+\hline
+C\_case5	& Chain\_branch\_2 &	NO	& NO & YES & YES\\
+\hline
+C\_case6	& Chain\_loop\_1 & YES & YES & NO & YES\\
+\hline
+C\_case7	& Chain\_loop\_2 & YES & YES & NO & YES\\
+\hline
+C\_case8	& Nesting\_branch & NO & NO & YES & YES\\
+\hline
+C\_case9 & Nesting\_loop & NO & NO & YES & YES\\
+\hline
+\multicolumn{2}{|c|}{\textbf{FNR}} & \textbf{56\%} & \textbf{78\%} & \textbf{22\%} & \textbf{0}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\center
+\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig8}
+\caption{Description of memory leaks reasons}
+\label{fig:8}
+\end{figure}
+
+%First, all the $4$ tools did not detect the memory leak in C\_case2, because the memory leaks in C\_case2 are caused by allocating memory blocks in conditional branches. In this case, the program will be compiled failed, because the pointer pointing to memory blocks is not found during the execution of function ``free()". Therefore, this type of test case is often ignored in static analysis.
+
+%First, we calculated the \textit{FNR} of the test results. In details, the false negative rate of CppCheck test results, that is \textit{FNR}(CppCheck) is 5/9 $\approx$ 0.56. In the same way, \textit{FNR}(Splint) = 0.78, \textit{FNR}(RL\_Detector) = 0.22, while \textit{FNR}(PML\_Checker) = 0. For the reason that the analysis method of PML\_Checker is based on the complex control flow, the results of PML\_Checker covered all the test cases about complex control flow in this experiment. In other words, the false negative rate of the CFG projection approach is lower than other approaches for detecting memory leaks in complex control flow, which reflects the effectiveness of this approach for complex control flow.
+
+First, PML\_Checker covered all the test cases about complex control flow in this experiment. In other words, the \textit{FNR} of the CFG projection approach is lower than other approaches for detecting memory leaks in complex control flow, which reflects the effectiveness of this approach for complex control flow.
+
+Second, regarding the comparison of the approaches, the regular match based approach compares the source code with the vulnerabilities in the process of detecting memory leaks. This approach is not sensitive to complex control flow and inflexible in the types of vulnerabilities to compare with. The style and notation based approach improves the software quality by improving the programming style and discovering the potential bugs that impacting the portability of programs. However, the memory leak analysis is not complete, so it has a high false negative rate. The approach by constructing resources streamlined slices only makes a simple assumption for allocation and deallocation of resources within loop bodies. It reduces the number of loops to 1 and treats the loops the same as branches. Therefore, this approach can not pass the test cases on the Chain\_Loop structure (C\_case6 and C\_case7) in the experiment.
+
+\noindent RQ2: \textit{Effectiveness for Complex Data Flow}
+
+The second research question is to compare the effectiveness achieved by the $4$ approaches with respect to complex control flows. Table~\ref{tab:3} lists the test results on $10$ small programs and Fig.~\ref{fig:9} shows the comparison on the number of  memory leaks in each data type by the $4$ tools. Comparing our approach with other approaches, we have the following observations.
+
+\begin{table}[!h]
+\center
+\caption{Test results on complex data types}\label{tab:3}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Test Case No.} & \textbf{Test Cases} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{A4}\\
+\hline
+T\_case1	& Array\_1 &	YES & NO & YES & YES\\
+\hline
+T\_case2 & Array\_2 & NO & NO & NO & NO \\
+\hline
+T\_case3	& Array\_3 & NO &	NO & NO & YES\\
+\hline
+T\_case4	& List\_1	& NO &	NO & NO & NO\\
+\hline
+T\_case5	& List\_2 & NO & YES & NO & YES\\
+\hline
+T\_case6	& List\_3 &	NO	& YES & NO & YES\\
+\hline
+T\_case7	& Struct\_1 & NO & YES & NO & YES\\
+\hline
+T\_case8	& Struct\_2 & NO & YES & NO & YES\\
+\hline
+T\_case9	& Array\_struct\_1 & NO & YES & YES & YES\\
+\hline
+T\_case10 & Array\_struct\_2 & YES & YES & YES & YES\\
+\hline
+\multicolumn{2}{|c|}{\textbf{FNR}} & \textbf{80\%} & \textbf{40\%} & \textbf{70\%} & \textbf{20\%}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig9}
+\caption{The leaks number of each data type}
+\label{fig:9}
+\end{figure}
+
+%First, the common high FNR shows us the accuracy of pointer alias analysis on complex data flow is relatively lower for all the tools.
+
+First, the results of Splint and PML\_Checker show a higher effectiveness compared with the other two tools in the experiment. Splint has a high effectiveness because it mainly checks the specifications in programs, which is sensitive to different data types. Splint has a high effectiveness because it simplifies the analysis for complex data types in the process of abstracting the control flows. 
+
+Second, comparing PML\_Checker with Splint, Splint reported memory leaks on the latter three data types (linked list, struct and array\_struct), except the memory leaks in an array in Fig.~\ref{fig:9}. Due to the programs that are provided in this paper are in small scale and simple data relationships, PML\_Checker shows a little advantage compared to Splint. For the former approaches, that is CppCheck and RL\_Detector, there is a large space to improve in analyzing the complex data types.
+
+\noindent RQ3: \textit{Accuracy and Run time for Benchmarks}
+
+The third research question is to compare the accuracy achieved by the $4$ approaches, and the run time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
+
+\noindent\textbf{Experiment \RNum{1}} This experiment analyzed the test results and run time of the four tools on SPEC CPU $2000$ and SIR, and the \textit{FPR} was selected to measure the accuracy of different approaches on the same test suite. Table~\ref{tab:4} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:5} shows the test results on SIR. Compare our approach with other approaches, we have the following observations. 
+
+%First, we calculate the false positive rates in Table~\ref{tab:4}, i.e., \textit{FPR}(CppCheck) =$ 2/19$ $\approx$ 0.11. \textit{FPR}(Splint) = 0.44. \textit{FPR}(RL\_Detector) = 0.09. \textit{FPR}(PML\_Checker) = 0.13. Similarly, in Table~\ref{tab:5}, \textit{FPR}(CppCheck) = 0.19, \textit{FPR}(Splint) = 0.30, \textit{FPR}(RL\_Detector) = 0.08, \textit{FPR}(PML\_Checker) = 0.18.
+
+\begin{table}[!h]
+\center
+\caption{Test results on SPEC CPU $2000$}\label{tab:4}
+\hspace{-0.5cm}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+& \textbf{Size} & \multicolumn{2}{|c|}{\textbf{A1}} & \multicolumn{2}{|c|}{\textbf{A2}} & \multicolumn{2}{|c|}{\textbf{A3}} & \multicolumn{2}{|c|}{\textbf{A4}}\\
+\hline
+Program & Kloc & TW & FP & TW & FP & TW & FP & TW & FP\\
+\hline
+gzip       & 7.8    & 1  & 1 & 1	& 1   & 1   & 1  & 3  & 1\\
+\hline
+vpr        & 17.0   & 0  & 0 & 0	 & 0   & 0  &	0  &	4   &1\\
+\hline
+gcc        & 205.8 & 1  & 0 & 46 & 24 & 35 &	0  & 22 & 1\\
+\hline
+mesa     & 49.7   & 1  & 0 & 9	 & 5	   & 4  & 2  & 17 & 5\\
+\hline
+art         & 1.3     & 1  & 0 &0   & 0	   & 1  &	0   & 3  & 0\\
+\hline
+mcf        & 1.9     & 0  & 0 & 5  &  2  & 0   & 0  & 1  & 1\\
+\hline
+equake   & 1.5     & 0  & 0 & 0	 & 0   &	0  & 0   & 8  & 0\\
+\hline
+crafty     & 18.9   & 0	 & 0	 & 0	 & 0	  & 0   & 0   & 0   & 0\\
+\hline
+ammp    & 13.3   & 12 & 0 & 22 & 4  & 	20 & 0  & 22 & 2\\
+\hline
+parser    & 10.9   & 0	 & 0	 & 0	   &0  & 0    & 0  & 0  & 0\\
+\hline
+perlbmk & 58.2   & 2   & 1	 & 0	   & 0  &	4   & 1  & 2  & 0\\
+\hline
+gap        & 59.5   &  0 & 0 & 0    & 	0  &	0   & 0   & 0	& 0\\
+\hline
+vortex    & 52.7    & 0	 & 0	 & 0	   & 0  &	0   & 0   & 0	& 0\\
+\hline 
+bzip2     & 4.6      & 1 & 0	 & 2	   & 1  &	0   & 0   & 1	& 0\\
+\hline
+twolf     & 19.7     & 0 & 0	 & 0	   & 0  &	0   & 0   & 0	& 0\\
+\hline
+Total     & 581      & 19 & 2 & 85 &	37 & 65 & 6	& 83 & 11\\
+\hline
+\multicolumn{2}{|c|}{\textbf{FPR}} & \multicolumn{2}{|c|}{\textbf{11\%}} & \multicolumn{2}{|c|}{\textbf{44\%}} & \multicolumn{2}{|c|}{\textbf{9\%}}  &\multicolumn{2}{|c|}{\textbf{13\%}}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+\caption{Test results on SIR}\label{tab:5}
+\raggedleft
+\hspace{-0.5cm}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+& \textbf{Size} & \multicolumn{2}{|c|}{\textbf{A1}} & \multicolumn{2}{|c|}{\textbf{A2}} & \multicolumn{2}{|c|}{\textbf{A3}} & \multicolumn{2}{|c|}{\textbf{A4}}\\
+\hline
+Program & Kloc & TW & FP & TW & FP & TW & FP & TW & FP\\
+\hline
+bash       & 59.8 &7	&1	  & 15  & 3  & 3	 & 0   & 17  & 2\\
+\hline
+flex	       & 10.5  & 1	& 0	  & 2    & 1  & 2	 & 1	   & 2   & 1\\
+\hline
+grep	 & 10.1 & 3	& 1	  & 0    & 0  & 0	 & 0	   & 2   & 0\\
+\hline
+gzip	       & 5.7   & 0	& 0	  & 0    & 0  & 0	 & 0	   & 0   & 0\\
+\hline
+make	 & 35.5 &1	& 0	  & 0    & 0  & 0	 & 0	   & 1   & 0\\
+\hline
+print	 & 0.7   &  0	& 0	  & 0    & 0  & 0	 & 0	   & 0   & 0\\
+\hline
+print2	 & 0.6   & 0	& 0	  & 0    & 0  & 0	 & 0   &	0   & 0\\
+\hline
+replace    & 0.6   & 0	& 0	  & 0    & 0  & 0	 & 0	   & 0   & 0\\
+\hline
+schedule  & 0.4	& 0	& 0	  & 5    & 2  & 0	 & 0	   & 2   & 0\\
+\hline
+schedule2 & 0.4	& 0	& 0    & 3    & 0  & 0	 & 0	   & 2   & 1\\
+\hline
+sed	        & 14.4	& 4	& 2    &	0   & 0  & 0	 & 0	   & 3   & 0\\
+\hline
+space	 & 6.2	& 2	& 0	   & 0   & 0  & 0	 & 0	   & 1   & 1\\
+\hline
+tcas	       & 0.2	& 0	& 0    &	0   & 0  & 0	 & 0    & 0   & 0\\
+\hline
+totinfo	 & 0.6	& 0  & 0	   & 0    & 0  & 0	 & 0	   & 0   & 0\\
+\hline
+vim        & 122.2	& 3	& 0	   & 12  & 5  & 8	 & 0	   & 4   & 1\\
+\hline
+Total	 & 267.9	 & 21&4	   & 37  & 11 & 13 & 1   & 34  & 6\\
+\hline
+\multicolumn{2}{|c|}{\textbf{FPR}} & \multicolumn{2}{|c|}{\textbf{19\%}} & \multicolumn{2}{|c|}{\textbf{30\%}} & \multicolumn{2}{|c|}{\textbf{8\%}} & \multicolumn{2}{|c|}{\textbf{18\%}}\\
+\hline
+\end{tabular}
+\end{table}
+First, in the view of \textit{TW} from Table~\ref{tab:4} and Table~\ref{tab:5}, Splint reported most bugs, and PML\_Checker ranked second, while CppCheck reported the least bugs. However, in the view of \textit{FP}, the \textit{FPR} of Splint is the highest, and the \textit{FPR} of the other three tools are acceptable.
+
+Second, we analyzed the effectiveness of the CFG projection approach by comparing the MLF of test results. The table of test  results is converted into MLF of test results by constructing a matrix. The results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. We compress this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results, the final matrix $D_1$ is as follows.
+\[
+\scriptsize
+D_1=\left[
+\begin{array}{cccccccccc}
+0 & 0 & 35 & 2 & 1 & 0 & 0 & 20 & 3 & 0\\
+0 & 0 & 1  &  1 & 1 & 0 & 0 & 12 & 1 & 1\\
+0 & 0 & 22 & 4 & 0 & 3 & 0 & 18 & 0 & 1 \\
+2 & 3 & 21 & 12 & 3& 0 & 8 & 20 & 2 & 1  
+\end{array}
+\right]^{T}
+\]
+
+$D_2$ is the matrix abstracted from Table~\ref{tab:5}, and $D_2$ is shown as follow:
+\[
+\scriptsize
+D_2=\left[
+\begin{array}{ccccccccc}
+3 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 8 \\
+6 & 1 & 2 &  1 & 0 & 0 & 2 & 2 & 3\\
+12 & 1 & 0 & 0 & 3 & 3 & 0 & 0 & 7 \\
+15 & 1 & 2& 1 & 2 & 1 & 3 & 0 & 3  
+\end{array}
+\right]^{T}
+\]
+
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig10}
+\caption{The MLF of each tool on SPEC CPU 2000}
+\label{fig:10}
+\end{figure}
+
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig11}
+\caption{The MLF of each tool on SIR}
+\label{fig:11}
+\end{figure}
+
+In Fig.~\ref{fig:10}, the abscissa shows the name of the program corresponding to each row in the matrix, the ordinate shows the value of corresponding MLF. This figure displays the number of memory leaks confirmed by manually checking, among the test results on the $15$ programs from SPEC CPU $2000$. We conclude from the figure that the CFG projection has a good detection result on all the test sets except gcc, for the reasons that the program gcc is larger than others in scale. Therefore, we deduce that the scalability of the CFG projection approach for large scale test objects needs to be improved. While in Fig.~\ref{fig:11}, due to the smaller amount of loc(line of code) comparing to SPEC CPU 2000 and fewer \textit{TW} of each tool, the advantage of PML\_Checker is not obvious. But the analysis results between the two benchmarks are generally consistent.
+
+Third, considering symbolic method are used in A1(CppCheck), A3(RL\_Detector) and A4(PML\_Checker), meanwhile, in order to verify whether our approach to influence the running time, so we chose SPEC CPU 2000 as the test object due to its large amount of code and large number of files, compared and analyzed run time of the three tools.  Table~\ref{tab:6} lists the run time on this benchmark. Comparing the run time of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in run time, and our approach did not affect the run time of PML\_Checker.
+
+\begin{table}[!h]
+\center
+\caption{Run time on SPEC CPU $2000$}\label{tab:6}
+\hspace{-0.5cm}\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Program}& \textbf{Size(Kloc)} & \textbf{A1(s)} & \textbf{A3(s)} & \textbf{A4(s)}\\
+\hline
+gzip       & 7.8    & 5.3  & 4.5 & 3.2\\
+\hline
+vpr        & 17.0   & 10.0  & 7.5 & 7.6\\
+\hline
+gcc        & 205.8 & 167.7  & 48.3 & 41.0 \\
+\hline
+mesa     & 49.7   & 51.0  & 33.1 & 34.8\\
+\hline
+art         & 1.3     & 0.3  & 0.9 & 0.4\\
+\hline
+mcf        & 1.9     & 1.0  & 4.0 & 3.7\\
+\hline
+equake   & 1.5     & 0.2  & 1.0 & 0.4\\
+\hline
+crafty     & 18.9   & 27.3	 & 14.2	 & 13.3\\
+\hline
+ammp    & 13.3   & 7.4 & 10.3 & 10.0\\
+\hline
+parser    & 10.9   & 4.0	 & 6.7	 & 5.1\\
+\hline
+perlbmk & 58.2   & 123.2   & 41.3	 & 39.0\\
+\hline
+gap        & 59.5   &  29.0 & 20.9 & 20.0\\
+\hline
+vortex    & 52.7    & 73.2	 & 30.1	 & 26.7\\
+\hline 
+bzip2     & 4.6      & 2.0 & 0.6	 & 1.5\\
+\hline
+twolf     & 19.7     & 11.0 & 23.7	 & 24.0\\
+\hline
+Total     & 581.0    & 512.6 & 247.1 & 230.7\\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Experiment \RNum{2}} This experiment analyzed the results of the four tools on test cases from SARD. The \textit{FPR} and \textit{FNR} were measured to the accuracy of different approaches on the same test suite. Table~\ref{tab:7} shows the test results on these test cases, and Fig.~\ref{fig:12} is a histogram that compares test results metrics of the four detection tools. Comparing our approach with other approaches, we have the following observations.
+
+%First, we calculated the false negative rate from the test results of $20$ test cases with memory errors marked ``bad", and the false positive rate from the test results of $20$ test cases without memory errors which corresponding to the ``bad" cases marked ``good". Specifically, \textit{FNR}(RL\_Detector) = 0.7, and \textit{FPR}(RL\_Detector) = 0. \textit{FNR}(CppCheck) = 0.5, and \textit{FPR} (CppCheck) = 0. \textit{FNR}(Splint) = 0.8, and \textit{FPR}(Splint) = 0.05. \textit{FNR}(PML\_Checker) = 0.3, and \textit{FPR}(PML\_Checker) = 0.
+
+The \textit{FPR} of PML\_Checker is the lowest among the four tools. For the analysis of \textit{FPR}, there are no false positives in the results of RL\_Detector, CppCheck and PML\_Checker, while Splint reported a false positive, which confirmed that Splint has a high \textit{FPR} in experiment \RNum{1}. This experiment failed to compare the \textit{FPR} due to the small scale of the programs, but the test results on \textit{FNR} reflected the accuracy of our approach in detecting memory leaks.
+
+\begin{table}[!h]
+\center
+\caption{Test results on SARD test cases}\label{tab:7}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Test Cases} & \textbf{A1} (TW)& \textbf{A2} (TW) & \textbf{A3} (TW) & \textbf{A4} (TW)\\
+\hline
+bad cases(20) &10 & 4 & 6 & 14\\
+\hline
+good cases(20) & 0 & 	1 &	0 &	0\\
+\hline
+\textbf{FPR} & \textbf{0}& \textbf{5\%} & \textbf{0} & \textbf{0}\\
+\hline
+\textbf{FNR} & \textbf{50\%}& \textbf{80\%} & \textbf{70\%} & \textbf{30\%}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig12}
+\caption{The bar chart of test results}
+\label{fig:12}
+\end{figure}
+
+\subsection{Summary}
+From the above experimental results, we have the following main findings including advantages and limitations: 
+\begin{itemize}
+\item 
+For the complex control flows and complex data types analysis, our projection-based approach is better than the other three approaches.
+\item 
+For the accuracy of detection, our projection-based approach shows a lower false negative rate compared to other tools, while it shows a high false positive rate in some public benchmarks (such as SPEC CPU $2000$ and SIR). Therefore, in the next step, more detailed data flow analysis will be added into our approach.
+\item 
+For the scalability of detection, our experiment needs to expand the range of detection. Specifically, we will detect the large scale benchmarks with millions of code lines, or source code from some open source software.
+\end{itemize}
