@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  24 DEC 2017 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  25 DEC 2017 11:03
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -356,43 +356,19 @@ Overfull \hbox (17.59647pt too wide) in paragraph at lines 109--109
  []
 
 (introduction.tex
-
-LaTeX Warning: Citation `F93' on page 1 undefined on input line 4.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-LaTeX Warning: Citation `AJ06' on page 1 undefined on input line 8.
-
-
-LaTeX Warning: Citation `KJMP06' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `AJ06' on page 1 undefined on input line 16.
-
-
-LaTeX Warning: Citation `SYX12' on page 1 undefined on input line 21.
-
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-
-LaTeX Warning: Citation `XA05' on page 2 undefined on input line 34.
-
-
-LaTeX Warning: Citation `H87' on page 2 undefined on input line 34.
-
-) (description.tex
-
-LaTeX Warning: Citation `OR06' on page 2 undefined on input line 4.
-
-[2] <figure/fig1-fig4/fig1.png, id=17, 545.78906pt x 292.09125pt>
+)
+(description.tex [2]
+<figure/fig1-fig4/fig1.png, id=17, 545.78906pt x 292.09125pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
@@ -455,20 +431,17 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 File: figure/fig8-fig12/fig_new.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig_new.png>
-Package pdftex.def Info: figure/fig8-fig12/fig_new.png used on input line 200.
+Package pdftex.def Info: figure/fig8-fig12/fig_new.png used on input line 201.
 (pdftex.def)             Requested size: 258.0pt x 176.27534pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 200--201
- [] 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 201--202
+ [][] 
  []
 
 ) (experiments.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-
-LaTeX Warning: Citation `EL02' on page 6 undefined on input line 41.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -495,44 +468,44 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figure/fig8-fig12/fig9.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig9.png>
-Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 147.
+Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 148.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
  [7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 261.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 262.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 274.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 <figure/fig8-fig12/fig10.png, id=50, 238.9728pt x 103.587pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 287.
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 288.
 (pdftex.def)             Requested size: 232.19843pt x 100.65155pt.
 
 <figure/fig8-fig12/fig11.png, id=52, 243.309pt x 109.8504pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 294.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 295.
 (pdftex.def)             Requested size: 232.19843pt x 104.83833pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./figure/fig8-fig12/fig10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 []\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 301--302
+Underfull \hbox (badness 1990) in paragraph at lines 302--303
 \OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
  []
 
@@ -540,63 +513,39 @@ Underfull \hbox (badness 1990) in paragraph at lines 301--302
 File: figure/fig8-fig12/fig12.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig12.png>
-Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 371.
+Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 372.
 (pdftex.def)             Requested size: 232.19843pt x 93.06912pt.
-) (related.tex
-
-LaTeX Warning: Citation `YZ04' on page 9 undefined on input line 5.
-
-
-LaTeX Warning: Citation `SJP05' on page 9 undefined on input line 5.
-
-[9 <./figure/fig8-fig12/fig11.png> <./figure/fig8-fig12/fig12.png>]
-
-LaTeX Warning: Citation `BPS00' on page 10 undefined on input line 8.
-
-
-LaTeX Warning: Citation `J14' on page 10 undefined on input line 9.
-
-
-LaTeX Warning: Citation `XA05' on page 10 undefined on input line 9.
-
-
-LaTeX Warning: Citation `YZ04' on page 10 undefined on input line 9.
-
-
-LaTeX Warning: Citation `KJMP06' on page 10 undefined on input line 12.
-
-
-LaTeX Warning: Citation `KK12' on page 10 undefined on input line 12.
-
-
-LaTeX Warning: Citation `KK16' on page 10 undefined on input line 15.
-
-
-LaTeX Warning: Citation `WJG14' on page 10 undefined on input line 15.
-
-
-LaTeX Warning: Citation `MFS12' on page 10 undefined on input line 15.
-
-
-LaTeX Warning: Citation `W05' on page 10 undefined on input line 17.
-
-
-LaTeX Warning: Citation `NL10' on page 10 undefined on input line 17.
-
-
-LaTeX Warning: Citation `D94' on page 10 undefined on input line 17.
-
+) (related.tex [9 <./figure/fig8-fig12/fig11.png> <./figure/fig8-fig12/fig12.pn
+g>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
+) (conclusion.tex) (bare_conf.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+[]\OT1/ptm/m/n/8 A. Finkel-stein, ``Re-port of the in-quiry into the lon-don
+ []
 
-LaTeX Warning: Citation `H87' on page 10 undefined on input line 17.
 
-) (conclusion.tex)
-No file bare_conf.bbl.
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+\OT1/ptm/m/n/8 amu-lance ser-vice. sec-tion 4039,'' 1993, avail-able at
+ []
+
+[10]
+Underfull \hbox (badness 1635) in paragraph at lines 56--60
+\OT1/ptm/m/it/8 nese Jour-nal of Com-puter\OT1/ptm/m/n/8 , vol. 1987, no. 2, pp
+. 74--81, 1987,
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 71--74
+\OT1/ptm/m/n/8 tools,'' \OT1/ptm/m/it/8 Com-puter Sci-ence\OT1/ptm/m/n/8 , vol.
+ 31, no. 2, pp. 171--174, 2004,
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -608,35 +557,33 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (bare_conf.aux)
+[11
 
-LaTeX Warning: There were undefined references.
-
- ) 
+] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 5080 strings out of 493323
- 72865 string characters out of 3146850
+ 5096 strings out of 493323
+ 73075 string characters out of 3146850
  201537 words of memory out of 3000000
- 8511 multiletter control sequences out of 15000+200000
- 47231 words of font info for 88 fonts, out of 3000000 for 9000
+ 8521 multiletter control sequences out of 15000+200000
+ 49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,21n,58p,1935b,1339s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikT
-ex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pf
-b><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 501314 bytes).
+ 39i,21n,58p,1926b,1339s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
+:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:
+/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
+mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
+w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (11 pages, 505473 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

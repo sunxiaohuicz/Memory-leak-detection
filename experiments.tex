@@ -16,7 +16,7 @@ In general, we investigate the following research questions in our experiments:
 In the rest of this section, we present detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
 
 \subsubsection{Test Subjects}\label{ssec:ts}
-We evaluated our approach on a number of small programs with memory leaks that have different complex control flows and complex data types. In addition, a collection of larger programs is tested in our experiments, which include all the C programs from SPEC CPU $2000$ $15$ in total, all the C programs from SIR $15$ in total, and $40$ test cases about memory errors from SARD.
+We evaluated our approach on a number of small programs with memory leaks that have different complex control flows and complex data types. In addition, a collection of larger programs is tested in our experiments, which include all the C programs from SPEC CPU $2000$ $15$ in total, all the C programs from SIR $15$ in total, and $40$ test cases about memory errors from SARD.(The relevant test code can be accessed in footnote 1).
 \subsubsection{Selected Approaches}\label{ssec:ca}
 Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
 %
@@ -87,7 +87,7 @@ C\_case8	& Nesting\_branch & NO & NO & YES & YES\\
 \hline
 C\_case9 & Nesting\_loop & NO & NO & YES & YES\\
 \hline
-\multicolumn{2}{|c|}{\textbf{FNR}} & \textbf{56\%} & \textbf{78\%} & \textbf{22\%} & \textbf{0}\\
+\multicolumn{2}{|c|}{FNR} & 56\% & 78\% & 22\% & 0\\
 \hline
 \end{tabular}
 \end{table}
@@ -138,12 +138,13 @@ T\_case9	& Array\_struct\_1 & NO & YES & YES & YES\\
 \hline
 T\_case10 & Array\_struct\_2 & YES & YES & YES & YES\\
 \hline
-\multicolumn{2}{|c|}{\textbf{FNR}} & \textbf{80\%} & \textbf{40\%} & \textbf{70\%} & \textbf{20\%}\\
+\multicolumn{2}{|c|}{FNR} & 80\% & 40\% & 70\% & 20\%\\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{figure}[!h]
+\center
 \includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig9}
 \caption{The leaks number of each data type}
 \label{fig:9}
@@ -204,7 +205,7 @@ twolf     & 19.7     & 0 & 0	 & 0	   & 0  &	0   & 0   & 0	& 0\\
 \hline
 Total     & 581      & 19 & 2 & 85 &	37 & 65 & 6	& 83 & 11\\
 \hline
-\multicolumn{2}{|c|}{\textbf{FPR}} & \multicolumn{2}{|c|}{\textbf{11\%}} & \multicolumn{2}{|c|}{\textbf{44\%}} & \multicolumn{2}{|c|}{\textbf{9\%}}  &\multicolumn{2}{|c|}{\textbf{13\%}}\\
+\multicolumn{2}{|c|}{FPR} & \multicolumn{2}{|c|}{11\%} & \multicolumn{2}{|c|}{44\%} & \multicolumn{2}{|c|}{9\%}  &\multicolumn{2}{|c|}{13\%}\\
 \hline
 \end{tabular}
 \end{table}
@@ -250,7 +251,7 @@ vim        & 122.2	& 3	& 0	   & 12  & 5  & 8	 & 0	   & 4   & 1\\
 \hline
 Total	 & 267.9	 & 21&4	   & 37  & 11 & 13 & 1   & 34  & 6\\
 \hline
-\multicolumn{2}{|c|}{\textbf{FPR}} & \multicolumn{2}{|c|}{\textbf{19\%}} & \multicolumn{2}{|c|}{\textbf{30\%}} & \multicolumn{2}{|c|}{\textbf{8\%}} & \multicolumn{2}{|c|}{\textbf{18\%}}\\
+\multicolumn{2}{|c|}{FPR} & \multicolumn{2}{|c|}{19\%} & \multicolumn{2}{|c|}{30\%} & \multicolumn{2}{|c|}{8\%} & \multicolumn{2}{|c|}{18\%}\\
 \hline
 \end{tabular}
 \end{table}
@@ -359,9 +360,9 @@ bad cases(20) &10 & 4 & 6 & 14\\
 \hline
 good cases(20) & 0 & 	1 &	0 &	0\\
 \hline
-\textbf{FPR} & \textbf{0}& \textbf{5\%} & \textbf{0} & \textbf{0}\\
+FPR & 0& 5\% & 0 & 0\\
 \hline
-\textbf{FNR} & \textbf{50\%}& \textbf{80\%} & \textbf{70\%} & \textbf{30\%}\\
+FNR & 50\% & 80\% & 70\% & 30\%\\
 \hline
 \end{tabular}
 \end{table}
