@@ -173,7 +173,7 @@ Take projection graph in Fig.~\ref{fig:4} as an example. According to the detect
 
 The control flow graph projection makes the detection process simple and intuitive. More importantly, all the cases of memory leaks mentioned in Section~\ref{sec:description} can be detected in the detection algorithm. However, this approach may result in a high false positive rate, since it does not analyze the specific value of conditional predicate in the valuating of control flow branches, which leads to a low sensitivity to data flows. In Fig.~\ref{fig:7}, the statement $5$ will be marked with a $B$ node (control flow branching statement). Apart from this, the example code will be judged to have a suspected memory leak, by using the algorithm above, since the buffer may not be freed in every branch. However, there are no memory leaks in this example. Specifically, the result of the condition is true when analyzing the conditional predicate of line $5$ (buffer != NULL), that is, the memory blocks are freed after being allocated. 
 
-In order to reduce such false positives, this paper combines symbolic execution\footnote{Symbolic execution. https://en.wikipedia.org/wiki/Symbolic\_execution. 2017.} and constraint solving\footnote{Constraint solving. http://www.constraintsolving.com/. 2017.} during the execution of the algorithm to accurately evaluate the branching conditions.
+In order to reduce such false positives, this paper combines symbolic execution\footnote{Symbolic execution.https://en.wikipedia.org/wiki/Symbolic\_execution.2017.} and constraint solving\footnote{Constraint solving. http://www.constraintsolving.com/. 2017.} during the execution of the algorithm to accurately evaluate the branching conditions.
 %
 \begin{figure}[!h]
 \small
@@ -191,7 +191,8 @@ void main(){
 \caption{A piece of code}\label{fig:7}
 \end{figure}
 
-Symbolic execution simulates the execution of programs by symbolizing variables. Specifically, symbolic execution collects memory allocation and release points by backward traversal of the CFG. At the same time, at each of the control flow branch, conditions of the branch are added to the current path conditions. Finally, those paths related to memory allocation and release will be merged at the meeting node of the CFG. Constraint solving uses the constraint solver to solve the satisfiability of the path conditions. Constraint solving is carried on the projected CFG. Therefore, symbolic execution and constraint solving can help to reduce similar false positives like the problem in this example.
+Symbolic execution simulates the execution of programs by symbolizing variables. Specifically, symbolic execution collects memory allocation and release points by backward traversal for the CFG. At the same time, at each of the control flow branch, conditions of the branch are added to the current path conditions. Finally, those paths related to memory allocation and release will be merged at the meeting node of the CFG, and then according to Hoare logic\footnote{Hoare logic. https://en.wikipedia.org/wiki/Hoare\_logic. 2017.}, our system carries constraint solving to the merged paths. Constraint solving is accompanied by the projection process.  
+%Therefore, symbolic execution and constraint solving can help to reduce similar false positives like the problem in this example.
 
 \subsection{System Framework}
 

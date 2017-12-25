@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  25 DEC 2017 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  25 DEC 2017 16:45
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -414,9 +414,9 @@ Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 55.
 Missing character: There is no Î in font cmr10!
 Missing character: There is no — in font cmr10!
 
-Underfull \hbox (badness 5817) in paragraph at lines 176--176
-[][][]\OT1/ptm/m/n/8 Symbolic ex-e-cu-tion. https://en.wikipedia.org/wiki/Symbo
-lic[]execution.
+Overfull \hbox (4.9379pt too wide) in paragraph at lines 176--176
+[][][]\OT1/ptm/m/n/8 Symbolic ex-e-cu-tion.https://en.wikipedia.org/wiki/Symbol
+ic[]execution.2017.| 
  []
 
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 182.
@@ -431,10 +431,10 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 File: figure/fig8-fig12/fig_new.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig_new.png>
-Package pdftex.def Info: figure/fig8-fig12/fig_new.png used on input line 201.
+Package pdftex.def Info: figure/fig8-fig12/fig_new.png used on input line 202.
 (pdftex.def)             Requested size: 258.0pt x 176.27534pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 201--202
+Overfull \hbox (6.0pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
@@ -581,7 +581,7 @@ c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
 /MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
 mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
 w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 505473 bytes).
+Output written on bare_conf.pdf (11 pages, 505496 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
