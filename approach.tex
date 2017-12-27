@@ -95,31 +95,31 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 \caption{ControlFlowProjection ($G$)}\label{alg:cfp}
 \textbf{Input:} A control flow graph $G$ for program $P$.\\
 \textbf{Output:} Projection graph $G^*$ for the input control flow graph\\
-\textbf{Begin}\\
-Step1: (According to the execution order of statements, establish the min-heap of $N$)\\
-1.\quad	\textbf{define} $\mathit{Red\_Black\_Tree}(N)$;\\
-2.\quad	\textbf{init} $\mathit{Red\_Black\_Tree}(N)$;\\
-3.\quad	\textbf{create} $\mathit{Red\_Black\_Tree}(N)$;\\
-4.\quad	$\forall n\in N, \mathit{Map}(n)\leftarrow(n,\Gamma(n))$;\\
-Step2: (Fold paths)\\
-1.\quad	\textbf{while} $\mathit{Red\_Black\_Tree}$.hasNext\\
-2.\quad	\textbf{do begin}\\
-3.\quad	\textbf{if} $n.ind\geq 2 || n.outd\geq 2$ \textbf{then}\\
-4.\quad \quad    \textbf{if} $A.a\in \Gamma(n) || F.f\in \Gamma(n)$\\
-5.\quad \quad	    \textbf{then} $\Gamma(n)\leftarrow A.a || \Gamma(n)\leftarrow F.f$\\
-6.\quad	\textbf{else} \\
-7.\quad \quad   \textbf{then} $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$\\
-8.\quad	\textbf{end}\\
-Step3: (Adjust the $\mathit{Red\_Black\_Tree}(N^*)$ and the $\mathit{Map}(N^*)$, and obtain the final projection graph $G^*$)\\
-1.\quad	\textbf{delete} $n (n\not\in N^*)$;\\
-2.\quad	$\mathit{Red\_Black\_Tree(N)} \leftarrow \mathit{Red\_Black\_Tree}(N^*)$\\
-3.\quad	$\mathit{Map}(N) \leftarrow \mathit{Map}(N^*)$;\\
-\textbf{End}
+%\textbf{Begin}\\
+%Step1: (According to the execution order of statements, establish the min-heap of $N$)\\
+1.\quad	Initialize the Red Black Tree $\mathit{Red\_Black\_Tree}(N)$;\\
+%2.\quad	\textbf{init} $\mathit{Red\_Black\_Tree}(N)$;\\
+%3.\quad	\textbf{create} $\mathit{Red\_Black\_Tree}(N)$;\\
+2.\quad	$\forall n\in N, \mathit{Map}(n)\leftarrow(n,\Gamma(n))$;\\
+%Step2: (Fold paths)\\
+3.\quad	\textbf{do while} $\mathit{Red\_Black\_Tree}$.hasNext\\
+4.\quad	\textbf{begin}\\
+5.\quad	\textbf{if} $n.ind\geq 2 || n.outd\geq 2$ \textbf{then}\\
+6.\quad \quad    \textbf{if} $A.a\in \Gamma(n) || F.f\in \Gamma(n)$\\
+7.\quad \quad	    \textbf{then} $\Gamma(n)\leftarrow A.a || \Gamma(n)\leftarrow F.f$\\
+8.\quad	\textbf{else} \\
+9.\quad \quad   \textbf{then} $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$\\
+10.\quad	\textbf{end}\\
+%Step3: (Adjust the $\mathit{Red\_Black\_Tree}(N^*)$ and the $\mathit{Map}(N^*)$, and obtain the final projection graph $G^*$)\\
+11.\quad	\textbf{delete} $n (n\not\in N^*)$;\\
+12.\quad	$\mathit{Red\_Black\_Tree(N)} \leftarrow \mathit{Red\_Black\_Tree}(N^*)$\\
+13.\quad	$\mathit{Map}(N) \leftarrow \mathit{Map}(N^*)$;\\
+%\textbf{End}
 \end{algorithm}
 
 The projection algorithm is acceptable in the aspect of complexity. In this algorithm, we assume that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
 
-\subsection{Detection Process}
+\subsection{Detection Method}
 
 %$G^* \mapsto G$, and $G^*$ is the projection graph of the control flow graph $G$, and there are two definitions on $G^*$.
 Given a graph $G^*=(N^*, E^*)$, we define the direct predecessor of a node as follows:
@@ -135,7 +135,7 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 \caption{MemoryLeakDetection ($G^*$)}\label{alg:mld}
 \textbf{Input:} The projection graph $G^*$.\\
 \textbf{Output:} The detection results for memory leaks ($\mathit{true}$ or $\mathit{false}$)\\
-\textbf{Begin}\\
+%\textbf{Begin}\\
 1.\ \	      \textbf{define} Stack $\mathit{stack}$;\\
 2.\ \ 	\textbf{define} Node $\mathit{base}$, $\mathit{current}$;\\
 3.\ \       \textbf{bool} $\mathit{MemLeak\_Check}$(Tree $\mathit{Red\_Black\_Tree}$, Set $\mathit{Map}$)\\
@@ -162,7 +162,7 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 24.\ \ \quad    \textbf{return} $\mathit{false}$;\\
 25.\ \ 	\textbf{else then}\\
 26.\ \ \quad	    \textbf{return} $\mathit{true}$;\\
-\textbf{End}
+%\textbf{End}
 \end{algorithm}
 
 There are only one loop in the traversal of Red Black Tree, so the time complexity of this algorithm is $O(log(N))$, and the space complexity of this algorithm is $S(N)$.
@@ -194,14 +194,14 @@ void main(){
 Symbolic execution simulates the execution of programs by symbolizing variables. Specifically, symbolic execution collects memory allocation and release points by backward traversal for the CFG. At the same time, at each of the control flow branch, conditions of the branch are added to the current path conditions. Finally, those paths related to memory allocation and release will be merged at the meeting node of the CFG, and then according to Hoare logic\footnote{Hoare logic. https://en.wikipedia.org/wiki/Hoare\_logic. 2017.}, our system carries constraint solving to the merged paths. Constraint solving is accompanied by the projection process.  
 %Therefore, symbolic execution and constraint solving can help to reduce similar false positives like the problem in this example.
 
-\subsection{System Framework}
+\subsection{System Workflow}
 
-\begin{figure}[!h]
-\small
-\centering
-\includegraphics[width=0.5\textwidth]{figure/fig8-fig12/fig_new}
-\caption{Framework flowchart for PML\_Checker}\label{fig:18}
-\end{figure}
+%\begin{figure}[!h]
+%\small
+%\centering
+%\includegraphics[width=0.5\textwidth]{figure/fig8-fig12/fig_new}
+%\caption{Framework flowchart for PML\_Checker}\label{fig:18}
+%\end{figure}
 
-Fig.~\ref{fig:18} shows the flowchart for PML\_Checker. The input data of PML\_Checker is C language source code. after lexical analysis and syntax analysis, the CFG matched the source code is generated by the abstract syntax tree. Data flow analysis and symbolic execution extend the original CFG, the constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG wil be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and shows the test results. 
+The input data of PML\_Checker is C language source code. After lexical analysis and syntax analysis, Abstract syntax tree generates the original control flow graph, which will be output to the system interface. Next, data flow analysis and symbolic execution extend the original CFG, constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG wil be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and displays the test results. 
 

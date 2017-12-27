@@ -3,7 +3,7 @@
 
 To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
 %we experimentally compare our approach and existing approaches for memory leak static analysis. We 
-we compared our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. For the sake of fairness, in the results of our experiments, we considered the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a CFG with more than one control flow branches of the procedure $P$ is called a complex control flow. Data structure like linked list, struct, array and the combination of these data types are called complex data types. Furthermore, we adopt SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and some test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach.
+we compared our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. 
 
 In general, we investigate the following research questions in our experiments:
 \begin{description}
@@ -16,7 +16,7 @@ In general, we investigate the following research questions in our experiments:
 In the rest of this section, we present detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
 
 \subsubsection{Test Subjects}\label{ssec:ts}
-We evaluated our approach on a number of small programs with memory leaks that have different complex control flows and complex data types. In addition, a collection of larger programs is tested in our experiments, which include all the C programs from SPEC CPU $2000$ $15$ in total, all the C programs from SIR $15$ in total, and $40$ test cases about memory errors from SARD. (The relevant test code can be accessed in footnote 1).
+For the sake of fairness, in the results of our experiments, we considered the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, we adopt all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. We present on a number of small programs with memory leaks that have different complex control flows and complex data types. (The relevant test code can be accessed in footnote 1).
 \subsubsection{Selected Approaches}\label{ssec:ca}
 Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
 %
@@ -56,7 +56,7 @@ There are some parameters and metrics used in our experiments for evaluation.
 
 \subsection{Experimental Results}
 
-\noindent RQ1: \textit{Effectiveness for Complex Control Flow}
+\noindent RQ1: \textit{Effectiveness Analysis of Complex Control Flow}
 
 The first research question is to compare the effectiveness achieved by the $4$ tools with respect to complex control flows. Table~\ref{tab:2} lists the test results on $9$ small programs and Fig.~\ref{fig:8} shows the number of the $4$ tools reported memory leaks in each control flow structure. Comparing our approach with other approaches, we have the following observations.
 
@@ -107,7 +107,7 @@ First, PML\_Checker covered all the test cases about complex control flow in thi
 
 Second, regarding the comparison of the approaches, the regular match based approach compares the source code with the vulnerabilities in the process of detecting memory leaks. This approach is not sensitive to complex control flow and inflexible in the types of vulnerabilities to compare with. The style and notation based approach improves the software quality by improving the programming style and discovering the potential bugs that impacting the portability of programs. However, the memory leak analysis is not complete, so it has a high false negative rate. The approach by constructing resources streamlined slices only makes a simple assumption for allocation and deallocation of resources within loop bodies. It reduces the number of loops to 1 and treats the loops the same as branches. Therefore, this approach can not pass the test cases on the Chain\_Loop structure (C\_case6 and C\_case7) in the experiment.
 
-\noindent RQ2: \textit{Effectiveness for Complex Data Flow}
+\noindent RQ2: \textit{Effectiveness Analysis of Complex Data Flow}
 
 The second research question is to compare the effectiveness achieved by the $4$ approaches with respect to complex control flows. Table~\ref{tab:3} lists the test results on $10$ small programs and Fig.~\ref{fig:9} shows the comparison on the number of  memory leaks in each data type by the $4$ tools. Comparing our approach with other approaches, we have the following observations.
 
@@ -156,11 +156,13 @@ First, the results of Splint and PML\_Checker show a higher effectiveness compar
 
 Second, comparing PML\_Checker with Splint, Splint reported memory leaks on the latter three data types (linked list, struct and array\_struct), except the memory leaks in an array in Fig.~\ref{fig:9}. Due to the programs that are provided in this paper are in small scale and simple data relationships, PML\_Checker shows a little advantage compared to Splint. For the former approaches, that is CppCheck and RL\_Detector, there is a large space to improve in analyzing the complex data types.
 
-\noindent RQ3: \textit{Accuracy and Run time for Benchmarks}
+\noindent RQ3: \textit{Accuracy and Run Time Analysis of Benchmarks}
 
 The third research question is to compare the accuracy achieved by the $4$ approaches, and the run time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
 
-\noindent\textbf{Experiment \RNum{1}} This experiment analyzed the test results and run time of the four tools on SPEC CPU $2000$ and SIR, and the \textit{FPR} was selected to measure the accuracy of different approaches on the same test suite. Table~\ref{tab:4} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:5} shows the test results on SIR. Compare our approach with other approaches, we have the following observations. 
+\noindent\textbf{Experiment on SPEC CPU 2000 and SIR} 
+\\
+This experiment analyzed the test results and run time of the four tools on SPEC CPU $2000$ and SIR, and the \textit{FPR} was selected to measure the accuracy of different approaches on the same test suite. Table~\ref{tab:4} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:5} shows the test results on SIR. Compare our approach with other approaches, we have the following observations. 
 
 %First, we calculate the false positive rates in Table~\ref{tab:4}, i.e., \textit{FPR}(CppCheck) =$ 2/19$ $\approx$ 0.11. \textit{FPR}(Splint) = 0.44. \textit{FPR}(RL\_Detector) = 0.09. \textit{FPR}(PML\_Checker) = 0.13. Similarly, in Table~\ref{tab:5}, \textit{FPR}(CppCheck) = 0.19, \textit{FPR}(Splint) = 0.30, \textit{FPR}(RL\_Detector) = 0.08, \textit{FPR}(PML\_Checker) = 0.18.
 
@@ -343,7 +345,9 @@ Total     & 581.0    & 512.6 & 247.1 & 230.7\\
 \end{tabular}
 \end{table}
 
-\noindent\textbf{Experiment \RNum{2}} This experiment analyzed the results of the four tools on test cases from SARD. The \textit{FPR} and \textit{FNR} were measured to the accuracy of different approaches on the same test suite. Table~\ref{tab:7} shows the test results on these test cases, and Fig.~\ref{fig:12} is a histogram that compares test results metrics of the four detection tools. Comparing our approach with other approaches, we have the following observations.
+\noindent\textbf{Experiment on test cases from SARD} 
+\\
+This experiment analyzed the results of the four tools on test cases from SARD. The \textit{FPR} and \textit{FNR} were measured to the accuracy of different approaches on the same test suite. Table~\ref{tab:7} shows the test results on these test cases, and Fig.~\ref{fig:12} is a histogram that compares test results metrics of the four detection tools. Comparing our approach with other approaches, we have the following observations.
 
 %First, we calculated the false negative rate from the test results of $20$ test cases with memory errors marked ``bad", and the false positive rate from the test results of $20$ test cases without memory errors which corresponding to the ``bad" cases marked ``good". Specifically, \textit{FNR}(RL\_Detector) = 0.7, and \textit{FPR}(RL\_Detector) = 0. \textit{FNR}(CppCheck) = 0.5, and \textit{FPR} (CppCheck) = 0. \textit{FNR}(Splint) = 0.8, and \textit{FPR}(Splint) = 0.05. \textit{FNR}(PML\_Checker) = 0.3, and \textit{FPR}(PML\_Checker) = 0.
 

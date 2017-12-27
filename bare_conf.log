@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  26 DEC 2017 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  27 DEC 2017 16:53
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -409,9 +409,20 @@ Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 55.
 (pdftex.def)             Requested size: 180.60315pt x 27.49327pt.
 
 ** ATTENTION: \proof is deprecated (line 64). Use \IEEEproof instead.
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--118
+
+ []
+
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Î in font cmr10!
 Missing character: There is no — in font cmr10!
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--166
+
+ []
+
+
 Overfull \hbox (4.9379pt too wide) in paragraph at lines 176--176
 [][][]\OT1/ptm/m/n/8 Symbolic ex-e-cu-tion.https://en.wikipedia.org/wiki/Symbol
 ic[]execution.2017.| 
@@ -424,88 +435,87 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5] <figure/fig8-fig12/fig_new.png, id=36, 302.0478pt x 206.36305pt>
-File: figure/fig8-fig12/fig_new.png Graphic file (type png)
-
-<use figure/fig8-fig12/fig_new.png>
-Package pdftex.def Info: figure/fig8-fig12/fig_new.png used on input line 202.
-(pdftex.def)             Requested size: 258.0pt x 176.27534pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 202--203
- [][] 
- []
-
-) (experiments.tex
+ [5]) (experiments.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [6 <./figure/fig8-fig12/fig_new.png>]
+
 Underfull \hbox (badness 2913) in paragraph at lines 43--44
 \OT1/ptm/m/n/10 adopts re-sources stream-lined slices con-struc-tion and is
  []
 
-<figure/fig8-fig12/fig8.png, id=41, 241.3818pt x 98.2872pt>
+[6] <figure/fig8-fig12/fig8.png, id=40, 241.3818pt x 98.2872pt>
 File: figure/fig8-fig12/fig8.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig8.png>
 Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 97.
 (pdftex.def)             Requested size: 232.19843pt x 94.54958pt.
 
-<figure/fig8-fig12/fig9.png, id=42, 242.3454pt x 85.2786pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figure/fig8-fig12/fig9.png, id=41, 242.3454pt x 85.2786pt>
 File: figure/fig8-fig12/fig9.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig9.png>
 Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 148.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
- [7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 262.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 264.
 
 
-<figure/fig8-fig12/fig10.png, id=49, 238.9728pt x 103.587pt>
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 277.
+
+
+<figure/fig8-fig12/fig10.png, id=48, 238.9728pt x 103.587pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 288.
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 290.
 (pdftex.def)             Requested size: 232.19843pt x 100.65155pt.
 
-<figure/fig8-fig12/fig11.png, id=51, 243.309pt x 109.8504pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figure/fig8-fig12/fig11.png, id=50, 243.309pt x 109.8504pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 295.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 297.
 (pdftex.def)             Requested size: 232.19843pt x 104.83833pt.
- [8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 []\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 302--303
+Underfull \hbox (badness 1990) in paragraph at lines 304--305
 \OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig8-fig12/fig12.png, id=59, 240.4182pt x 96.36pt>
+[8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
+<figure/fig8-fig12/fig12.png, id=58, 240.4182pt x 96.36pt>
 File: figure/fig8-fig12/fig12.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig12.png>
-Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 372.
+Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 376.
 (pdftex.def)             Requested size: 232.19843pt x 93.06912pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 ) (related.tex [9 <./figure/fig8-fig12/fig12.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -513,8 +523,7 @@ Missing character: There is no  in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no  in font ptmr7t!
-) (conclusion.tex)
-(bare_conf.bbl
+) (conclusion.tex) (bare_conf.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
 []\OT1/ptm/m/n/8 A. Finkel-stein, ``Re-port of the in-quiry into the lon-don
  []
@@ -530,13 +539,13 @@ Underfull \hbox (badness 1635) in paragraph at lines 56--60
 . 74--81, 1987,
  []
 
-[10]
+
 Underfull \hbox (badness 2961) in paragraph at lines 71--74
 \OT1/ptm/m/n/8 tools,'' \OT1/ptm/m/it/8 Com-puter Sci-ence\OT1/ptm/m/n/8 , vol.
  31, no. 2, pp. 171--174, 2004,
  []
 
-)
+[10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -552,10 +561,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 5096 strings out of 493323
- 73075 string characters out of 3146850
- 194537 words of memory out of 3000000
- 8521 multiletter control sequences out of 15000+200000
+ 5090 strings out of 493323
+ 72921 string characters out of 3146850
+ 210537 words of memory out of 3000000
+ 8516 multiletter control sequences out of 15000+200000
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,58p,1926b,1339s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -572,9 +581,9 @@ c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
 ex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pf
 b><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 495335 bytes).
+Output written on bare_conf.pdf (11 pages, 350842 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
