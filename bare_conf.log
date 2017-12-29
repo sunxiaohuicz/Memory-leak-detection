@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  27 DEC 2017 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  29 DEC 2017 14:23
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -381,12 +381,12 @@ Package pdftex.def Info: figure/fig1-fig4/fig2.png used on input line 47.
 ) (approach.tex
 Underfull \vbox (badness 1831) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 20.
 
 (E:\MikTex\tex\latex\psnfss\ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 ) [3 <./figure/fig1-fig4/fig1.png> <./figure/fig1-fig4/fig2.png>]
-Underfull \hbox (badness 1472) in paragraph at lines 43--45
+Underfull \hbox (badness 1472) in paragraph at lines 45--47
 []\OT1/ptm/m/n/10 Fig. 3[] shows the CFG (G) of a piece of code. In
  []
 
@@ -394,10 +394,10 @@ Underfull \hbox (badness 1472) in paragraph at lines 43--45
 File: figure/fig1-fig4/fig_3.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_3.png>
-Package pdftex.def Info: figure/fig1-fig4/fig_3.png used on input line 48.
+Package pdftex.def Info: figure/fig1-fig4/fig_3.png used on input line 50.
 (pdftex.def)             Requested size: 258.0pt x 28.07869pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 48--49
+Overfull \hbox (6.0pt too wide) in paragraph at lines 50--51
  [] 
  []
 
@@ -405,36 +405,35 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 48--49
 File: figure/fig1-fig4/fig_4.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_4.png>
-Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 55.
+Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 57.
 (pdftex.def)             Requested size: 180.60315pt x 27.49327pt.
 
-** ATTENTION: \proof is deprecated (line 64). Use \IEEEproof instead.
+** ATTENTION: \proof is deprecated (line 66). Use \IEEEproof instead.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--118
+Underfull \hbox (badness 10000) in paragraph at lines 98--121
 
  []
 
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Î in font cmr10!
 Missing character: There is no — in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--166
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 139--169
 
  []
 
 
-Overfull \hbox (4.9379pt too wide) in paragraph at lines 176--176
+Overfull \hbox (4.9379pt too wide) in paragraph at lines 179--179
 [][][]\OT1/ptm/m/n/8 Symbolic ex-e-cu-tion.https://en.wikipedia.org/wiki/Symbol
 ic[]execution.2017.| 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 182.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 185.
 
 (E:\MikTex\tex\latex\psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
  [5]) (experiments.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -451,18 +450,12 @@ File: figure/fig8-fig12/fig8.png Graphic file (type png)
 Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 97.
 (pdftex.def)             Requested size: 232.19843pt x 94.54958pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <figure/fig8-fig12/fig9.png, id=41, 242.3454pt x 85.2786pt>
 File: figure/fig8-fig12/fig9.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig9.png>
 Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 148.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -483,19 +476,12 @@ File: figure/fig8-fig12/fig10.png Graphic file (type png)
 Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 290.
 (pdftex.def)             Requested size: 232.19843pt x 100.65155pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <figure/fig8-fig12/fig11.png, id=50, 243.309pt x 109.8504pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
 Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 297.
 (pdftex.def)             Requested size: 232.19843pt x 104.83833pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 304--305
 []\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
@@ -563,11 +549,11 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  5090 strings out of 493323
  72921 string characters out of 3146850
- 210537 words of memory out of 3000000
+ 208537 words of memory out of 3000000
  8516 multiletter control sequences out of 15000+200000
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,58p,1926b,1339s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,58p,1926b,1368s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
 1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
 0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
@@ -581,7 +567,7 @@ c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
 ex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pf
 b><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 350842 bytes).
+Output written on bare_conf.pdf (11 pages, 351670 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
