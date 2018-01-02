@@ -1,16 +1,16 @@
 %!TEX root=bare_conf.tex
 \section{Approach}\label{sec:approach}
-Similar to the CFG based static analysis, our approach also first constructs a detection model of C program, where memory leak may happen. The main difference of our approach is that, we perform projection in constructing the detection model, which simplifies the later memory leak detection procedure based on the model.
+Similar to the CFG based static analysis, this paper also first constructs a detection model of C program, where memory leak may happen. The main difference of our approach is that, our approach performs projection in constructing the detection model, which simplifies the later memory leak detection procedure based on the model.
 
 \subsection{Projection Algorithm}
 
-This section describes a set of rules and an algorithm for projecting a control flow graph to a simply one. First of all, we introduce several concepts. These are going to be used in the projection rules.
+This section describes a set of rules and an algorithm for projecting a control flow graph to a simply one. First of all, this paper introduces several concepts. These are going to be used in the projection rules.
 
 %\begin{definition}[Projection Subject]
 %Projection subject is the control flow graph of the program to be analyzed, which is a directed graph $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. 
 %\end{definition}
 
-$Projection Subject$ is the input of the projection process and $Projection Target$ is the output of the projection process. Specifically, $Projection Subject$($G$) is the control flow graph of the program to be analyzed. $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. $Projection Target$($G^*$ ) is a directed graph that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
+Projection Subject is the input of the projection process and Projection Target is the output of the projection process. Specifically, Projection Subject($G$) is the control flow graph of the program to be analyzed. $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. Projection Target($G^*$) is a directed graph that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
 
 %\begin{definition}[Projection Target]
 %Projection target is a directed graph $G^*$ that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
@@ -28,7 +28,7 @@ $\forall$ $n\in B$ in directed graph $G^*$, if $\forall m\in M: m\not\in \Gamma(
 \end{itemize}
 \end{definition}
 
-In general, the \emph{Control Flow Graph Projection} is the process from the \emph{Projection Subject} transforming into the \emph{Projection Target} according to the following rules, we summarize the projection rules as follows: 
+In general, the Control Flow Graph Projection is the process from the Projection Subject transforming into the Projection Target according to the following rules, we summarize the projection rules as follows: 
 \begin{itemize}
 \item 
 Rule 1: The set $N^*$ of the projection graph only contains nodes related to memory allocation and deallocation, and all the control flow branch nodes in the procedure $P$.
@@ -120,12 +120,12 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 %\textbf{End}
 \end{algorithm}
 
-The projection algorithm is acceptable in the aspect of complexity. In this algorithm, we assume that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
+The projection algorithm is acceptable in the aspect of complexity. In this algorithm, this paper assumes that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
 
 \subsection{Detection Method}
 
 %$G^* \mapsto G$, and $G^*$ is the projection graph of the control flow graph $G$, and there are two definitions on $G^*$.
-Given a graph $G^*=(N^*, E^*)$, we define the direct predecessor of a node as follows:
+Given a graph $G^*=(N^*, E^*)$, this paper defines the direct predecessor of a node as follows:
 
 \begin{definition}{Direct Predecessor Node}
 For two nodes $m$, $n$ ($m, n\in N^*$), if $m$ is the first open node among all the predecessor nodes of node $n$ (i.e., $Η(n)$), then $m$ is called the direct predecessor node of $n$.
@@ -206,5 +206,5 @@ Symbolic execution simulates the execution of programs by symbolizing variables.
 %\caption{Framework flowchart for PML\_Checker}\label{fig:18}
 %\end{figure}
 
-The input data of PML\_Checker is C language source code. After lexical analysis and syntax analysis, Abstract syntax tree generates the original control flow graph, which will be output to the system interface. Next, data flow analysis and symbolic execution extend the original CFG, constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG wil be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and displays the test results. 
+The input data of PML\_Checker is C language source code. After lexical analysis and syntax analysis, abstract syntax tree generates the original control flow graph, which will be output to the system interface. Next, data flow analysis and symbolic execution extend the original CFG, constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG wil be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and displays the test results. 
 

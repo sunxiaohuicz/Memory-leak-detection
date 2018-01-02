@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  29 DEC 2017 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  2 JAN 2018 15:41
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -352,35 +352,45 @@ LaTeX Warning: No \author given.
 
 LaTeX Warning: No \author given.
 
+
+Underfull \hbox (badness 2529) in paragraph at lines 115--116
+[]\OT1/ptm/b/n/9 This pa-per im-ple-ments a mem-ory leak de-tec-tion tool
+ []
+
 (introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[][][]\OT1/ptm/m/n/8 Report of the In-quiry Into The Lon-don Amu-lance Ser-vice
+.
+ []
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-)
-(description.tex [2]
-<figure/fig1-fig4/fig1.png, id=17, 545.78906pt x 292.09125pt>
+) (description.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<figure/fig1-fig4/fig1.png, id=16, 545.78906pt x 292.09125pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
 Package pdftex.def Info: figure/fig1-fig4/fig1.png used on input line 40.
 (pdftex.def)             Requested size: 232.19843pt x 124.26414pt.
 
-<figure/fig1-fig4/fig2.png, id=18, 636.87938pt x 94.10156pt>
+<figure/fig1-fig4/fig2.png, id=17, 636.87938pt x 94.10156pt>
 File: figure/fig1-fig4/fig2.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig2.png>
 Package pdftex.def Info: figure/fig1-fig4/fig2.png used on input line 47.
 (pdftex.def)             Requested size: 232.19843pt x 34.30728pt.
 ) (approach.tex
-Underfull \vbox (badness 1831) has occurred while \output is active []
-
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 20.
 
 (E:\MikTex\tex\latex\psnfss\ot1phv.fd
@@ -414,9 +424,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--121
 
  []
 
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Î in font cmr10!
 Missing character: There is no — in font cmr10!
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 139--169
 
  []
@@ -434,7 +445,11 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
- [5]) (experiments.tex
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]) (experiments.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -456,11 +471,7 @@ File: figure/fig8-fig12/fig9.png Graphic file (type png)
 <use figure/fig8-fig12/fig9.png>
 Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 148.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
+ [7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 264.
 
@@ -476,12 +487,19 @@ File: figure/fig8-fig12/fig10.png Graphic file (type png)
 Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 290.
 (pdftex.def)             Requested size: 232.19843pt x 100.65155pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <figure/fig8-fig12/fig11.png, id=50, 243.309pt x 109.8504pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
 Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 297.
 (pdftex.def)             Requested size: 232.19843pt x 104.83833pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 304--305
 []\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
@@ -491,9 +509,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--305
 Underfull \hbox (badness 1990) in paragraph at lines 304--305
 \OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
 <figure/fig8-fig12/fig12.png, id=58, 240.4182pt x 96.36pt>
@@ -545,29 +560,32 @@ Before submitting the final camera ready copy, remember to:
 
 [11
 
-] (bare_conf.aux) ) 
+] (bare_conf.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  5090 strings out of 493323
  72921 string characters out of 3146850
- 208537 words of memory out of 3000000
+ 202537 words of memory out of 3000000
  8516 multiletter control sequences out of 15000+200000
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,58p,1926b,1368s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
-public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
-:/MikTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public
-/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikT
-ex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pf
-b><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 351670 bytes).
+ 39i,10n,58p,1981b,1368s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti
+10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/ur
+w/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/font
+s/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (11 pages, 351251 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -3,20 +3,20 @@
 
 To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
 %we experimentally compare our approach and existing approaches for memory leak static analysis. We 
-we compared our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. 
+this paper compares our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. 
 
-In general, we investigate the following research questions in our experiments:
+In general, this paper investigates the following research questions in the following experiments:
 \begin{description}
 \item[RQ1:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex control flows? 
 \item[RQ2:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex data types? 
 \item[RQ3:] How does our approach perform compared with existing approaches under the public benchmarks in terms of accuracy and run time analysis? 
 \end{description}
 
-\subsection{Setup}
-In the rest of this section, we present detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
+\subsection{Experimental Setup}
+In the rest of this section, this paper presents detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
 
 \subsubsection{Test Subjects}\label{ssec:ts}
-For the sake of fairness, in the results of our experiments, we considered the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, we adopt all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. We present on a number of small programs with memory leaks that have different complex control flows and complex data types. (The relevant test code can be accessed in footnote 1).
+For the sake of fairness, in the results of our experiments, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, this experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. This paper presents on a number of small programs with memory leaks that have different complex control flows and complex data types. (Relevant test code can be accessed in footnote 1).
 \subsubsection{Selected Approaches}\label{ssec:ca}
 Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
 %
@@ -40,7 +40,7 @@ A4 & pro-grap &	CFG projection &	PML\_Checker\\
 %
 Regular matching and style, notation based detection are common approaches adopt in source code static detection. Both CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.} and Splint\footnote{Splint. http://www.splint.org/. 2010.} are open source static detection tools used in Windows operating system. Apart from this, both tools can detect memory leaks in C programming language. In details, Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes.
  
-RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. We compare our tool PML\_Checker which implements the presented approach with the above tools.
+RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
 
 \subsubsection{Parameters and Metrics}\label{ssec:pm}
 There are some parameters and metrics used in our experiments for evaluation.
@@ -259,7 +259,7 @@ Total	 & 267.9	 & 21&4	   & 37  & 11 & 13 & 1   & 34  & 6\\
 \end{table}
 First, in the view of \textit{TW} from Table~\ref{tab:4} and Table~\ref{tab:5}, Splint reported most bugs, and PML\_Checker ranked second, while CppCheck reported the least bugs. However, in the view of \textit{FP}, the \textit{FPR} of Splint is the highest, and the \textit{FPR} of the other three tools are acceptable.
 
-Second, we analyzed the effectiveness of the CFG projection approach by comparing the MLF of test results. The table of test  results is converted into MLF of test results by constructing a matrix. The results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. We compress this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results, the final matrix $D_1$ is as follows.
+Second, this paper analyzes the effectiveness of the CFG projection approach by comparing the MLF of test results. The table of test  results is converted into MLF of test results by constructing a matrix. The results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. This paper compress this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results, the final matrix $D_1$ is as follows.
 \[
 \scriptsize
 D_1=\left[
@@ -301,7 +301,7 @@ D_2=\left[
 
 In Fig.~\ref{fig:10}, the abscissa shows the name of the program corresponding to each row in the matrix, the ordinate shows the value of corresponding MLF. This figure displays the number of memory leaks confirmed by manually checking, among the test results on the $15$ programs from SPEC CPU $2000$. We conclude from the figure that the CFG projection has a good detection result on all the test sets except gcc, for the reasons that the program gcc is larger than others in scale. Therefore, we deduce that the scalability of the CFG projection approach for large scale test objects needs to be improved. While in Fig.~\ref{fig:11}, due to the smaller amount of loc(line of code) comparing to SPEC CPU 2000 and fewer \textit{TW} of each tool, the advantage of PML\_Checker is not obvious. But the analysis results between the two benchmarks are generally consistent.
 
-Third, considering symbolic method are used in A1(CppCheck), A3(RL\_Detector) and A4(PML\_Checker), meanwhile, in order to verify whether our approach to influence the running time, so we chose SPEC CPU 2000 as the test object due to its large amount of code and large number of files, compared and analyzed run time of the three tools.  Table~\ref{tab:6} lists the run time on this benchmark. Comparing the run time of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in run time, and our approach did not affect the run time of PML\_Checker.
+Third, considering symbolic method are used in A1(CppCheck), A3(RL\_Detector) and A4(PML\_Checker), meanwhile, in order to verify whether our approach to influence the running time, so this section chooses SPEC CPU 2000 as the test object due to its large amount of code and large number of files, compared and analyzed run time of the three tools.  Table~\ref{tab:6} lists the run time on this benchmark. Comparing the run time of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in run time, and our approach did not affect the run time of PML\_Checker.
 
 \begin{table}[!h]
 \center
@@ -386,5 +386,5 @@ For the complex control flows and complex data types analysis, our projection-ba
 \item 
 For the accuracy of detection, our projection-based approach shows a lower false negative rate compared to other tools, while it shows a high false positive rate in some public benchmarks (such as SPEC CPU $2000$ and SIR). Therefore, in the next step, more detailed data flow analysis will be added into our approach.
 \item 
-For the scalability of detection, our experiment needs to expand the range of detection. Specifically, we will detect the large scale benchmarks with millions of code lines, or source code from some open source software.
+For the scalability of detection, our experiment needs to expand the range of detection. Specifically, our system will detect the large scale benchmarks with millions of code lines, or source code from some open source software.
 \end{itemize}
