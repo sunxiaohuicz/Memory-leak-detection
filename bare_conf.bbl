@@ -21,42 +21,33 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{F93}
-A.~Finkelstein, ``Report of the inquiry into the london amulance service.
-  section 4039,'' 1993, available at
-  http://www0.cs.ucl.ac.uk/staff/A.Finkelstein/las/lascase0.9.pdf, accessed at
-  16 June 2017.
-
 \bibitem{AJ06}
 A.~Aggarwal and P.~Jalote, ``Integrating static and dynamic analysis for
   detecting vulnerabilities,'' in \emph{Proc.\ 30th Annual International
-  Computer Software and Applications Conference - {COMPSAC}. Volume 1}.\hskip
-  1em plus 0.5em minus 0.4em\relax {IEEE} Computer Society, 2006, pp. 343--350.
+  Computer Software and Applications Conference - {COMPSAC}}, 2006, pp.
+  343--350.
 
 \bibitem{KJMP06}
 H.~Kim, J.~A. Joao, O.~Mutlu, and Y.~N. Patt, ``Diverge-merge processor
   {(DMP):} dynamic predicated execution of complex control-flow graphs based on
   frequently executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM}
-  International Symposium on Microarchitecture - {(MICRO-39} 2006)}.
+  International Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
 
 \bibitem{SYX12}
 Y.~Sui, D.~Ye, and J.~Xue, ``Static memory leak detection using full-sparse
   value-flow analysis,'' in \emph{Proc.\ International Symposium on Software
-  Testing and Analysis - {ISSTA}}.\hskip 1em plus 0.5em minus 0.4em\relax
-  {ACM}, 2012, pp. 254--264.
+  Testing and Analysis - {ISSTA}}, 2012, pp. 254--264.
 
 \bibitem{XA05}
 Y.~Xie and A.~Aiken, ``Context- and path-sensitive memory leak detection,'' in
   \emph{Proc.\ 10th European Software Engineering Conference held jointly with
   13th {ACM} {SIGSOFT} International Symposium on Foundations of Software
-  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax {ACM}, 2005, pp.
-  115--125.
+  Engineering}, 2005, pp. 115--125.
 
-\bibitem{H87}
-L.~Hou, ``A general method for the program static analysis,'' \emph{Chinese
-  Journal of Computer}, vol. 1987, no.~2, pp. 74--81, 1987,
-  http://www.ixueshu.com/document/090dd8f1c9612084318947a18e7f93\\86.html,
-  accessed at 25 June 2017.
+\bibitem{ZW01}
+J.~Zhang and X.~Wang, ``A constraint solver and its application to path
+  feasibility analysis,'' \emph{International Journal of Software Engineering
+  and Knowledge Engineering}, no.~2, pp. 139--156, 2001.
 
 \bibitem{OR06}
 M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
@@ -67,17 +58,24 @@ M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
 D.~Evans and D.~Larochelle, ``Improving security using extensible lightweight
   static analysis,'' \emph{IEEE Software}, vol.~19, no.~1, pp. 42--51, 2002.
 
-\bibitem{YZ04}
-Y.~Yang and J.~Zhang, ``Static program analysis techniques and tools,''
-  \emph{Computer Science}, vol.~31, no.~2, pp. 171--174, 2004,
-  http://www.cqvip.com/qk/92817x/200402/9323003.html, accessed at 25 June 2017.
+\bibitem{XZX11}
+Z.~Xu, J.~Zhang, and Z.~Xu, ``Memory leak detection based on memory state
+  transition graph,'' in \emph{Proc.\ Asia-Pacific Software Engineering
+  Conference - {APSEC}}, 2011, pp. 33--40.
 
-\bibitem{SJP05}
-V.~Swarup, S.~Jajodia, and J.~Pamula, ``Rule-based topological vulnerability
-  analysis,'' in \emph{Proc.\ 3rd International Workshop on Mathematical
-  Methods, Models, and Architectures for Computer Network Security -
-  {MMM-ACNS}}, ser. LNCS, vol. 3685.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2005, pp. 23--37.
+\bibitem{XZX15}
+------, ``Melton: a practical and precise memory leak detection tool for c
+  programs,'' \emph{Frontiers of Computer Science}, no.~1, pp. 34--54, 2015.
+
+\bibitem{HL06}
+D.~L. Heine and M.~S. Lam, ``Static detection of leaks in polymorphic
+  containers,'' in \emph{Proc.\ International Conference on Software
+  Engineering - {ICSE}}, 2006, pp. 252--261.
+
+\bibitem{DWC12}
+L.~Dong, J.~Wang, and L.~Chen, ``Modular heap abstraction-based memory leak
+  detection for heap-manipulating programs,'' in \emph{Proc.\ 19th Asia-Pacific
+  Software Engineering Conference - {APSEC}}, 2012, pp. 20--29.
 
 \bibitem{BPS00}
 W.~R. Bush, J.~D. Pincus, and D.~J. Sielaff, ``A static analyzer for finding
@@ -91,33 +89,42 @@ X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
   http://cdmd.cnki.com.cn/Article/CDMD-10055-1015528928.htm, accessed at 25
   June 2017.
 
+\bibitem{YZ04}
+Y.~Yang and J.~Zhang, ``Static program analysis techniques and tools,''
+  \emph{Computer Science}, vol.~31, no.~2, pp. 171--174, 2004,
+  http://www.cqvip.com/qk/92817x/200402/9323003.html, accessed at 25 June 2017.
+
+\bibitem{KFM13}
+H.~F. Jan C.~Kleinsorge and P.~Marwedel, ``Simple analysis of partial
+  worst-case execution paths on general control flow graphs,'' in \emph{Proc.\
+  ACM International Conference on Embedded Software - {EMSOFT}}.
+
+\bibitem{LLQ16}
+Y.~L. Xin~Li and H.~Q. etc., ``Symbolic execution of complex program driven by
+  machine learning based constraint solving,'' in \emph{Proc.\ Conference on
+  Automated Software Engineering - {ASE}}, 2016, pp. 554--559.
+
+\bibitem{MGDD14}
+K.~D. Jagadiswar~Mohapatra, Soumyajit~Gid and S.~K. Das, ``Slicing complex c++
+  program dynamically,'' in \emph{Proc.\ International Conference on Advanced
+  Communication Control and Computing Teclmologies - {ICACCCT}}, 2014, pp.
+  1765--1770.
+
 \bibitem{KK12}
 B.~Katzmarski and R.~Koschke, ``Program complexity metrics and programmer
   opinions,'' in \emph{Proc.\ 20th International Conference on Program
   Comprehension - {ICPC}}, 2012, pp. 17--26.
 
-\bibitem{KK16}
-V.~Kanvar and U.~P. Khedker, ``Heap abstractions for static analysis,''
-  \emph{{ACM} Comput. Surv.}, vol.~49, no.~2, pp. 29:1--29:47, 2016.
+\bibitem{DG14}
+D.~Dai and L.~V. Gool, ``Ensemble projection for semi-supervised image
+  classification,'' in \emph{Proc.\ International Conference on Computer Vision
+  - {ICCV}}, 2014, pp. 2072--2079.
 
-\bibitem{WJG14}
-Q.~Wang, D.~Jin, and Y.~Gong, ``A memory model based on three-valued matrix for
-  static defect detection,'' in \emph{Proc.\ 25th {IEEE} International
-  Symposium on Software Reliability Engineering Workshops - {ISSRE}}.\hskip 1em
-  plus 0.5em minus 0.4em\relax {IEEE} Computer Society, 2014, pp. 251--256.
-
-\bibitem{MFS12}
-F.~Merz, S.~Falke, and C.~Sinz, ``{LLBMC:} bounded model checking of {C} and
-  {C++} programs using a compiler {IR},'' in \emph{Proc.\ 4th International
-  Conference on Verified Software: Theories, Tools, Experiments - {VSTTE}},
-  ser. LNCS, vol. 7152.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2012,
-  pp. 146--161.
-
-\bibitem{W05}
-A.~D. Wilson, ``Playanywhere: a compact interactive tabletop projection-vision
-  system,'' in \emph{Proc.\ 18th Annual {ACM} Symposium on User Interface
-  Software and Technology - {UIST}}.\hskip 1em plus 0.5em minus 0.4em\relax
-  {ACM}, 83-92, p. 2005.
+\bibitem{HWS15}
+R.~W. Zhiwu~Huang and S.~Shan, ``Projection metric learning on grassmann
+  manifold with application to video based face recognition,'' in \emph{Proc.\
+  Conference on Computer Vision and Pattern Recognition - {CVPR}}, 2015, pp.
+  140--149.
 
 \bibitem{NL10}
 D.~J. Nott and C.~Leng, ``Bayesian projection approaches to variable selection

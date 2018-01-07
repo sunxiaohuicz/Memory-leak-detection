@@ -1,10 +1,22 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Database file #1: Mdetection.bib
+Repeated entry---line 374 of file Mdetection.bib
+ : @inproceedings{SYX12
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 393 of file Mdetection.bib
+ : @inproceedings{LLQ16
+ :                     ,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 413 of file Mdetection.bib
+ :   article 
+ :           No.= {16},
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty year in KJMP06
+Warning--empty year in KFM13
 
 Done.
-(There was 1 warning)
+(There were 3 error messages)
