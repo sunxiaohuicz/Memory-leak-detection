@@ -89,11 +89,6 @@ X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
   http://cdmd.cnki.com.cn/Article/CDMD-10055-1015528928.htm, accessed at 25
   June 2017.
 
-\bibitem{YZ04}
-Y.~Yang and J.~Zhang, ``Static program analysis techniques and tools,''
-  \emph{Computer Science}, vol.~31, no.~2, pp. 171--174, 2004,
-  http://www.cqvip.com/qk/92817x/200402/9323003.html, accessed at 25 June 2017.
-
 \bibitem{KFM13}
 H.~F. Jan C.~Kleinsorge and P.~Marwedel, ``Simple analysis of partial
   worst-case execution paths on general control flow graphs,'' in \emph{Proc.\
