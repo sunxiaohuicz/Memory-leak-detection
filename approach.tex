@@ -42,14 +42,14 @@ If the node $n\in N^*$, $n\in \Gamma(n)$, then the node $n$ is a closed node.
 
 % that is, the degree of the branch node plus one.
 
-Fig.~\ref{fig:3} shows the CFG (G) of a piece of code. In this graph, there are $11$ elements forms set $N$, that is, $N = \{S_0, S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_{10}\}$. The memory block is allocated in $S_1$ ($S_1\in A$) and freed in $S_9$ ($S_9\in F$); $S_3$ is a looping branch node and $S_6$ is a conditional branch node ($B=\{S_3, S_6\}$); In node $S_7$, another pointer points to the memory block ($S_7\in A$); Others are unrelated to memory operation. Thus the cyclomatic complexity of this graph is $4$.
+Fig.~\ref{figure3} shows the CFG (G) of a piece of code. In this graph, there are $11$ elements forms set $N$, that is, $N = \{S_0, S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_{10}\}$. The memory block is allocated in $S_1$ ($S_1\in A$) and freed in $S_9$ ($S_9\in F$); $S_3$ is a looping branch node and $S_6$ is a conditional branch node ($B=\{S_3, S_6\}$); In node $S_7$, another pointer points to the memory block ($S_7\in A$); Others are unrelated to memory operation. Thus the cyclomatic complexity of this graph is $4$.
 Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projection Rule 2, we have $N*=A\cup B\cup F=\{S_1, S_3, S_6, S_7, S_9\}$. Following Rule $2$, we have the edges from $S_1$ to $S_3$, $S_3$ to $S_6$, $S_6$ to $S_7$ and $S_7$ to $S_9$. Following Rule $3$, $S_3$ is a closed node since all its direct successor nodes are not memory related nodes, thus we add a loop to $S_3$. There is no loop at $S_6$, because the direct successor $s_7$ is a memory related node.  
 
 \begin{figure}[!h]
 \center
 \includegraphics[width=0.5\textwidth]{figure/fig1-fig4/fig_3}
 \caption{The CFG of the program (G)}
-\label{fig:3}
+\label{figure3}
 \end{figure}
 
 \begin{figure}[!h]
@@ -108,11 +108,11 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 3.\quad	\textbf{while} $\mathit{Red\_Black\_Tree}$.hasNext \textbf{do}\\
 %4.\quad	\textbf{do}\\
 4.\quad	\textbf{if} $n.ind\geq 2 || n.outd\geq 2$ \textbf{then}\\
-5.\quad \quad    \textbf{if} $A.a\in \Gamma(n) || F.f\in \Gamma(n)$\\
-6.\quad \quad	    \textbf{then} $\Gamma(n)\leftarrow A.a || \Gamma(n)\leftarrow F.f$\\
-7.\quad	\textbf{else} \\
-8.\quad \quad   \textbf{then} $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$\\
-9.\quad\textbf{end}\\
+5.\quad \quad    \textbf{if} $A.a\in \Gamma(n) || F.f\in \Gamma(n)$ \textbf{then}\\
+6.\quad \quad	   $\Gamma(n)\leftarrow A.a || \Gamma(n)\leftarrow F.f$.\\
+7.\quad	\textbf{else then} \\
+8.\quad \quad  $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$.\\
+9.\quad\textbf{end while}\\
 %Step3: (Adjust the $\mathit{Red\_Black\_Tree}(N^*)$ and the $\mathit{Map}(N^*)$, and obtain the final projection graph $G^*$)\\
 10.\quad	Delete all $n$ that are not in $N^*$.\\
 11.\quad	$\mathit{Red\_Black\_Tree(N)} \leftarrow \mathit{Red\_Black\_Tree}(N^*)$.\\
@@ -141,30 +141,30 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 %\textbf{Begin}\\
 1.\ \	Declare a $\mathit{stack}$ to be detected.\\
 2.\ \ 	Declare node $\mathit{base}$ and node $\mathit{current}$ for traverse.\\
-3.\ \       \textbf{bool} $\mathit{MemLeak\_Check}$(Tree $\mathit{Red\_Black\_Tree}$, Set $\mathit{Map}$)\\
+3.\ \        $\mathit{Check\_MemLeak}$(Tree $\mathit{Red\_Black\_Tree}$, Set $\mathit{Map}$)\\
 4.\ \ 	\textbf{while} $\mathit{Red\_Black\_Tree}$.hasNext \textbf{do} \\
 %5.\ \ 	\textbf{do begin}\\
-5.\ \ \quad	    $\mathit{base} \leftarrow$ null.\\
-6.\ \quad	    $\mathit{current} = \mathit{Red\_Black\_Tree}$.$\mathit{current\_Ele}$\\
+5.\ \quad	   set $\mathit{base} =$ null.\\
+6.\ \quad	   set $\mathit{current} = \mathit{Red\_Black\_Tree}$.$\mathit{current\_Ele}$\\
 7.\ \ \quad	    \textbf{if} $\mathit{base}$ == null \textbf{then}\\
 8.\ \ \quad\quad	        \textbf{if} $\mathit{current}$ != $A$ \&\& $\mathit{current}$ != $F$ \textbf{then}\\
-9.\ \ \quad\quad\quad	            \textbf{continue}\\
+9.\ \ \quad\quad\quad	            \textbf{continue}.\\
 10.\ \ \quad\quad	        \textbf{else then}\\
-11.\ \ \quad\quad\quad	            $\mathit{base} \leftarrow \mathit{current}$\\
-12.\ \ \quad\quad\quad	            $\mathit{stack}$.push($\mathit{base}$)\\
+11.\ \ \quad\quad\quad	            $\mathit{base} \leftarrow \mathit{current}$.\\
+12.\ \ \quad\quad\quad	            $\mathit{stack}$.push($\mathit{base}$).\\
 13.\ \ \quad	    \textbf{else then}\\
 14.\ \ \quad\quad       \textbf{if} $\mathit{current}\in B$ \textbf{then}\\
 15.\ \ \quad\quad\quad            \textbf{if} $B.ind<2 || B.outd<2$ \textbf{then}\\
-16.\ \ \quad\quad\quad\quad	                \textbf{return} $\mathit{false}$\\
+16.\ \ \quad\quad\quad\quad	                \textbf{return} $\mathit{false}$.\\
 17.\ \ \quad\quad\quad        \textbf{else if} $\mathit{current} == \mathit{base}$ \textbf{then}\\
-18.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.push($\mathit{current}$);\\
+18.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.push($\mathit{current}$).\\
 19.\ \ \quad\quad\quad	        \textbf{else if} $\mathit{current}$ != $\mathit{base}$ \textbf{then}\\
-20.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.pop()\\
-21.\ \ 	\textbf{end}\\
+20.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.pop().\\
+21.\ \ 	\textbf{end while}\\
 22.\ \ 	\textbf{if} $\mathit{stack}$ != null \textbf{then}\\
-23.\ \ \quad    \textbf{return} $\mathit{false}$\\
+23.\ \ \quad    \textbf{return} $\mathit{false}$.\\
 24.\ \ 	\textbf{else then}\\
-25.\ \ \quad	    \textbf{return} $\mathit{true}$\\
+25.\ \ \quad	    \textbf{return} $\mathit{true}$.\\
 %\textbf{End}
 \end{algorithm}
 
