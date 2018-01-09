@@ -33,6 +33,11 @@ H.~Kim, J.~A. Joao, O.~Mutlu, and Y.~N. Patt, ``Diverge-merge processor
   frequently executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM}
   International Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
 
+\bibitem{LCW13}
+M.~Li, Y.~Chen, L.~Wang, and G.~H. Xu, ``Dynamically validating static memory
+  leak warnings,'' in \emph{Proc.\ International Symposium on Software Testing
+  and Analysis, {ISSTA}}, 2013, pp. 112--122.
+
 \bibitem{SYX12}
 Y.~Sui, D.~Ye, and J.~Xue, ``Static memory leak detection using full-sparse
   value-flow analysis,'' in \emph{Proc.\ International Symposium on Software
@@ -90,18 +95,18 @@ X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
   June 2017.
 
 \bibitem{KFM13}
-H.~F. Jan C.~Kleinsorge and P.~Marwedel, ``Simple analysis of partial
+J.~C. Kleinsorge, H.~Falk, and P.~Marwedel, ``Simple analysis of partial
   worst-case execution paths on general control flow graphs,'' in \emph{Proc.\
   ACM International Conference on Embedded Software - {EMSOFT}}.
 
 \bibitem{LLQ16}
-Y.~L. Xin~Li and H.~Q. etc., ``Symbolic execution of complex program driven by
-  machine learning based constraint solving,'' in \emph{Proc.\ Conference on
+X.~Li, Y.~Liang, and H.~Q. etc., ``Symbolic execution of complex program driven
+  by machine learning based constraint solving,'' in \emph{Proc.\ Conference on
   Automated Software Engineering - {ASE}}, 2016, pp. 554--559.
 
 \bibitem{MGDD14}
-K.~D. Jagadiswar~Mohapatra, Soumyajit~Gid and S.~K. Das, ``Slicing complex c++
-  program dynamically,'' in \emph{Proc.\ International Conference on Advanced
+J.~Mohapatra, S.~Gid, K.~Debasis, and S.~K. Das, ``Slicing complex c++ program
+  dynamically,'' in \emph{Proc.\ International Conference on Advanced
   Communication Control and Computing Teclmologies - {ICACCCT}}, 2014, pp.
   1765--1770.
 
@@ -116,7 +121,7 @@ D.~Dai and L.~V. Gool, ``Ensemble projection for semi-supervised image
   - {ICCV}}, 2014, pp. 2072--2079.
 
 \bibitem{HWS15}
-R.~W. Zhiwu~Huang and S.~Shan, ``Projection metric learning on grassmann
+Z.~Huang, R.~Wang, and S.~Shan, ``Projection metric learning on grassmann
   manifold with application to video based face recognition,'' in \emph{Proc.\
   Conference on Computer Vision and Pattern Recognition - {CVPR}}, 2015, pp.
   140--149.

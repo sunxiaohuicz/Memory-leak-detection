@@ -99,23 +99,23 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 \textbf{Output:} Projection graph $G^*$ for the input control flow graph\\
 %\textbf{Begin}\\
 %Step1: (According to the execution order of statements, establish the min-heap of $N$)\\
-1.\quad	Initialize the Red Black Tree $\mathit{Red\_Black\_Tree}(N)$.\\
+1.\quad	Initialize the Red Black Tree $\mathit{RBT}(N)$.\\
 %2.\quad	\textbf{init} $\mathit{Red\_Black\_Tree}(N)$;\\
 %3.\quad	\textbf{create} $\mathit{Red\_Black\_Tree}(N)$;\\
 %2.\quad	$\forall n\in N, \mathit{Map}(n)\leftarrow(n,\Gamma(n))$;\\
 2.\quad	For all $n$ from $N$, add $n$ and $\Gamma(n)$ to $\mathit{Map}(n)$.\\
 %Step2: (Fold paths)\\
-3.\quad	\textbf{while} $\mathit{Red\_Black\_Tree}$.hasNext \textbf{do}\\
+3.\quad	\textbf{while} $\mathit{RBT}$ has next element \textbf{do}\\
 %4.\quad	\textbf{do}\\
-4.\quad	\textbf{if} $n.ind\geq 2 || n.outd\geq 2$ \textbf{then}\\
-5.\quad \quad    \textbf{if} $A.a\in \Gamma(n) || F.f\in \Gamma(n)$ \textbf{then}\\
-6.\quad \quad	   $\Gamma(n)\leftarrow A.a || \Gamma(n)\leftarrow F.f$.\\
-7.\quad	\textbf{else then} \\
-8.\quad \quad  $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$.\\
+4.\quad	\quad \textbf{if} $n.ind\geq 2 || n.outd\geq 2$ \textbf{then}\\
+5.\quad \quad \quad    \textbf{if} $a\in \Gamma(n) || f\in \Gamma(n)$ \textbf{then}\\
+6.\quad \quad \quad \quad	   $\Gamma(n)\leftarrow a || \Gamma(n)\leftarrow f$.\\
+7.\quad \quad \textbf{else then} \\
+8.\quad \quad \quad  $\Gamma(n)\leftarrow (n\cup \Gamma(n)\cap N^*)$.\\
 9.\quad\textbf{end while}\\
 %Step3: (Adjust the $\mathit{Red\_Black\_Tree}(N^*)$ and the $\mathit{Map}(N^*)$, and obtain the final projection graph $G^*$)\\
 10.\quad	Delete all $n$ that are not in $N^*$.\\
-11.\quad	$\mathit{Red\_Black\_Tree(N)} \leftarrow \mathit{Red\_Black\_Tree}(N^*)$.\\
+11.\quad	$\mathit{RBT(N)} \leftarrow \mathit{RBT}(N^*)$.\\
 12.\quad	$\mathit{Map}(N) \leftarrow \mathit{Map}(N^*)$.\\
 %\textbf{End}
 \end{algorithm}
@@ -141,25 +141,25 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 %\textbf{Begin}\\
 1.\ \	Declare a $\mathit{stack}$ to be detected.\\
 2.\ \ 	Declare node $\mathit{base}$ and node $\mathit{current}$ for traverse.\\
-3.\ \        $\mathit{Check\_MemLeak}$(Tree $\mathit{Red\_Black\_Tree}$, Set $\mathit{Map}$)\\
-4.\ \ 	\textbf{while} $\mathit{Red\_Black\_Tree}$.hasNext \textbf{do} \\
+3.\ \        $\mathit{Check\_MemLeak}$(Tree $\mathit{RBT}$, Set $\mathit{Map}$)\\
+4.\ \ 	\textbf{while} $\mathit{RBT}$ has next element \textbf{do} \\
 %5.\ \ 	\textbf{do begin}\\
-5.\ \quad	   set $\mathit{base} =$ null.\\
-6.\ \quad	   set $\mathit{current} = \mathit{Red\_Black\_Tree}$.$\mathit{current\_Ele}$\\
+5.\ \ \quad	   set $\mathit{base} =$ null.\\
+6.\ \ \quad	   set $\mathit{current}$ = the current element of $\mathit{RBT}$.\\
 7.\ \ \quad	    \textbf{if} $\mathit{base}$ == null \textbf{then}\\
-8.\ \ \quad\quad	        \textbf{if} $\mathit{current}$ != $A$ \&\& $\mathit{current}$ != $F$ \textbf{then}\\
-9.\ \ \quad\quad\quad	            \textbf{continue}.\\
+8.\ \ \quad \quad	        \textbf{if} $\mathit{current}$ != $A$ \&\& $\mathit{current}$ != $F$ \textbf{then}\\
+9.\ \ \quad \quad \quad	            \textbf{continue}.\\
 10.\ \ \quad\quad	        \textbf{else then}\\
-11.\ \ \quad\quad\quad	            $\mathit{base} \leftarrow \mathit{current}$.\\
-12.\ \ \quad\quad\quad	            $\mathit{stack}$.push($\mathit{base}$).\\
+11.\ \ \quad\quad \quad	            $\mathit{base} \leftarrow \mathit{current}$.\\
+12.\ \ \quad\quad \quad	            $\mathit{stack}$.push($\mathit{base}$).\\
 13.\ \ \quad	    \textbf{else then}\\
-14.\ \ \quad\quad       \textbf{if} $\mathit{current}\in B$ \textbf{then}\\
-15.\ \ \quad\quad\quad            \textbf{if} $B.ind<2 || B.outd<2$ \textbf{then}\\
-16.\ \ \quad\quad\quad\quad	                \textbf{return} $\mathit{false}$.\\
-17.\ \ \quad\quad\quad        \textbf{else if} $\mathit{current} == \mathit{base}$ \textbf{then}\\
-18.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.push($\mathit{current}$).\\
-19.\ \ \quad\quad\quad	        \textbf{else if} $\mathit{current}$ != $\mathit{base}$ \textbf{then}\\
-20.\ \ \quad\quad\quad\quad	            $\mathit{stack}$.pop().\\
+14.\ \ \quad \quad       \textbf{if} $\mathit{current}\in B$ \textbf{then}\\
+15.\ \ \quad \quad \quad            \textbf{if} $B.ind<2 || B.outd<2$ \textbf{then}\\
+16.\ \ \quad \quad \quad \quad	                \textbf{return} $\mathit{false}$.\\
+17.\ \ \quad \quad \quad        \textbf{else if} $\mathit{current} == \mathit{base}$ \textbf{then}\\
+18.\ \ \quad \quad \quad \quad	            $\mathit{stack}$.push($\mathit{current}$).\\
+19.\ \ \quad \quad \quad	        \textbf{else if} $\mathit{current}$ != $\mathit{base}$ \textbf{then}\\
+20.\ \ \quad \quad \quad \quad	            $\mathit{stack}$.pop().\\
 21.\ \ 	\textbf{end while}\\
 22.\ \ 	\textbf{if} $\mathit{stack}$ != null \textbf{then}\\
 23.\ \ \quad    \textbf{return} $\mathit{false}$.\\

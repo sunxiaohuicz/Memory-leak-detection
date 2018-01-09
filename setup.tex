@@ -1,0 +1,43 @@
+%!TEX root=bare_conf.tex
+\section{Experimental Setup}\label{sec:setup}
+
+%In the rest of this section, this paper presents detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
+
+\subsection{Test Subjects}\label{ssec:ts}
+For the sake of fairness, in the results of our experiments, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, this experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. This paper presents on a number of small programs with memory leaks that have different complex control flows and complex data types. (Relevant test code can be accessed in footnote 1).
+\subsection{Selected Approaches}\label{ssec:ca}
+Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
+%
+\begin{table}[!h]
+\center
+\caption{Information of approaches}\label{tab:1}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{No.} & \textbf{Abbreviation} & \textbf{Description} & \textbf{Tool}\\
+\hline
+1 & exp-mat & expression matching & CppCheck\\
+\hline
+2 & stl-not & style and notation &	Splint\\
+\hline
+3 & steam-slic & resources streamlined slices & RL\_Detector\\
+\hline
+4 & pro-grap &	CFG projection &	PML\_Checker\\
+\hline
+\end{tabular}
+\end{table}
+%
+Regular matching and style, notation based detection are common approaches adopt in source code static detection. Both CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.} and Splint\footnote{Splint. http://www.splint.org/. 2010.} are open-source static detection tools used in Windows operating system. Apart from this, both tools can detect memory leaks in C programming language. In details, Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes.
+ 
+RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
+
+\subsection{Parameters and Metrics}\label{ssec:pm}
+There are some parameters and metrics used in our experiments for evaluation.
+\begin{itemize}
+\item \textit{TW:} The total number of the reported memory leaks.
+\item \textit{TL:} The total number of memory leaks contained in a program, and it takes the number of pointers pointing to memory blocks as the measurement standard.
+\item \textit{FP:} The number of false positives.
+\item \textit{MLF:} The difference of \textit{TW} and \textit{FP}, which denotes the number of real memory leaks in the test results.
+\item \textit{FPR:} The false positive rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FPR}=$\frac{\textit{FP}}{\textit{TW}}$.
+\item \textit{FNR:} The false negative rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FNR}=1-$\frac{\textit{TW}}{\textit{TL}}$.
+\item \textit{Time:} The run time of each tool for C program.
+\end{itemize}

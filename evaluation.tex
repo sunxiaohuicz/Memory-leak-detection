@@ -1,9 +1,8 @@
 %!TEX root=bare_conf.tex
-\section{Experiments}\label{sec:experiments}
+\section{Evaluation}\label{sec:evaluation}
 
 To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
-%we experimentally compare our approach and existing approaches for memory leak static analysis. We 
-this paper compares our tool -- PML\_Checker with other tools which represent the existing different static detection approaches. 
+this paper compares our tool---PML\_Checker with three open-source tools which represent the existing different static detection approaches. 
 
 In general, this paper investigates the following research questions in the following experiments:
 \begin{description}
@@ -11,48 +10,6 @@ In general, this paper investigates the following research questions in the foll
 \item[RQ2:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex data types? 
 \item[RQ3:] How does our approach perform compared with existing approaches under the public benchmarks in terms of accuracy and run time analysis? 
 \end{description}
-
-\subsection{Experimental Setup}
-In the rest of this section, this paper presents detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
-
-\subsubsection{Test Subjects}\label{ssec:ts}
-For the sake of fairness, in the results of our experiments, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, this experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. This paper presents on a number of small programs with memory leaks that have different complex control flows and complex data types. (Relevant test code can be accessed in footnote 1).
-\subsubsection{Selected Approaches}\label{ssec:ca}
-Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
-%
-\begin{table}[!h]
-\center
-\caption{Information of approaches}\label{tab:1}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{No.} & \textbf{Abbreviation} & \textbf{Description} & \textbf{Tool}\\
-\hline
-A1 & exp-mat & expression matching & CppCheck\\
-\hline
-A2 & stl-not & style and notation &	Splint\\
-\hline
-A3 & steam-slic & resources streamlined slices & RL\_Detector\\
-\hline
-A4 & pro-grap &	CFG projection &	PML\_Checker\\
-\hline
-\end{tabular}
-\end{table}
-%
-Regular matching and style, notation based detection are common approaches adopt in source code static detection. Both CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.} and Splint\footnote{Splint. http://www.splint.org/. 2010.} are open source static detection tools used in Windows operating system. Apart from this, both tools can detect memory leaks in C programming language. In details, Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes.
- 
-RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
-
-\subsubsection{Parameters and Metrics}\label{ssec:pm}
-There are some parameters and metrics used in our experiments for evaluation.
-\begin{itemize}
-\item \textit{TW:} The total number of the reported memory leaks.
-\item \textit{TL:} The total number of memory leaks contained in a program, and it takes the number of pointers pointing to memory blocks as the measurement standard.
-\item \textit{FP:} The number of false positives.
-\item \textit{MLF:} The difference of \textit{TW} and \textit{FP}, which denotes the number of real memory leaks in the test results.
-\item \textit{FPR:} The false positive rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FPR}=$\frac{\textit{FP}}{\textit{TW}}$.
-\item \textit{FNR:} The false negative rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FNR}=1-$\frac{\textit{TW}}{\textit{TL}}$.
-\item \textit{Time:} The run time of each tool for C program.
-\end{itemize}
 
 \subsection{Experimental Results}
 
@@ -63,31 +20,31 @@ The first research question is to compare the effectiveness achieved by the $4$ 
 \begin{table}[!h]
 \center
 \caption{Test results on complex control flows}\label{tab:2}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Test Case No.} & \textbf{Test Cases} & \textbf{A1} & \textbf{A2} & \textbf{A}3 & \textbf{A4}\\
+\textbf{No.}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RL\_Detector} & \textbf{PML\_Checker}\\
 \hline
-C\_case1	& Simple\_branch &	YES & NO & YES & YES\\
+1	 &	YES & NO & YES & YES\\
 \hline
 %C\_case2 & Simple\_branch\_2 & \textendash & \textendash & \textendash & \textendash\\
 %\hline
-C\_case2	& Simple\_loop\_1 & NO &	NO & YES & YES\\
+2	 & NO &	NO & YES & YES\\
 \hline
-C\_case3	& Simple\_loop\_2	& YES &	NO & YES & YES\\
+3		& YES &	NO & YES & YES\\
 \hline
-C\_case4	& Chain\_branch\_1 & NO & NO & YES & YES\\
+4	 & NO & NO & YES & YES\\
 \hline
-C\_case5	& Chain\_branch\_2 &	NO	& NO & YES & YES\\
+5	 &	NO	& NO & YES & YES\\
 \hline
-C\_case6	& Chain\_loop\_1 & YES & YES & NO & YES\\
+6	 & YES & YES & NO & YES\\
 \hline
-C\_case7	& Chain\_loop\_2 & YES & YES & NO & YES\\
+7	 & YES& YES & NO & YES\\
 \hline
-C\_case8	& Nesting\_branch & NO & NO & YES & YES\\
+8	 & NO & NO & YES & YES\\
 \hline
-C\_case9 & Nesting\_loop & NO & NO & YES & YES\\
+9 & NO & NO & YES & YES\\
 \hline
-\multicolumn{2}{|c|}{FNR} & 56\% & 78\% & 22\% & 0\\
+FNR & 56\% & 78\% & 22\% & 0\\
 \hline
 \end{tabular}
 \end{table}
@@ -114,31 +71,31 @@ The second research question is to compare the effectiveness achieved by the $4$
 \begin{table}[!h]
 \center
 \caption{Test results on complex data types}\label{tab:3}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Test Case No.} & \textbf{Test Cases} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{A4}\\
+\textbf{No.}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RL\_Detector} & \textbf{PML\_Checker}\\
 \hline
-T\_case1	& Array\_1 &	YES & NO & YES & YES\\
+1	 &	YES & NO & YES & YES\\
 \hline
-T\_case2 & Array\_2 & NO & NO & NO & NO \\
+2  & NO & NO & NO & NO \\
 \hline
-T\_case3	& Array\_3 & NO &	NO & NO & YES\\
+3	 & NO &	NO & NO & YES\\
 \hline
-T\_case4	& List\_1	& NO &	NO & NO & NO\\
+4		& NO &	NO & NO & NO\\
 \hline
-T\_case5	& List\_2 & NO & YES & NO & YES\\
+5	 & NO & YES & NO & YES\\
 \hline
-T\_case6	& List\_3 &	NO	& YES & NO & YES\\
+6	 &	NO	& YES & NO & YES\\
 \hline
-T\_case7	& Struct\_1 & NO & YES & NO & YES\\
+7	 & NO & YES & NO & YES\\
 \hline
-T\_case8	& Struct\_2 & NO & YES & NO & YES\\
+8	 & NO & YES & NO & YES\\
 \hline
-T\_case9	& Array\_struct\_1 & NO & YES & YES & YES\\
+9	 & NO & YES & YES & YES\\
 \hline
-T\_case10 & Array\_struct\_2 & YES & YES & YES & YES\\
+10  & YES & YES & YES & YES\\
 \hline
-\multicolumn{2}{|c|}{FNR} & 80\% & 40\% & 70\% & 20\%\\
+FNR & 80\% & 40\% & 70\% & 20\%\\
 \hline
 \end{tabular}
 \end{table}
@@ -386,5 +343,5 @@ For the complex control flows and complex data types analysis, our projection-ba
 \item 
 For the accuracy of detection, our projection-based approach shows a lower false negative rate compared to other tools, while it shows a high false positive rate in some public benchmarks (such as SPEC CPU $2000$ and SIR). Therefore, in the next step, more detailed data flow analysis will be added into our approach.
 \item 
-For the scalability of detection, our experiment needs to expand the range of detection. Specifically, our system will detect the large scale benchmarks with millions of code lines, or source code from some open source software.
+For the scalability of detection, our experiment needs to expand the range of detection. Specifically, our system will detect the large scale benchmarks with millions of code lines, or source code from some open-source software.
 \end{itemize}

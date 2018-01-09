@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  8 JAN 2018 21:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  9 JAN 2018 21:59
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -365,15 +365,20 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-) (description.tex
-[2] <figure/fig1-fig4/fig1.png, id=17, 545.78906pt x 292.09125pt>
+
+
+LaTeX Warning: Reference `sec:experiments' on page 2 undefined on input line 47
+.
+
+) (description.tex [2]
+<figure/fig1-fig4/fig1.png, id=16, 545.78906pt x 292.09125pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
 Package pdftex.def Info: figure/fig1-fig4/fig1.png used on input line 40.
 (pdftex.def)             Requested size: 232.19843pt x 124.26414pt.
 
-<figure/fig1-fig4/fig2.png, id=18, 636.87938pt x 94.10156pt>
+<figure/fig1-fig4/fig2.png, id=17, 636.87938pt x 94.10156pt>
 File: figure/fig1-fig4/fig2.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig2.png>
@@ -413,9 +418,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--121
 
  []
 
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Œ in font cmr10!
 Missing character: There is no ó in font cmr10!
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 139--169
 
  []
@@ -433,74 +439,78 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
- [5]) (experiments.tex
+ [5]) (setup.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 2913) in paragraph at lines 43--44
+Underfull \hbox (badness 2913) in paragraph at lines 31--32
 \OT1/ptm/m/n/10 adopts re-sources stream-lined slices con-struc-tion and is
  []
 
-[6] <figure/fig8-fig12/fig8.png, id=40, 241.3818pt x 98.2872pt>
+) (evaluation.tex [6]
+<figure/fig8-fig12/fig8.png, id=40, 241.3818pt x 98.2872pt>
 File: figure/fig8-fig12/fig8.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig8.png>
-Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 97.
+Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 56.
 (pdftex.def)             Requested size: 232.19843pt x 94.54958pt.
 
 <figure/fig8-fig12/fig9.png, id=41, 242.3454pt x 85.2786pt>
 File: figure/fig8-fig12/fig9.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig9.png>
-Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 148.
+Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 107.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
+ [7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 223.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 236.
+
+
+<figure/fig8-fig12/fig10.png, id=48, 1047.915pt x 580.41844pt>
+File: figure/fig8-fig12/fig10.png Graphic file (type png)
+
+<use figure/fig8-fig12/fig10.png>
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 249.
+(pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 264.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 277.
-
-
-<figure/fig8-fig12/fig10.png, id=48, 238.9728pt x 103.587pt>
-File: figure/fig8-fig12/fig10.png Graphic file (type png)
-
-<use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 290.
-(pdftex.def)             Requested size: 232.19843pt x 100.65155pt.
-
-<figure/fig8-fig12/fig11.png, id=50, 243.309pt x 109.8504pt>
+<figure/fig8-fig12/fig11.png, id=50, 956.82469pt x 568.37344pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 297.
-(pdftex.def)             Requested size: 232.19843pt x 104.83833pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-[]\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 304--305
-\OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
- []
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 256.
+(pdftex.def)             Requested size: 232.19843pt x 137.93013pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+[]\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 263--264
+\OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
+ []
+
 <figure/fig8-fig12/fig12.png, id=58, 240.4182pt x 96.36pt>
 File: figure/fig8-fig12/fig12.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig12.png>
-Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 376.
+Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 335.
 (pdftex.def)             Requested size: 232.19843pt x 93.06912pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (related.tex [9 <./figure/fig8-fig12/fig12.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -508,7 +518,8 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl)
+) (conclusion.tex)
+(bare_conf.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -520,31 +531,39 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (bare_conf.aux) ) 
+[11
+
+] (bare_conf.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5042 strings out of 493323
- 72315 string characters out of 3146850
- 205234 words of memory out of 3000000
- 8470 multiletter control sequences out of 15000+200000
- 49249 words of font info for 92 fonts, out of 3000000 for 9000
+ 5048 strings out of 493323
+ 72371 string characters out of 3146850
+ 201234 words of memory out of 3000000
+ 8473 multiletter control sequences out of 15000+200000
+ 50345 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,49p,1982b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/M
-ikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a
-.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 348890 bytes).
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti
+10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/ur
+w/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/font
+s/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (11 pages, 421093 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

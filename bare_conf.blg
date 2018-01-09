@@ -1,6 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Database file #1: Mdetection.bib
+Repeated entry---line 337 of file Mdetection.bib
+ : @inproceedings{LCW13
+ :                     ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 374 of file Mdetection.bib
  : @inproceedings{SYX12
  :                     ,
@@ -19,4 +23,4 @@ I'm skipping whatever remains of this entry
 Warning--empty year in KFM13
 
 Done.
-(There were 3 error messages)
+(There were 4 error messages)
