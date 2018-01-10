@@ -62,7 +62,6 @@ Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projec
 \begin{theorem}[Control Flow Graph Projection Theorem]
 Given a directed graph $G = (N, E)$. If $G^* \mapsto G$ where $G^*=(N^*, E^*)$, then $G^*$ strictly keeps the reachability relation among nodes in $N^*$ from $G$, that is, $\forall m,n\in N^*$, $m$ can reach $n$ in $G^*$ if and only if $m$ can reach $n$ in $G$.
 \end{theorem}
-
 \begin{proof} Presume $m$ can reach $n$ in $G^*$, which means there exists a directed path $\mu^*=(m,e_1^*,e_2^*,\ldots,e_k^*,n)$ in $G^*$. 
 Since $G^* \mapsto G$, then there must exist a set of paths $\mu_0=(m,e^0_i,\ldots,e^0_{j_0}, e_1^*)$, $\mu_i=(e^*_{i}, e^{i}_i,\ldots,e^{i}_{j_i}, e_{i+1}^*)$ ($1\leq i\leq k-1$) and $\mu_k=(e_k^*,e^k_i,\ldots,e^k_j, e_{j_k}, n)$ in $G$, where $e^{i}_{j_i}$ can be empty. The $k$ paths are connected since the last node in a path is the starting node of another path. Formally, given path $\mu_i=(e^*_{i}, e^{i}_i,\ldots,e^{i}_{j_i}, e_{i+1}^*)$ and $\mu_{i+1}=(e^*_{i+1}, e^{i+1}_{i+1},\ldots,e^{i+1}_{j_{i+1}}, e_{i+2}^*)$. According to the definition of path, we have $e_{i+1}^*\in \Gamma(e^{i}_{j_i})$ in path $\mu_i$
 and $e^{i+1}_{i+1} \in \Gamma(e^*_{i+1})$ in path $\mu_{i+1}$. Thus we have a path from $e^{i}_{j_i}$ to $e^{i+1}_{i+1}$ via $e^*_{i+1}$. That is we can connect $\mu_i$ and $\mu_{i+1}$ as path $(e^*_{i},e^{i}_i,\ldots,e^{i}_{j_i}, e_{i+1}^*, e^{i+1}_{i+1},\ldots,e^{i+1}_{j_{i+1}}, e_{i+2}^*)$. In this way, by connecting the $k$ paths, we have a path from $m$ to $n$ in $G$.
@@ -76,6 +75,7 @@ Either there are no other nodes in $N^*$ except $m$ and $n$;
 Or there is $\mu=(m,\ldots,n_1,\ldots,n_2,\ldots,n_k,\ldots,n)$, where $m$, $n$, $n_i\in N^* (1\leq i \leq k)$, and the remaining nodes do not belong to $N^*$.
 \end{itemize}
 %
+
 In the former case, according to the rules of control flow graph projection, $m$ can immediately reach $n$ in $G^*$, i.e., $n\in \Gamma(m)$.
 %
 In the later case, let $\mu=m,\mu_1,n_1\mu_2, n_2,\cdots,\mu_k, n_k, \mu_{k+1}, n$, where $\mu_i=(n^i_{1},\ldots,n^i_{j_i}) (1\leq i\leq k+1)$, there are no nodes in each path $\mu_i$ from $N^*$ except end nodes. According to the projection rules, the nodes in each path $\mu_i$ will be deleted in $G^*$ such that there is a immediate edge between $m$ and $n_1$, between each $n_i$ and $n_{i+1} (1\leq i \leq k)$, and between $n_{k+1}$ and $n$, which forms a path $
@@ -168,9 +168,9 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 %\textbf{End}
 \end{algorithm}
 
-There are only one loop in the traversal of Red Black Tree, so the time complexity of this algorithm is $O(log(N))$, and the space complexity of this algorithm is $S(N)$.
-
 Take projection graph in Fig.~\ref{fig:4} as an example. According to the detection algorithm, the direct predecessor node of node $S_9$ is node $S_7$, and the direct predecessor node of node $S_7$ is node $S_6$, node $S_6$ is a branch node. That is, the memory blocks are freed in the conditional branch of node $6$, which is determined to be a suspected memory leak.
+
+There are only one loop in the traversal of Red Black Tree, so the time complexity of this algorithm is $O(log(N))$, and the space complexity of this algorithm is $S(N)$.
 
 \subsection{Optimization Strategy}
 

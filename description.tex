@@ -10,6 +10,7 @@ The lifetime of heap memory space is represented in three ways in existing works
 \item 
 \textit{Liveness:} the lifetime of a heap memory space ends after the last access to that space.
 \end{itemize}
+
 This paper focuses on the second view - reachability, as reasoning on the reachability is more intuitive in the CFG, and our analysis is based on it.
 In the reachability view, there is a memory leak if the lifetime of a heap memory space ends while the memory pointer can not reach to that space.
 %This paper analyzes the reasons for memory leaks from the perspective of control flow, which is based on the second way - reachability. 
