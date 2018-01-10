@@ -1,17 +1,16 @@
 %!TEX root=bare_conf.tex
 \section{Evaluation}\label{sec:evaluation}
 
-To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
-this paper compares our tool---PML\_Checker with three open-source tools which represent the existing different static detection approaches. 
 
-In general, this paper investigates the following research questions in the following experiments:
+
+In general, this paper investigates the following research questions to evaluate PML\_Checker:
 \begin{description}
 \item[RQ1:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex control flows? 
 \item[RQ2:] How does our approach perform compared with existing approaches in terms of effectiveness analysis for complex data types? 
-\item[RQ3:] How does our approach perform compared with existing approaches under the public benchmarks in terms of accuracy and run time analysis? 
+\item[RQ3:] How does our approach perform compared with existing approaches under the public benchmarks in terms of accuracy and efficiency analysis? 
 \end{description}
 
-\subsection{Experimental Results}
+\subsection{Experiments on public benchmarks}
 
 \noindent RQ1: \textit{Effectiveness Analysis of Complex Control Flow}
 
@@ -30,7 +29,7 @@ The first research question is to compare the effectiveness achieved by the $4$ 
 %\hline
 2	 & NO &	NO & YES & YES\\
 \hline
-3		& YES &	NO & YES & YES\\
+3    & YES & NO & YES & YES\\
 \hline
 4	 & NO & NO & YES & YES\\
 \hline

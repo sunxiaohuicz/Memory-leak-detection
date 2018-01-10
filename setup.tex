@@ -1,16 +1,51 @@
 %!TEX root=bare_conf.tex
 \section{Experimental Setup}\label{sec:setup}
-
+To evaluate the projection approach proposed in Section~\ref{sec:approach}, 
+this paper compares our tool---PML\_Checker with three open-source tools which represent the existing different static detection approaches. 
 %In the rest of this section, this paper presents detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
 
 \subsection{Test Subjects}\label{ssec:ts}
-For the sake of fairness, in the results of our experiments, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. In details, a complex control flow refers to a control flow graph with more than one control flow branches. Complex data types include data structure like linked list, struct, array and the combination of these data types. Furthermore, this experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy of the projection approach. This paper presents on a number of small programs with memory leaks that have different complex control flows and complex data types. (Relevant test code can be accessed in footnote 1).
-\subsection{Selected Approaches}\label{ssec:ca}
-Table~\ref{tab:1} lists the $4$ approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
+This experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy and efficiency of the projection approach. Moreover, for the sake of fairness, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. A complex control flow refers to a control flow graph with more than one control flow branches, which is the focus of this paper. To make the experiment more convincing, this paper considers the complexity of data types. In our experiment, Complex data types include data structure like linked list, struct, array and the combination of these data types. This paper presents $10$ small programs with different complex control flows and $10$ small programs with different complex data typese as test cases\protect\footnote{PML\_Checker.https://github.com/sunxiaohuiczcz/PML\_Checker.git.2017.}. Adhering to the principle of single case coverage scenarios minimized\footnote{Test Case Design.http://ecomputernotes.com/software-engineering/test-case-design.2017.}, each case only covers one test scenario and includes only one memory leak.
+The detailed information of study cases are shown inaable~\ref{tab:1}.
 %
 \begin{table}[!h]
 \center
-\caption{Information of approaches}\label{tab:1}
+\caption{Information of syudy cases}\label{tab:1}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{complex control flows}} & \multicolumn{2}{|c|}{\textbf{complex data types}}\\
+\hline
+\textbf{case info} & \textbf{size(Loc)} & \textbf{case info} & \textbf{size(Loc)}\\
+\hline
+branch\_1 & 11 & array\_1 & 10\\
+\hline
+branch\_2 & 13 & array\_2 &	18\\
+\hline
+loop\_1 & 14 & array\_3 & 19\\
+\hline
+loop\_2 & 14 &	array\_struct\_1 &	16\\
+\hline
+chain\_branch\_1 & 14 &	array\_struct\_2 &	21\\
+\hline
+chain\_branch\_2 & 14 &	list\_1 &	39\\
+\hline
+chain\_loop\_1 & 18 &	list\_2 &	95\\
+\hline
+chain\_loop\_2 & 18 &	list\_3 &	53\\
+\hline
+nesting\_branch & 14 &	struct\_1 &	37\\
+\hline
+nesting\_loop & 18 &	struct\_2 &	18\\
+\hline
+\end{tabular}
+\end{table}
+%
+\subsection{Selected Approaches}\label{ssec:ca}
+Table~\ref{tab:2} lists the four approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
+%
+\begin{table}[!h]
+\center
+\caption{Information of approaches}\label{tab:2}
 \begin{tabular}{|c|c|c|c|}
 \hline
 \textbf{No.} & \textbf{Abbreviation} & \textbf{Description} & \textbf{Tool}\\
@@ -30,7 +65,7 @@ Regular matching and style, notation based detection are common approaches adopt
  
 RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
 
-\subsection{Parameters and Metrics}\label{ssec:pm}
+\subsection{Metrics}\label{ssec:m}
 There are some parameters and metrics used in our experiments for evaluation.
 \begin{itemize}
 \item \textit{TW:} The total number of the reported memory leaks.

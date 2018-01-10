@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  9 JAN 2018 21:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  10 JAN 2018 13:55
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -267,7 +267,11 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 \c@definition=\count121
 \c@theorem=\count122
- (bare_conf.aux)
+ (bare_conf.aux
+
+LaTeX Warning: Label `tab:2' multiply defined.
+
+)
 \openout1 = `bare_conf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -282,8 +286,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-
-(E:\MikTex\tex\context\base\supp-pdf.mkii
+ (E:\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen132
@@ -350,15 +353,10 @@ LaTeX Warning: No \author given.
 LaTeX Warning: No \author given.
 
 (introduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-[][][]\OT1/ptm/m/n/8 Report of the In-quiry Into The Lon-don Amu-lance Ser-vice
-.
- []
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
@@ -367,7 +365,7 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
 
-LaTeX Warning: Reference `sec:experiments' on page 2 undefined on input line 47
+LaTeX Warning: Reference `sec:experiments' on page 2 undefined on input line 46
 .
 
 ) (description.tex [2]
@@ -439,87 +437,93 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
- [5]) (setup.tex
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]) (setup.tex
+Underfull \hbox (badness 2269) in paragraph at lines 8--8
+[][][]\OT1/ptm/m/n/8 Test Case Design.http://ecomputernotes.com/software-engine
+ering/test-
+ []
+
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 2913) in paragraph at lines 31--32
+Underfull \hbox (badness 2913) in paragraph at lines 66--67
 \OT1/ptm/m/n/10 adopts re-sources stream-lined slices con-struc-tion and is
  []
 
-) (evaluation.tex [6]
+[6]) (evaluation.tex
 <figure/fig8-fig12/fig8.png, id=40, 241.3818pt x 98.2872pt>
 File: figure/fig8-fig12/fig8.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig8.png>
-Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 56.
+Package pdftex.def Info: figure/fig8-fig12/fig8.png used on input line 53.
 (pdftex.def)             Requested size: 232.19843pt x 94.54958pt.
 
 <figure/fig8-fig12/fig9.png, id=41, 242.3454pt x 85.2786pt>
 File: figure/fig8-fig12/fig9.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig9.png>
-Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 107.
+Package pdftex.def Info: figure/fig8-fig12/fig9.png used on input line 104.
 (pdftex.def)             Requested size: 232.19843pt x 81.70775pt.
- [7 <./figure/fig8-fig12/fig8.png> <./figure/fig8-fig12/fig9.png>]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 223.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 236.
-
-
-<figure/fig8-fig12/fig10.png, id=48, 1047.915pt x 580.41844pt>
-File: figure/fig8-fig12/fig10.png Graphic file (type png)
-
-<use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 249.
-(pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig8-fig12/fig11.png, id=50, 956.82469pt x 568.37344pt>
+[7 <./figure/fig8-fig12/fig8.png>]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 220.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 233.
+
+
+<figure/fig8-fig12/fig10.png, id=47, 1047.915pt x 580.41844pt>
+File: figure/fig8-fig12/fig10.png Graphic file (type png)
+
+<use figure/fig8-fig12/fig10.png>
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 246.
+(pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
+
+<figure/fig8-fig12/fig11.png, id=49, 956.82469pt x 568.37344pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 256.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 253.
 (pdftex.def)             Requested size: 232.19843pt x 137.93013pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+[8 <./figure/fig8-fig12/fig9.png> <./figure/fig8-fig12/fig10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
 []\OT1/ptm/m/n/10 Third, con-sid-er-ing sym-bolic method are used in
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 263--264
+Underfull \hbox (badness 1990) in paragraph at lines 260--261
 \OT1/ptm/m/n/10 A1(CppCheck), A3(RL[]Detector) and A4(PML[]Checker),
  []
 
-<figure/fig8-fig12/fig12.png, id=58, 240.4182pt x 96.36pt>
+<figure/fig8-fig12/fig12.png, id=57, 240.4182pt x 96.36pt>
 File: figure/fig8-fig12/fig12.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig12.png>
-Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 335.
+Package pdftex.def Info: figure/fig8-fig12/fig12.png used on input line 332.
 (pdftex.def)             Requested size: 232.19843pt x 93.06912pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (related.tex [9 <./figure/fig8-fig12/fig12.png>]
+) (related.tex [9 <./figure/fig8-fig12/fig11.png> <./figure/fig8-fig12/fig12.pn
+g>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex)
-(bare_conf.bbl [10])
+) (conclusion.tex) (bare_conf.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -538,17 +542,17 @@ Before submitting the final camera ready copy, remember to:
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  5048 strings out of 493323
- 72371 string characters out of 3146850
- 201234 words of memory out of 3000000
+ 72370 string characters out of 3146850
+ 193234 words of memory out of 3000000
  8473 multiletter control sequences out of 15000+200000
  50345 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,49p,1982b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,49p,2023b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
 /cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
 fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
@@ -561,7 +565,7 @@ pe1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti
 10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/ur
 w/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/font
 s/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 421093 bytes).
+Output written on bare_conf.pdf (11 pages, 422611 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
