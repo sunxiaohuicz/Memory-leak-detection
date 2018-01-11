@@ -28,10 +28,10 @@ A.~Aggarwal and P.~Jalote, ``Integrating static and dynamic analysis for
   343--350.
 
 \bibitem{KJMP06}
-H.~Kim, J.~A. Joao, O.~Mutlu, and Y.~N. Patt, ``Diverge-merge processor
-  {(DMP):} dynamic predicated execution of complex control-flow graphs based on
-  frequently executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM}
-  International Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
+H.~Kim, J.~A. Joao, and O.~Mutlu, ``Diverge-merge processor {(DMP):} dynamic
+  predicated execution of complex control-flow graphs based on frequently
+  executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM} International
+  Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
 
 \bibitem{LCW13}
 M.~Li, Y.~Chen, L.~Wang, and G.~H. Xu, ``Dynamically validating static memory

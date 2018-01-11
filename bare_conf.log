@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  10 JAN 2018 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  11 JAN 2018 15:08
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -267,11 +267,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 \c@definition=\count121
 \c@theorem=\count122
- (bare_conf.aux
-
-LaTeX Warning: Label `tab:2' multiply defined.
-
-)
+ (bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -286,7 +282,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
- (E:\MikTex\tex\context\base\supp-pdf.mkii
+
+(E:\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen132
@@ -479,7 +476,7 @@ Underfull \hbox (badness 2913) in paragraph at lines 29--30
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6]) (evaluation.tex
-Overfull \hbox (15.67073pt too wide) in paragraph at lines 27--68
+Overfull \hbox (15.67073pt too wide) in paragraph at lines 27--66
  [][] 
  []
 
@@ -487,7 +484,7 @@ Overfull \hbox (15.67073pt too wide) in paragraph at lines 27--68
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (20.11067pt too wide) in paragraph at lines 76--117
+Overfull \hbox (20.11067pt too wide) in paragraph at lines 74--113
  [][] 
  []
 
@@ -495,48 +492,112 @@ Overfull \hbox (20.11067pt too wide) in paragraph at lines 76--117
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 122.
+Underfull \hbox (badness 3199) in paragraph at lines 114--116
+[]\OT1/ptm/m/n/10 First, cal-cu-late the \OT1/ptm/m/it/10 FP \OT1/ptm/m/n/10 in
+ Ta-ble III[]. \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (CppCheck)
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 114--116
+\OMS/cmsy/m/n/10 $ \OT1/ptm/m/n/10 11%, \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (Sp
+lint) = 44%, \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (RL[]Detector) = 9%,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+\OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (PML[]Checker) = 13%. Sim-i-larly, in Ta-ble
+ V[],
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 114--116
+\OT1/ptm/m/n/10 Ta-ble III[] and Ta-ble IV[], Splint re-ports most bugs, and
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 117--118
+[]\OT1/ptm/m/n/10 Second, this pa-per an-a-lyzes the ef-fec-tive-ness of the
+ []
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 135.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 132.
 
 
 <figure/fig8-fig12/fig10.png, id=40, 1047.915pt x 580.41844pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 148.
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 145.
 (pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <figure/fig8-fig12/fig11.png, id=42, 956.82469pt x 568.37344pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 155.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 152.
 (pdftex.def)             Requested size: 232.19843pt x 137.93013pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./figure/fig8-fig12/fig10.png>]
+[7]
+Underfull \hbox (badness 1796) in paragraph at lines 161--180
+\OT1/ptm/m/n/10 SARD. Com-pare PML[]Checker with other three Tools,
+ []
 
-LaTeX Warning: Reference `fig:12' on page 8 undefined on input line 165.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--292
+Underfull \hbox (badness 1354) in paragraph at lines 161--180
+\OT1/ptm/m/n/10 we have the fol-low-ing ob-ser-va-tions. First, cal-cu-late the
 
  []
 
-[8 <./figure/fig8-fig12/fig11.png>]) (related.tex [9]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+ \OT1/ptm/m/it/10 2) Ef-fi-ciency Anal-y-sis: [][] \OT1/ptm/m/n/10 Con-sid-er-i
+ng Cp-pCheck,
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 280--283
+\OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 280--283
+\OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
+m/m/it/10 NP \OT1/ptm/m/n/10 of
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 280--283
+\OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
+) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+ []
+
+[8 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>])
+(related.tex [9]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no  in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no  in font ptmr7t!
-) (conclusion.tex)
-(bare_conf.bbl)
+) (conclusion.tex) (bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -552,14 +613,11 @@ Before submitting the final camera ready copy, remember to:
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
  5031 strings out of 493323
- 71958 string characters out of 3146850
- 199234 words of memory out of 3000000
+ 71956 string characters out of 3146850
+ 195234 words of memory out of 3000000
  8459 multiletter control sequences out of 15000+200000
  50345 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -576,7 +634,7 @@ pe1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti
 10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/ur
 w/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/font
 s/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 405583 bytes).
+Output written on bare_conf.pdf (10 pages, 406672 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
