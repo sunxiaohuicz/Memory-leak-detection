@@ -13,10 +13,18 @@ In general, this paper investigates the following research questions to evaluate
 \noindent RQ1: \textit{Accuracy and Efficiency of PML\_Checker}
 %The first research question is to compare the accuracy achieved by the four approaches, and the run-time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
 
-\subsubsection{Accuracy Analysis} 
+\subsubsection{Accuracy Analysis}
+
+\ 
+
 This section includes two-part experiments: experiment on large amount code (SPEC CPU $2000$ and SIR), experiment on small amount code (test cases from SARD).
 
 Table~\ref{tab:3} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:4} shows the test results on SIR. Compare PML\_Checker with other three tools, we have the following observations. 
+
+First, calculate the \textit{FP} in Table~\ref{tab:3}. \textit{FP}(CppCheck) $\approx$ 11\%, \textit{FP}(Splint) = 44\%, \textit{FP}(RL\_Detector) = 9\%, \textit{FP}(PML\_Checker) = 13\%. Similarly, in Table~\ref{tab:5}, \textit{FP}(CppCheck) = 19\%, \textit{FP}(Splint) = 0.30\%, \textit{FP}(RL\_Detector) = 8\%, \textit{FP}(PML\_Checker) = 18\%.
+In the view of \textit{TW} from Table~\ref{tab:3} and Table~\ref{tab:4}, Splint reports most bugs, and PML\_Checker ranks second, while CppCheck reports the least bugs. However, in the view of \textit{FP}, the \textit{FP} of Splint is highest, and the \textit{FP} of the other three tools are acceptable.
+
+Second, this paper analyzes the effectiveness of the PML\_Checker by comparing the MLF of test results. Test results from Table~\ref{tab:3} can be converted into MLF of test results by constructing a matrix. Specifically, the results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. This paper compresses this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results. The final matrix $D_1$ is as follows.
 
 \begin{table}[!h]
 \centering
@@ -111,10 +119,7 @@ Total	 & 267.9	 & 21&4	   & 37  & 11 & 13 & 1   & 34  & 6\\
 \hline
 \end{tabular}
 \end{table}
-First, calculate the \textit{FP} in Table~\ref{tab:3}. \textit{FP}(CppCheck) $\approx$ 11\%, \textit{FP}(Splint) = 44\%, \textit{FP}(RL\_Detector) = 9\%, \textit{FP}(PML\_Checker) = 13\%. Similarly, in Table~\ref{tab:5}, \textit{FP}(CppCheck) = 19\%, \textit{FP}(Splint) = 0.30\%, \textit{FP}(RL\_Detector) = 8\%, \textit{FP}(PML\_Checker) = 18\%.
-In the view of \textit{TW} from Table~\ref{tab:3} and Table~\ref{tab:4}, Splint reports most bugs, and PML\_Checker ranks second, while CppCheck reports the least bugs. However, in the view of \textit{FP}, the \textit{FP} of Splint is highest, and the \textit{FP} of the other three tools are acceptable.
 
-Second, this paper analyzes the effectiveness of the PML\_Checker by comparing the MLF of test results. Test results from Table~\ref{tab:3} can be converted into MLF of test results by constructing a matrix. Specifically, the results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. This paper compresses this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results. The final matrix $D_1$ is as follows.
 \[
 \scriptsize
 D_1=\left[
@@ -185,6 +190,8 @@ NP & 50\% & 80\% & 70\% & 30\%\\
 %\label{fig:12}
 %\end{figure}
 \subsubsection{Efficiency Analysis} 
+
+\ 
 
 Considering CppCheck, RL\_Detector and PML\_Checker all use symbolic execution, it is necessary to verify whether our approach affects the efficiency. This experiment chooses SPEC CPU $2000$ as the test object due to its large amount of code and large number of files, and analyzes the run-time of the three tools. 
 
