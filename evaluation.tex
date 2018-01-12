@@ -166,19 +166,16 @@ In Fig.~\ref{fig:11}, due to the smaller amount code of SIR comparing to SPEC CP
 Table~\ref{tab:5} shows the test results on $40$ test cases from SARD. Compare PML\_Checker with other three Tools, we have the following observations.
 First, calculate the \textit{NP} of the test results of $20$ test cases with memory errors marked ``bad", and the \textit{FP} of the test results of $20$ test cases without memory errors which corresponding to the ``bad" cases marked ``good". \textit{NP}(RL\_Detector) = 70\%, \textit{FP}(RL\_Detector) = 0. \textit{NP}(CppCheck) = 50\%, \textit{FP}(CppCheck) = 0. \textit{NP}(Splint) = 80\%, \textit{FP}(Splint) = 5\%. \textit{NP}(PML\_Checker) = 30\%,  \textit{FP}(PML\_Checker) = 0. The \textit{FP} of PML\_Checker is the lowest among the four tools. For the analysis of \textit{FP}, there are no false positives in the results of RL\_Detector, CppCheck and PML\_Checker. While Splint reports a false positive. This experiment fails to compare the \textit{FP} due to the small size of program, but the test results on \textit{NP} reflects the accuracy of PML\_Checker in detecting memory leaks.
 \begin{table}[!h]
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \center
 \caption{Test results on SARD test cases}\label{tab:5}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Test Cases} & \textbf{A1} (TW)& \textbf{A2} (TW) & \textbf{A3} (TW) & \textbf{A4} (TW)\\
+\textbf{Cases} &       \tabincell{c}{\textbf{CppCheck}\\\textbf{(TW)}} &           \tabincell{c}{\textbf{Splint}\\\textbf{(TW)}} &               \tabincell{c}{\textbf{RLDetector}\\\textbf{(TW)}} & \tabincell{c}{\textbf{PMLChecker}\\\textbf{(TW)}}\\
 \hline
-bad cases(20) &10 & 4 & 6 & 14\\
+bad  &10 & 4 & 6 & 14\\
 \hline
-good cases(20) & 0 & 	1 &	0 &	0\\
-\hline
-FP & 0& 5\% & 0 & 0\\
-\hline
-NP & 50\% & 80\% & 70\% & 30\%\\
+good  & 0 & 1 &	0 &	0\\
 \hline
 \end{tabular}
 \end{table}
@@ -198,12 +195,13 @@ Considering CppCheck, RL\_Detector and PML\_Checker all use symbolic execution, 
 Table~\ref{tab:6} lists the run-time of CppCheck, RL\_Detector and PML\_Checker. By comparing the run-time of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in run-time, and our approach does not affect the efficiency of PML\_Checker.
 
 \begin{table}[!h]
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \centering
 \caption{Run time on SPEC CPU $2000$}\label{tab:6}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Program}& \textbf{Kloc} & \textbf{CppCheck} & \textbf{RL\_Detector} & \textbf{PML\_Checker}\\
+\textbf{Program}& \tabincell{c}{\textbf{Size}\\\textbf{(Kloc)}}             &            \tabincell{c}{\textbf{CppCheck}\\\textbf{(Time)}} &      \tabincell{c}{\textbf{RLDetector}\\\textbf{(Time)}} & \tabincell{c}{\textbf{PMLChecker}\\\textbf{(Time)}}\\
 \hline
 gzip       & 7.8    & 5.3s  & 4.5s & 3.2s\\
 \hline
@@ -249,7 +247,7 @@ Total     & 581.0    & 512.6s & 247.1s & 230.7s\\
 \caption{Test results on complex control flows}\label{tab:7}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Case}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
+\textbf{Cases}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
 \hline
 branch1	 &	YES & NO & YES & YES\\
 \hline
@@ -296,7 +294,7 @@ Second, regarding the comparison of the approaches. Obviously, our approach has 
 \caption{Test results on complex data types}\label{tab:8}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Case}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
+\textbf{Cases}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
 \hline
 array1	 &	YES & NO & YES & YES\\
 \hline

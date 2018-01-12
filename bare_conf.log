@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  11 JAN 2018 22:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  12 JAN 2018 10:09
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -545,12 +545,12 @@ Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 157.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-Underfull \hbox (badness 1796) in paragraph at lines 166--185
+Underfull \hbox (badness 1796) in paragraph at lines 166--182
 \OT1/ptm/m/n/10 SARD. Com-pare PML[]Checker with other three Tools,
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 166--185
+Underfull \hbox (badness 1354) in paragraph at lines 166--182
 \OT1/ptm/m/n/10 we have the fol-low-ing ob-ser-va-tions. First, cal-cu-late the
 
  []
@@ -559,24 +559,24 @@ Underfull \hbox (badness 1354) in paragraph at lines 166--185
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 287--290
+Underfull \hbox (badness 2626) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 287--290
+Underfull \hbox (badness 3428) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
 m/m/it/10 NP \OT1/ptm/m/n/10 of
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 287--290
+Underfull \hbox (badness 3919) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
 ) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
  []
 
@@ -602,13 +602,13 @@ Before submitting the final camera ready copy, remember to:
 
 [10] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 5030 strings out of 493323
- 71939 string characters out of 3146850
+ 5031 strings out of 493323
+ 71948 string characters out of 3146850
  190234 words of memory out of 3000000
- 8458 multiletter control sequences out of 15000+200000
+ 8459 multiletter control sequences out of 15000+200000
  50345 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,49p,2009b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,15n,49p,2009b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cm
 mi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/t
@@ -622,7 +622,7 @@ lic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/M
 ikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a
 .pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 406260 bytes).
+Output written on bare_conf.pdf (10 pages, 406145 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
