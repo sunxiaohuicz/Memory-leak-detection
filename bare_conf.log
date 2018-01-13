@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  13 JAN 2018 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  13 JAN 2018 16:59
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -386,19 +386,19 @@ Underfull \hbox (badness 1616) in paragraph at lines 14--18
 []\OT1/ptm/m/n/10 This pa-per fo-cuses on the sec-ond view---reachability.
  []
 
-[2] <figure/fig1-fig4/fig1.png, id=16, 69.77792pt x 74.50516pt>
+[2] <figure/fig1-fig4/fig1.png, id=16, 438.8897pt x 234.8775pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
 Package pdftex.def Info: figure/fig1-fig4/fig1.png used on input line 41.
-(pdftex.def)             Requested size: 232.19843pt x 247.97205pt.
+(pdftex.def)             Requested size: 232.19843pt x 124.26585pt.
 
-<figure/fig1-fig4/fig2.png, id=17, 636.87938pt x 94.10156pt>
+<figure/fig1-fig4/fig2.png, id=18, 613.54219pt x 127.22531pt>
 File: figure/fig1-fig4/fig2.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig2.png>
 Package pdftex.def Info: figure/fig1-fig4/fig2.png used on input line 48.
-(pdftex.def)             Requested size: 232.19843pt x 34.30728pt.
+(pdftex.def)             Requested size: 232.19843pt x 48.1481pt.
 ) (approach.tex
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 20.
 
@@ -409,7 +409,7 @@ Underfull \hbox (badness 1472) in paragraph at lines 45--46
 []\OT1/ptm/m/n/10 Fig. 3[] shows the CFG (G) of a piece of code. In
  []
 
-<figure/fig1-fig4/fig_3.png, id=26, 477.28313pt x 51.94406pt>
+<figure/fig1-fig4/fig_3.png, id=29, 477.28313pt x 51.94406pt>
 File: figure/fig1-fig4/fig_3.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_3.png>
@@ -420,7 +420,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 51--52
  [] 
  []
 
-<figure/fig1-fig4/fig_4.png, id=27, 321.45094pt x 48.93282pt>
+<figure/fig1-fig4/fig_4.png, id=30, 321.45094pt x 48.93282pt>
 File: figure/fig1-fig4/fig_4.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_4.png>
@@ -453,11 +453,12 @@ Underfull \hbox (badness 1590) in paragraph at lines 80--84
 0 =
  []
 
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 99--122
 
  []
 
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Œ in font cmr10!
 Missing character: There is no ó in font cmr10!
 
@@ -478,7 +479,11 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
- [5]) (setup.tex
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]) (setup.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -541,7 +546,7 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 124.
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 137.
 
 
-<figure/fig8-fig12/fig10.png, id=41, 1047.915pt x 580.41844pt>
+<figure/fig8-fig12/fig10.png, id=44, 1047.915pt x 580.41844pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
@@ -551,12 +556,12 @@ Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 150.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig8-fig12/fig11.png, id=43, 956.82469pt x 568.37344pt>
+<figure/fig8-fig12/fig11.png, id=45, 1057.9525pt x 715.67375pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
 Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 157.
-(pdftex.def)             Requested size: 232.19843pt x 137.93013pt.
+(pdftex.def)             Requested size: 232.19843pt x 157.0665pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -573,12 +578,12 @@ Underfull \hbox (badness 1354) in paragraph at lines 166--182
  []
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \hbox (0.51808pt too wide) in paragraph at lines 250--275
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \hbox (badness 2626) in paragraph at lines 287--290
@@ -610,7 +615,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl [10])
+) (conclusion.tex) (bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -622,9 +627,11 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
+[10] (bare_conf.aux)
 
-] (bare_conf.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  5127 strings out of 493323
  73189 string characters out of 3146850
@@ -633,22 +640,22 @@ Here is how much of TeX's memory you used:
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,49p,1994b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
-public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
-:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public
-/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:
-/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
-mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
-w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 418303 bytes).
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
+9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikT
+ex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pf
+b><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (10 pages, 409499 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
