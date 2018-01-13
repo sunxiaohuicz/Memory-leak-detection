@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  12 JAN 2018 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  13 JAN 2018 16:10
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -259,43 +259,58 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
+(E:\MikTex\tex\latex\multirow\multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip53
+\multirow@cntb=\count121
+\multirow@dima=\skip54
+\bigstrutjot=\dimen132
+)
+(E:\MikTex\tex\latex\tools\array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen133
+\extrarowheight=\dimen134
+\NC@list=\toks31
+\extratabsurround=\skip55
+\backup@length=\skip56
+)
 (E:\MikTex\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (E:\MikTex\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-\c@definition=\count121
-\c@theorem=\count122
+\c@definition=\count122
+\c@theorem=\count123
  (bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 (E:\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count123
-\scratchdimen=\dimen132
+\scratchcounter=\count124
+\scratchdimen=\dimen135
 \scratchbox=\box33
-\nofMPsegments=\count124
-\nofMParguments=\count125
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count126
-\MPscratchDim=\dimen133
-\MPnumerator=\count127
-\makeMPintoPDFobject=\count128
-\everyMPtoPDFconversion=\toks32
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen136
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks33
 ) (E:\MikTex\tex\generic\oberdiek\pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -341,7 +356,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count129
+\c@lstlisting=\count130
 
 
 LaTeX Warning: No \author given.
@@ -353,25 +368,30 @@ LaTeX Warning: No \author given.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
+Missing character: There is no Ô in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ö in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-)
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+])
 (description.tex
+Underfull \vbox (badness 7685) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1616) in paragraph at lines 14--18
 []\OT1/ptm/m/n/10 This pa-per fo-cuses on the sec-ond view---reachability.
  []
 
-[2] <figure/fig1-fig4/fig1.png, id=16, 545.78906pt x 292.09125pt>
+[2] <figure/fig1-fig4/fig1.png, id=16, 69.77792pt x 74.50516pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
 Package pdftex.def Info: figure/fig1-fig4/fig1.png used on input line 41.
-(pdftex.def)             Requested size: 232.19843pt x 124.26414pt.
+(pdftex.def)             Requested size: 232.19843pt x 247.97205pt.
 
 <figure/fig1-fig4/fig2.png, id=17, 636.87938pt x 94.10156pt>
 File: figure/fig1-fig4/fig2.png Graphic file (type png)
@@ -433,12 +453,11 @@ Underfull \hbox (badness 1590) in paragraph at lines 80--84
 0 =
  []
 
-
+[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 99--122
 
  []
 
-[4 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
 Missing character: There is no Œ in font cmr10!
 Missing character: There is no ó in font cmr10!
 
@@ -459,18 +478,22 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5]) (setup.tex
+ [5]) (setup.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 2913) in paragraph at lines 29--30
+Underfull \hbox (badness 2913) in paragraph at lines 11--12
 \OT1/ptm/m/n/10 adopts re-sources stream-lined slices con-struc-tion and is
  []
+
+
+Overfull \hbox (1.53352pt too wide) in paragraph at lines 45--45
+ []|[]| 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6]) (evaluation.tex
 Underfull \hbox (badness 3199) in paragraph at lines 24--26
@@ -501,20 +524,14 @@ Underfull \hbox (badness 2359) in paragraph at lines 27--28
  []
 
 
-Overfull \hbox (15.67073pt too wide) in paragraph at lines 35--74
+Overfull \hbox (20.07066pt too wide) in paragraph at lines 35--74
  [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (20.11067pt too wide) in paragraph at lines 82--121
+Overfull \hbox (24.5106pt too wide) in paragraph at lines 82--121
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 124.
@@ -524,7 +541,7 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 124.
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 137.
 
 
-<figure/fig8-fig12/fig10.png, id=40, 1047.915pt x 580.41844pt>
+<figure/fig8-fig12/fig10.png, id=41, 1047.915pt x 580.41844pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
@@ -534,7 +551,7 @@ Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 150.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig8-fig12/fig11.png, id=42, 956.82469pt x 568.37344pt>
+<figure/fig8-fig12/fig11.png, id=43, 956.82469pt x 568.37344pt>
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
@@ -556,27 +573,32 @@ Underfull \hbox (badness 1354) in paragraph at lines 166--182
  []
 
 
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 250--275
+ [][] 
+ []
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 285--288
+Underfull \hbox (badness 2626) in paragraph at lines 287--290
 \OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 285--288
+Underfull \hbox (badness 3428) in paragraph at lines 287--290
 \OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
 m/m/it/10 NP \OT1/ptm/m/n/10 of
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 285--288
+Underfull \hbox (badness 3919) in paragraph at lines 287--290
 \OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
 ) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--288
+Underfull \hbox (badness 10000) in paragraph at lines 287--290
 
  []
 
@@ -588,7 +610,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl)
+) (conclusion.tex) (bare_conf.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -600,31 +622,33 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (bare_conf.aux) ) 
+[11
+
+] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 5031 strings out of 493323
- 71948 string characters out of 3146850
- 190234 words of memory out of 3000000
- 8459 multiletter control sequences out of 15000+200000
- 50345 words of font info for 93 fonts, out of 3000000 for 9000
+ 5127 strings out of 493323
+ 73189 string characters out of 3146850
+ 188378 words of memory out of 3000000
+ 8549 multiletter control sequences out of 15000+200000
+ 49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,15n,49p,2009b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/M
-ikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a
-.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 406145 bytes).
+ 39i,17n,49p,1994b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
+:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:
+/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
+mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
+w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (11 pages, 418303 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

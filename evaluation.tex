@@ -201,39 +201,41 @@ Table~\ref{tab:6} lists the run-time of CppCheck, RL\_Detector and PML\_Checker.
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Program}& \tabincell{c}{\textbf{Size}\\\textbf{(Kloc)}}             &            \tabincell{c}{\textbf{CppCheck}\\\textbf{(Time)}} &      \tabincell{c}{\textbf{RLDetector}\\\textbf{(Time)}} & \tabincell{c}{\textbf{PMLChecker}\\\textbf{(Time)}}\\
+\multirow{2}{*}{\textbf{Program}}& \multirow{2}{*}{\tabincell{c}{\textbf{Size}\\\textbf{(Kloc)}}}&  \multicolumn{3}{|c|}{\textbf{RunTime(s)}}\\\cline{3-5}
+
+& &   \textbf{CppCheck} &      \textbf{RLDetector}&  \textbf{PMLChecker}\\
 \hline
-gzip       & 7.8    & 5.3s  & 4.5s & 3.2s\\
+gzip       & 7.8    & 5.3  & 4.5 & 3.2\\
 \hline
-vpr        & 17.0   & 10.0s  & 7.5s & 7.6s\\
+vpr        & 17.0   & 10.0  & 7.5 & 7.6\\
 \hline
-gcc        & 205.8 & 167.7s  & 48.3s & 41.0s \\
+gcc        & 205.8 & 167.7  & 48.3 & 41.0 \\
 \hline
-mesa     & 49.7   & 51.0s  & 33.1s & 34.8s\\
+mesa     & 49.7   & 51.0  & 33.1 & 34.8\\
 \hline
-art         & 1.3     & 0.3s  & 0.9s & 0.4s\\
+art         & 1.3     & 0.3  & 0.9 & 0.4\\
 \hline
-mcf        & 1.9     & 1.0s  & 4.0s & 3.7s\\
+mcf        & 1.9     & 1.0  & 4.0 & 3.7\\
 \hline
-equake   & 1.5     & 0.2s  & 1.0s & 0.4s\\
+equake   & 1.5     & 0.2  & 1.0 & 0.4\\
 \hline
-crafty     & 18.9   & 27.3s	 & 14.2s	 & 13.3s\\
+crafty     & 18.9   & 27.3	 & 14.2	 & 13.3\\
 \hline
-ammp    & 13.3   & 7.4s & 10.3s & 10.0s\\
+ammp    & 13.3   & 7.4 & 10.3 & 10.0\\
 \hline
-parser    & 10.9   & 4.0s	 & 6.7s	 & 5.1s\\
+parser    & 10.9   & 4.0	 & 6.7	 & 5.1\\
 \hline
-perlbmk & 58.2   & 123.2s   & 41.3s	 & 39.0s\\
+perlbmk & 58.2   & 123.2   & 41.3	 & 39.0\\
 \hline
-gap        & 59.5   &  29.0s & 20.9s & 20.0s\\
+gap        & 59.5   &  29.0 & 20.9 & 20.0\\
 \hline
-vortex    & 52.7    & 73.2s	 & 30.1s	 & 26.7s\\
+vortex    & 52.7    & 73.2	 & 30.1	 & 26.7\\
 \hline 
-bzip2     & 4.6      & 2.0s & 0.6s	 & 1.5s\\
+bzip2     & 4.6      & 2.0 & 0.6	 & 1.5\\
 \hline
-twolf     & 19.7     & 11.0s & 23.7s	 & 24.0s\\
+twolf     & 19.7     & 11.0 & 23.7	 & 24.0\\
 \hline
-Total     & 581.0    & 512.6s & 247.1s & 230.7s\\
+Total     & 581.0    & 512.6 & 247.1 & 230.7\\
 \hline
 \end{tabular}
 \end{table}
@@ -249,25 +251,25 @@ Total     & 581.0    & 512.6s & 247.1s & 230.7s\\
 \hline
 \textbf{Cases}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
 \hline
-branch1	 &	YES & NO & YES & YES\\
+branch1	 &$\surd$ & $\times$ & $\surd$ & $\surd$\\
 \hline
-branch2    & YES & YES & YES & YES\\
+branch2    & $\surd$ & $\surd$ & $\surd$ & $\surd$\\
 \hline
-loop1	 & NO &	NO & YES & YES\\
+loop1	 &$\times$ &	$\times$ & $\surd$ & $\surd$\\
 \hline
-loop2    & YES & NO & YES & YES\\
+loop2    & $\surd$ &$\times$ & $\surd$ & $\surd$\\
 \hline
-chainBranch1 & NO & NO & YES & YES\\
+chainBranch1 & $\times$ & $\times$ & $\surd$ & $\surd$\\
 \hline
-chainBranch2 &	NO	& NO & YES & YES\\
+chainBranch2 &	$\times$	& $\times$ & $\surd$ & $\surd$\\
 \hline
-chainLoop1	 & YES & YES & NO & YES\\
+chainLoop1	 & $\surd$ & $\surd$ & $\times$ & $\surd$\\
 \hline
-chainLoop2	 & YES& YES & NO & YES\\
+chainLoop2	 & $\surd$& $\surd$ & $\times$ & $\surd$\\
 \hline
-nestingBranch	 & NO & NO & YES & YES\\
+nestingBranch	 & $\times$ & $\times$ & $\surd$ & $\surd$\\
 \hline
-nestingLoop& NO & NO & YES & YES\\
+nestingLoop& $\times$ & $\times$ & $\surd$ & $\surd$\\
 \hline
 \end{tabular}
 \end{table}
@@ -296,25 +298,25 @@ Second, regarding the comparison of the approaches. Obviously, our approach has 
 \hline
 \textbf{Cases}  & \textbf{CppCheck} & \textbf{Splint} & \textbf{RLDetector} & \textbf{PMLChecker}\\
 \hline
-array1	 &	YES & NO & YES & YES\\
+array1	 &	$\surd$ & $\times$ & $\surd$ & $\surd$\\
 \hline
-array2  & NO & NO & NO & NO \\
+array2  & $\times$ & $\times$ & $\times$ & $\times$ \\
 \hline
-array3	 & NO &	NO & NO & YES\\
+array3	 & $\times$ &	$\times$ & $\times$ & $\surd$\\
 \hline
-list1 	& NO &	NO & NO & NO\\
+list1 	& $\times$ &$\times$ & $\times$ & $\times$\\
 \hline
-list2	 & NO & YES & NO & YES\\
+list2	 & $\times$ & $\surd$ & $\times$ & $\surd$\\
 \hline
-list3	 &	NO	& YES & NO & YES\\
+list3	 &	$\times$	& $\surd$ & $\times$ & $\surd$\\
 \hline
-struct1	 & NO & YES & NO & YES\\
+struct1	 & $\times$ & $\surd$ & $\times$ & $\surd$\\
 \hline
-struct2	 & NO & YES & NO & YES\\
+struct2	 & $\times$ & $\surd$ & $\times$ & $\surd$\\
 \hline
-arrayStruct1	 & NO & YES & YES & YES\\
+arrayStruct1	 & $\times$ & $\surd$ & $\surd$ & $\surd$\\
 \hline
-arrsyStruct2  & YES & YES & YES & YES\\
+arrsyStruct2  & $\surd$ & $\surd$ & $\surd$& $\surd$\\
 \hline
 \end{tabular}
 \end{table}
