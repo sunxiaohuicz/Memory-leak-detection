@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  13 JAN 2018 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  14 JAN 2018 10:12
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -488,69 +488,61 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 2913) in paragraph at lines 11--12
-\OT1/ptm/m/n/10 adopts re-sources stream-lined slices con-struc-tion and is
- []
-
-
-Overfull \hbox (1.53352pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.53352pt too wide) in paragraph at lines 38--38
  []|[]| 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [6]) (evaluation.tex
-Underfull \hbox (badness 3199) in paragraph at lines 24--26
+Underfull \hbox (badness 3199) in paragraph at lines 23--25
 []\OT1/ptm/m/n/10 First, cal-cu-late the \OT1/ptm/m/it/10 FP \OT1/ptm/m/n/10 in
  Ta-ble III[]. \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (CppCheck)
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 24--26
+Underfull \hbox (badness 4391) in paragraph at lines 23--25
 \OMS/cmsy/m/n/10 $ \OT1/ptm/m/n/10 11%, \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (Sp
 lint) = 44%, \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (RL[]Detector) = 9%,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
 \OT1/ptm/m/it/10 FP\OT1/ptm/m/n/10 (PML[]Checker) = 13%. Sim-i-larly, in Ta-ble
  V[],
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 24--26
+Underfull \hbox (badness 1371) in paragraph at lines 23--25
 \OT1/ptm/m/n/10 Ta-ble III[] and Ta-ble IV[], Splint re-ports most bugs, and
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 27--28
+Underfull \hbox (badness 2359) in paragraph at lines 26--27
 []\OT1/ptm/m/n/10 Second, this pa-per an-a-lyzes the ef-fec-tive-ness of the
  []
 
 
-Overfull \hbox (20.07066pt too wide) in paragraph at lines 35--74
+Overfull \hbox (26.35855pt too wide) in paragraph at lines 35--74
  [][] 
  []
 
 
-Overfull \hbox (24.5106pt too wide) in paragraph at lines 82--121
+Overfull \hbox (27.83835pt too wide) in paragraph at lines 83--122
  [][] 
  []
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 124.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 125.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 137.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 138.
 
 
 <figure/fig8-fig12/fig10.png, id=44, 1047.915pt x 580.41844pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 150.
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 151.
 (pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
 
 
@@ -560,50 +552,47 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 157.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 158.
 (pdftex.def)             Requested size: 232.19843pt x 157.0665pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-Underfull \hbox (badness 1796) in paragraph at lines 166--182
+Underfull \hbox (badness 1796) in paragraph at lines 167--183
 \OT1/ptm/m/n/10 SARD. Com-pare PML[]Checker with other three Tools,
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 166--182
+Underfull \hbox (badness 1354) in paragraph at lines 167--183
 \OT1/ptm/m/n/10 we have the fol-low-ing ob-ser-va-tions. First, cal-cu-late the
 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (0.51808pt too wide) in paragraph at lines 250--275
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 249--274
  [][] 
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 287--290
+Underfull \hbox (badness 2626) in paragraph at lines 286--289
 \OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 287--290
+Underfull \hbox (badness 3428) in paragraph at lines 286--289
 \OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
 m/m/it/10 NP \OT1/ptm/m/n/10 of
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 287--290
+Underfull \hbox (badness 3919) in paragraph at lines 286--289
 \OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
 ) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
@@ -615,7 +604,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl)
+) (conclusion.tex) (bare_conf.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -627,35 +616,33 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (bare_conf.aux)
+[11
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
  5127 strings out of 493323
  73189 string characters out of 3146850
- 188378 words of memory out of 3000000
+ 185378 words of memory out of 3000000
  8549 multiletter control sequences out of 15000+200000
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,49p,1994b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikT
-ex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pf
-b><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 409499 bytes).
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
+:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:
+/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
+mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
+w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (11 pages, 410798 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

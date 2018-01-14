@@ -4,14 +4,10 @@ To evaluate the projection approach proposed in Section~\ref{sec:approach},
 this paper compares our tool---PML\_Checker with three open-source tools which represent the existing different static detection approaches. 
 %In the rest of this section, this paper presents detailed information of the test subjects (Section~\ref{ssec:ts}), selected approaches to compare with (Section~\ref{ssec:ca}), the parameters and metrics (Section~\ref{ssec:pm}) in our experiments.
 \subsection{Test Tools}\label{ssec:tool}
-Table~\ref{tab:1} lists the four approaches considered in our experiments. There are several reasons for selecting the following approaches and the corresponding tools. 
+In our experiment, there are three state-of-the-art detection tools compared with PML\_Checker: CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.}, Splint\footnote{Splint. http://www.splint.org/. 2010.} and RL\_Detector. They are all open-source static detection tools, and have a good performance in detecting memory leaks.
 
-Regular matching and style, notation based detection are common approaches adopt in source code static detection. Both CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.} and Splint\footnote{Splint. http://www.splint.org/. 2010.} are open-source static detection tools used in Windows operating system. Apart from this, both the two tools can detect memory leaks in C source code. In details, Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes.
- 
-RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
+Splint develops different detecting standards for different types of errors in the compilation process, it detects memory leaks by annotations to record the pointer object’s lifetime~\cite{EL02}. CppCheck first creates symbol database of variables, functions and so on, and then it detects memory leaks by the embedded inspection classes. RL\_Detector is a static detection tool implemented, which adopts resources streamlined slices construction and is achieved a comparative accurate analysis of memory leaks. This section compares our tool PML\_Checker which implements the presented approach with the above tools.
 \subsection{Test Subjects}\label{ssec:ts}
-This experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.}, SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository) and $40$ test cases about memory errors from the SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) for measuring the accuracy and efficiency of the projection approach. 
-%
 \begin{table}[!h]
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \center
@@ -30,10 +26,7 @@ This experiment adopts all the C programs from SPEC CPU 2000\footnote{SPEC. http
 \hline
 \end{tabular}
 \end{table}
-%
-
-Moreover, for the sake of fairness, this paper considers the effectiveness of the approach from two aspects: complex control flows and complex data types. A complex control flow refers to a control flow graph with more than one control flow branches, which is the focus of this paper. To make the experiment more convincing, this paper considers the complexity of data types. In our experiment, Complex data types include data structure like linked list, struct, array and the combination of these data types. This paper presents $10$ small programs with different complex control flows and $10$ small programs with different complex data typese as test cases\protect\footnote{PML\_Checker.https://github.com/sunxiaohuiczcz/PML\_Checker.git.2017.}. Adhering to the principle of single case coverage scenarios minimized\footnote{Test Case Design. http://ecomputernotes.com/software-engineering/test-case-design. 2017.}, each case only covers one test scenario and includes only one memory leak.
-The detailed information of study cases are shown in Table~\ref{tab:2}.
+Table~\ref{tab:1} lists the information of real world repositories. This experiment adopts two real world repositories for evaluation: SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.} and SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.} (Software-artifact Infrastructure Repository). Specifically, we take $15$ programs with $581$ thousand lines code from SPEC CPU $2000$, and  $15$ programs with $267.9$ thousand lines code from SIR. However, we can not count the false negatives of the two repositories, because of the large amount of code. 
 %
 \begin{table}[!h]
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -41,7 +34,7 @@ The detailed information of study cases are shown in Table~\ref{tab:2}.
 \caption{Information of artificial cases}\label{tab:2}
 \begin{tabular}{|c|p{0.8cm}<{\centering}|p{0.8cm}<{\centering}|p{0.8cm}<{\centering}|p{0.8cm}<{\centering}|}
 \hline
-\multirow{2}{*}{\tabincell{c}{\textbf{Statistical}\\\textbf{metrics}}}&\multicolumn{2}{|c|}{\textbf{CC cases}} &                              \multicolumn{2}{|c|}{\textbf{SARD cases}}\\\cline{2-5}
+\multirow{2}{*}{\tabincell{c}{\textbf{Statistical}\\\textbf{metrics}}}&\multicolumn{2}{|c|}{\textbf{CC code}} &                              \multicolumn{2}{|c|}{\textbf{SARD cases}}\\\cline{2-5}
 & \tabincell{c}{\textbf{control}\\\textbf{flow}} & \tabincell{c}{\textbf{data}\\\textbf{type}}    &  \tabincell{c}{\textbf{bad}} &  \tabincell{c}{\textbf{good}}\\
 \hline
  \tabincell{c}{The number of\\test program} & 10 & 10 & 20 & 20\\
@@ -55,6 +48,10 @@ The detailed information of study cases are shown in Table~\ref{tab:2}.
 \end{tabular}
 \end{table}
 %
+
+In order to count false negatives of PML\_Checker, this experiment also uses artificial small code as test cases: SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) and CC code\protect\footnote{PML\_Checker.https://github.com/sunxiaohuiczcz/PML\_Checker.git.2017.}. SARD is a public benchmark providing test cases. This experiment take $40$ memory-related test cases, including $20$ bad cases with memory errors and $20$ corresponding good cases with no errors. CC code is provided by this paper to verify PML\_Checker from two aspects: complex control flows and complex data types.
+A complex control flow refers to a control flow graph with more than one control flow branches, which is the focus of this paper. To make the experiment more convincing, this paper considers the complexity of data types. In our experiment, complex data types include data structure like linked list, struct, array and the combination of these data types. CC code presents $10$ small programs with different complex control flows, and $10$ small programs with different complex data types. Adhering to the principle of single case coverage scenarios minimized\footnote{Test Case Design. http://ecomputernotes.com/software-engineering/test-case-design. 2017.}, each case only covers one test scenario and includes only one memory leak.
+The detailed information of study cases are shown in Table~\ref{tab:2}.
 \subsection{Metrics}\label{ssec:m}
 There are seven metrics in our experiments for evaluation.
 \begin{itemize}
