@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  14 JAN 2018 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  14 JAN 2018 19:50
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -604,7 +604,7 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl [10])
+) (conclusion.tex) (bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -616,9 +616,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
-
-] (bare_conf.aux) ) 
+[10] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
  5127 strings out of 493323
  73189 string characters out of 3146850
@@ -627,22 +625,22 @@ Here is how much of TeX's memory you used:
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,49p,1994b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/
-public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E
-:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public
-/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:
-/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/ut
-mb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/ur
-w/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 410798 bytes).
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/MikTex/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/pub
+lic/amsfonts/cm/cmsy9.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times
+/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1
+/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (10 pages, 410175 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
