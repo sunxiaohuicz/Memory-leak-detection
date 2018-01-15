@@ -3,12 +3,12 @@
 
 In general, this paper investigates the following research questions to evaluate PML\_Checker:
 \begin{description}
-\item[RQ1:] How does our approach perform under the real world repositories and public benchmarks? 
+\item[RQ1:] How does our approach perform under the real-world repositories and public benchmarks? 
 \item[RQ2:] How does our approach perform in terms of effectiveness analysis for complex control flows? 
 \item[RQ3:] How does our approach perform in terms of effectiveness analysis for complex data types? 
 \end{description}
 
-\subsection{RQ1: Performance on real world repositories and public benchmarks}
+\subsection{RQ1: Performance on real-world repositories and public benchmarks}
 
 %The first research question is to compare the accuracy achieved by the four approaches, and the run-time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
 
@@ -191,14 +191,14 @@ good  & 0 & 1 &	0 &	0\\
 
 \ 
 
-Considering CppCheck, RL\_Detector and PML\_Checker all use symbolic execution, it is necessary to verify whether our approach affects the efficiency. This experiment chooses SPEC CPU $2000$ as the test object due to its large amount of code and large number of files, and analyzes the run-time of the three tools. 
+Considering CppCheck, RL\_Detector and PML\_Checker all use symbolic execution, it is necessary to verify whether our approach affects the efficiency. This experiment chooses SPEC CPU $2000$ as the test object due to its large amount of code and large number of files, and analyzes the \textit{RunTime} of the three tools. 
 
-Table~\ref{tab:6} lists the run-time of CppCheck, RL\_Detector and PML\_Checker. By comparing the run-time of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in run-time, and our approach does not affect the efficiency of PML\_Checker.
+Table~\ref{tab:6} lists the \textit{RunTime} of CppCheck, RL\_Detector and PML\_Checker. By comparing the \textit{RunTime} of these three tools, we conclude that the performance of RL\_Detector and PML\_Checker is better than CppCheck in \textit{RunTime}, and our approach does not affect the efficiency of PML\_Checker.
 
 \begin{table}[!h]
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \centering
-\caption{Run time on SPEC CPU $2000$}\label{tab:6}
+\caption{RunTime on SPEC CPU $2000$}\label{tab:6}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -336,7 +336,7 @@ Second, comparing PML\_Checker to Splint, Splint reports memory leaks on the lat
 From the above experimental results, we have the following main findings including advantages and limitations: 
 \begin{itemize}
 \item 
-For the accuracy of detection, PMl\_Checker shows a lower false negative comparing to other three tools, while it shows a high false positive rate in real world repositories (SPEC CPU $2000$ and SIR). Therefore, in the next step, more detailed data flow analysis are plan to be added into our approach.
+For the accuracy of detection, PMl\_Checker shows a lower false negative comparing to other three tools, while it shows a high false positive rate in real-world repositories (SPEC CPU $2000$ and SIR). Therefore, in the next step, more detailed data flow analysis are plan to be added into our approach.
 \item 
 For the complex control flows and complex data types analysis, PML\_Checker is better than the other three tools.
 \item 
