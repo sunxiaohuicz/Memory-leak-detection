@@ -59,9 +59,27 @@ M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
   \emph{Proc.\ 13th International Symposium on Static Analysis - {SAS}}, 2006,
   pp. 405--424.
 
+\bibitem{J14}
+X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
+  dissertation, College of Computer and Control Engineering, Nankai University,
+  Tianjin, China, 2014,
+  http://cdmd.cnki.com.cn/Article/CDMD-10055-1015528928.htm, accessed at 25
+  June 2017.
+
 \bibitem{EL02}
 D.~Evans and D.~Larochelle, ``Improving security using extensible lightweight
   static analysis,'' \emph{IEEE Software}, vol.~19, no.~1, pp. 42--51, 2002.
+
+\bibitem{YZ04}
+Y.~Yang and J.~Zhang, ``Static program analysis techniques and tools,''
+  \emph{Computer Science}, vol.~31, no.~2, pp. 171--174, 2004,
+  http://www.cqvip.com/qk/92817x/200402/9323003.html, accessed at 25 June 2017.
+
+\bibitem{SJP05}
+V.~Swarup, S.~Jajodia, and J.~Pamula, ``Rule-based topological vulnerability
+  analysis,'' in \emph{Proc.\ 3rd International Workshop on Mathematical
+  Methods, Models, and Architectures for Computer Network Security -
+  {MMM-ACNS}}, vol. 3685, 2005, pp. 23--37.
 
 \bibitem{XZX11}
 Z.~Xu, J.~Zhang, and Z.~Xu, ``Memory leak detection based on memory state
@@ -77,22 +95,20 @@ D.~L. Heine and M.~S. Lam, ``Static detection of leaks in polymorphic
   containers,'' in \emph{Proc.\ International Conference on Software
   Engineering - {ICSE}}, 2006, pp. 252--261.
 
+\bibitem{YXYR14}
+D.~Yan, G.~Xu, S.~Yang, and A.~Rountev, ``Leakchecker: Practical static memory
+  leak detection for managed languages,'' in \emph{Proc.\ International
+  Symposium on Code Generation and Optimization - {CGO}}, 2014, pp. 87--97.
+
 \bibitem{DWC12}
 L.~Dong, J.~Wang, and L.~Chen, ``Modular heap abstraction-based memory leak
   detection for heap-manipulating programs,'' in \emph{Proc.\ 19th Asia-Pacific
   Software Engineering Conference - {APSEC}}, 2012, pp. 20--29.
 
-\bibitem{BPS00}
-W.~R. Bush, J.~D. Pincus, and D.~J. Sielaff, ``A static analyzer for finding
-  dynamic programming errors,'' \emph{Software - Practice and Experience -
-  {SPE}}, vol.~30, no.~7, pp. 775--802, 2000.
-
-\bibitem{J14}
-X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
-  dissertation, College of Computer and Control Engineering, Nankai University,
-  Tianjin, China, 2014,
-  http://cdmd.cnki.com.cn/Article/CDMD-10055-1015528928.htm, accessed at 25
-  June 2017.
+\bibitem{LXL15}
+Z.~Liu, B.~Xu, and D.~Liang, ``Semantics-based memory leak detection for c
+  programs,'' in \emph{Proc.\ International Conference on Fuzzy Systems and
+  Knowledge Discovery - (FSKD)}, 2015, pp. 2283--2287.
 
 \bibitem{KFM13}
 J.~C. Kleinsorge, H.~Falk, and P.~Marwedel, ``Simple analysis of partial
