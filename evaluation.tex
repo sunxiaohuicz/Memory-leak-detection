@@ -8,7 +8,7 @@ In general, this paper investigates the following research questions to evaluate
 \item[RQ3:] How does our approach perform in terms of effectiveness analysis for complex data types? 
 \end{description}
 
-\subsection{RQ1: Performance on real-world repositories and public benchmarks}
+\subsection{Performance on real-world repositories and public benchmarks}
 
 %The first research question is to compare the accuracy achieved by the four approaches, and the run-time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
 
@@ -241,7 +241,7 @@ Total     & 581.0    & 512.6 & 247.1 & 230.7\\
 \end{tabular}
 \end{table}
 
-\subsection{RQ2: Effectiveness Analysis of Complex Control Flows}
+\subsection{Effectiveness Analysis of Complex Control Flows}
 
 \begin{table}[!h]
 \center
@@ -288,7 +288,7 @@ First, calculate the \textit{NP} of the test results. \textit{NP}(CppCheck) = 50
 Second, regarding the comparison of the approaches. Obviously, our approach has advantage of complex-control-flow detection. The regular match based approach matches the source code with the vulnerabilities in the process of detection. This approach is not sensitive and inflexible to complex control flow. The style and notation based approach improves the software quality by improving the programming style, and discoves the potential bugs of program. However, this kind of analysis is not complete, so it has a high false negative rate. The approach by constructing resources streamlined slices only makes a simple assumption for allocation and deallocation of resources within loop bodies. It reduces the number of loops to 1 and treats the loops the same as branches. Therefore, this approach can not pass the test cases on the chain\_loop structure (chainLoop1 and chainLoop2) in the experiment. \\
 
 
-\subsection{RQ2: Effectiveness Analysis of Complex Data Types}
+\subsection{Effectiveness Analysis of Complex Data Types}
 
 \begin{table}[!h]
 \center

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  15 JAN 2018 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  16 JAN 2018 11:10
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -604,13 +604,7 @@ Missing character: There is no  in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no  in font ptmr7t!
-) (conclusion.tex) (bare_conf.bbl
-Underfull \hbox (badness 2961) in paragraph at lines 74--77
-\OT1/ptm/m/n/8 tools,'' \OT1/ptm/m/it/8 Com-puter Sci-ence\OT1/ptm/m/n/8 , vol.
- 31, no. 2, pp. 171--174, 2004,
- []
-
-)
+) (conclusion.tex) (bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -628,10 +622,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5130 strings out of 493323
- 73210 string characters out of 3146850
+ 5129 strings out of 493323
+ 73203 string characters out of 3146850
  185378 words of memory out of 3000000
- 8552 multiletter control sequences out of 15000+200000
+ 8551 multiletter control sequences out of 15000+200000
  49249 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,49p,1994b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -648,7 +642,7 @@ pe1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
 e1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikT
 ex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pf
 b><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 410357 bytes).
+Output written on bare_conf.pdf (10 pages, 409647 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

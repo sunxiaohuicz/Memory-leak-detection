@@ -1,21 +1,25 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Database file #1: Mdetection.bib
-Repeated entry---line 336 of file Mdetection.bib
+Repeated entry---line 335 of file Mdetection.bib
  : @inproceedings{LCW13
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 373 of file Mdetection.bib
+Repeated entry---line 372 of file Mdetection.bib
  : @inproceedings{SYX12
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 392 of file Mdetection.bib
+Repeated entry---line 391 of file Mdetection.bib
  : @inproceedings{LLQ16
  :                     ,
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 412 of file Mdetection.bib
+I was expecting an "="---line 411 of file Mdetection.bib
  :   article 
  :           No.= {16},
+I'm skipping whatever remains of this entry
+Repeated entry---line 447 of file Mdetection.bib
+ : @inproceedings{XR08
+ :                    ,
 I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -23,4 +27,4 @@ I'm skipping whatever remains of this entry
 Warning--empty year in KFM13
 
 Done.
-(There were 4 error messages)
+(There were 5 error messages)
