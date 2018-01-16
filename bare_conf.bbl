@@ -103,7 +103,7 @@ G.~Xu and A.~Rountev, ``Precise memory leak detection for java software using
 \bibitem{LXL15}
 Z.~Liu, B.~Xu, and D.~Liang, ``Semantics-based memory leak detection for c
   programs,'' in \emph{Proc.\ International Conference on Fuzzy Systems and
-  Knowledge Discovery - (FSKD)}, 2015, pp. 2283--2287.
+  Knowledge Discovery - {FSKD}}, 2015, pp. 2283--2287.
 
 \bibitem{KFM13}
 J.~C. Kleinsorge, H.~Falk, and P.~Marwedel, ``Simple analysis of partial
@@ -141,6 +141,11 @@ Z.~Huang, R.~Wang, and S.~Shan, ``Projection metric learning on grassmann
 D.~J. Nott and C.~Leng, ``Bayesian projection approaches to variable selection
   in generalized linear models,'' \emph{Computational Statistics {\&} Data
   Analysis}, vol.~54, no.~12, pp. 3227--3241, 2010.
+
+\bibitem{ZYC17}
+Q.~Zhang, L.~T. Yang, and Z.~Chen, ``Privacy-preserving double-projection deep
+  computation model with crowdsourcing on cloud for big data feature
+  learning,'' \emph{Internet of Things Journal}, no.~99, pp. 1--1, 2017.
 
 \bibitem{D94}
 K.~Davis, ``Projection-based program analysis,'' Ph.D. dissertation, Department
