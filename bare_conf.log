@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  16 JAN 2018 14:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  17 JAN 2018 22:03
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -368,9 +368,6 @@ LaTeX Warning: No \author given.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no ï in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no š in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -521,28 +518,26 @@ Underfull \hbox (badness 2359) in paragraph at lines 26--27
  []
 
 
-Overfull \hbox (26.35855pt too wide) in paragraph at lines 35--74
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 28.
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 41.
+
+
+Overfull \hbox (26.35855pt too wide) in paragraph at lines 59--98
  [][] 
  []
 
 
-Overfull \hbox (27.83835pt too wide) in paragraph at lines 83--122
+Overfull \hbox (27.83835pt too wide) in paragraph at lines 107--146
  [][] 
  []
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 125.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 138.
-
 
 <figure/fig8-fig12/fig10.png, id=44, 1047.915pt x 580.41844pt>
 File: figure/fig8-fig12/fig10.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 151.
+Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 150.
 (pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
 
 
@@ -552,47 +547,47 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
 <use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 158.
+Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 157.
 (pdftex.def)             Requested size: 232.19843pt x 157.0665pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-Underfull \hbox (badness 1796) in paragraph at lines 167--183
+Underfull \hbox (badness 1796) in paragraph at lines 166--182
 \OT1/ptm/m/n/10 SARD. Com-pare PML[]Checker with other three Tools,
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 167--183
+Underfull \hbox (badness 1354) in paragraph at lines 166--182
 \OT1/ptm/m/n/10 we have the fol-low-ing ob-ser-va-tions. First, cal-cu-late the
 
  []
 
 
-Overfull \hbox (0.51808pt too wide) in paragraph at lines 249--274
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 248--273
  [][] 
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 286--289
+Underfull \hbox (badness 2626) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 286--289
+Underfull \hbox (badness 3428) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
 m/m/it/10 NP \OT1/ptm/m/n/10 of
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 286--289
+Underfull \hbox (badness 3919) in paragraph at lines 285--288
 \OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
 ) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--289
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
  []
 
@@ -642,7 +637,7 @@ pe1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
 e1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikT
 ex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pf
 b><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (10 pages, 409973 bytes).
+Output written on bare_conf.pdf (10 pages, 410154 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
