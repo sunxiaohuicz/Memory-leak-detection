@@ -10,7 +10,7 @@ This section describes a set of rules and an algorithm for projecting a control 
 %Projection subject is the control flow graph of the program to be analyzed, which is a directed graph $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. 
 %\end{definition}
 
-Projection Subject is the input of the projection process and Projection Target is the output of the projection process. Specifically, Projection Subject($G$) is the control flow graph of the program to be analyzed. $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. Projection Target($G^*$) is a directed graph that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
+Projection Subject is the input of the projection process and Projection Target is the output of the projection process. Specifically, Projection Subject ($G$) is the control flow graph of the program to be analyzed. $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. Projection Target ($G^*$) is a directed graph that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cup B\cup F!=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
 
 %\begin{definition}[Projection Target]
 %Projection target is a directed graph $G^*$ that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
@@ -148,7 +148,7 @@ Given the nodes in set $A$ or $F$, the algorithm finds the direct predecessor no
 5.\ \ \quad	   set $\mathit{base} =$ null.\\
 6.\ \ \quad	   set $\mathit{current}$ = the current element of $\mathit{RBT}$.\\
 7.\ \ \quad	    \textbf{if} $\mathit{base}$ == null \textbf{then}\\
-8.\ \ \quad \quad	        \textbf{if} $\mathit{current}$ != $A$ \&\& $\mathit{current}$ != $F$ \textbf{then}\\
+8.\ \ \quad \quad	        \textbf{if} $\mathit{current}$ $\notin$ $A$ \&\& $\mathit{current}$ $\notin$ $F$ \textbf{then}\\
 9.\ \ \quad \quad \quad	            \textbf{continue}.\\
 10.\ \ \quad\quad	        \textbf{else then}\\
 11.\ \ \quad\quad \quad	            $\mathit{base} \leftarrow \mathit{current}$.\\
