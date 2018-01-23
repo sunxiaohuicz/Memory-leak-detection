@@ -16,7 +16,7 @@ Projection Subject is the input of the projection process and Projection Target 
 %Projection target is a directed graph $G^*$ that contains all the control flow branch nodes denoted by $B$, and all the allocation nodes denoted by $A$ and deallocation nodes denoted by $F$ (if exist). $G^* = (N^*, E^*)$, where $N^* = A\cup B\cup F$ ($A\cap B\cap F=\emptyset$) denotes the set of nodes, and $E^*$ denotes the set of edges between nodes, representing the sequential ordering between nodes.
 %\end{definition}
 
-\begin{definition}[Control Flow Graph Projection]
+\begin{definition}[Control-Flow-Graph Projection]
 Given two directed graphs $G = (N, E)$ and $G^* = (N^*, E^*)$. Let set $M$ contains all the statement nodes relating to memory management in the procedure $P$ and the set $B$ contains all the control flow branch nodes (e.g. {\sf if}, {\sf else}, {\sf while}, {\sf for} et al.). If $G$ and $G^*$ satisfy the following conditions, then we say that $G^*$ is the projection of $G$, denoted as $G^* \mapsto G$:
 \begin{itemize}
 \item
@@ -28,7 +28,7 @@ $\forall$ $n\in B$ in directed graph $G^*$, if $\forall m\in M: m\not\in \Gamma(
 \end{itemize}
 \end{definition}
 
-In general, the Control Flow Graph Projection is the process from the Projection Subject transforming into the Projection Target according to the following rules. This paper summarizes the projection rules as follows: 
+In general, the Control-Flow-Graph Projection is the process from the Projection Subject transforming into the Projection Target according to the following rules. This paper summarizes the projection rules as follows: 
 \begin{itemize}
 \item 
 Rule 1: The set $N^*$ of the projection graph only contains nodes related to memory allocation and deallocation, and all the control flow branch nodes in the procedure $P$.
@@ -60,7 +60,7 @@ Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projec
 \label{fig:4}
 \end{figure}
 
-\begin{theorem}[Control Flow Graph Projection Theorem]
+\begin{theorem}[Control-Flow-Graph Projection Theorem]
 Given a directed graph $G = (N, E)$. If $G^* \mapsto G$ where $G^*=(N^*, E^*)$, then $G^*$ strictly keeps the reachability relation among nodes in $N^*$ from $G$, that is, $\forall m,n\in N^*$, $m$ can reach $n$ in $G^*$ if and only if $m$ can reach $n$ in $G$.
 \end{theorem}
 \begin{proof} Presume $m$ can reach $n$ in $G^*$, which means there exists a directed path $\mu^*=(m,e_1^*,e_2^*,\ldots,e_k^*,n)$ in $G^*$. 
@@ -83,11 +83,11 @@ In the later case, let $\mu=m,\mu_1,n_1\mu_2, n_2,\cdots,\mu_k, n_k, \mu_{k+1}, 
 \mu^*=(m, n_1, n_2, \ldots, n_{i}, n_{i+1}, \ldots, n_{k+1}, n)$ in $G^*$. 
 \end{proof}
 
-Algorithm~\ref{alg:cfp} shows the projection algorithm according to the projection rules. %We can summarize from the control flow graph projection theorem that $G^*$ is a directed graph extracted from $G$ which consists of $N^*$. Apart from this, $G^*$ strictly keeps the reachable relationships among nodes in $N^*$ from $G$. Specifically, if $N^* = N$, then $P[G, N^*] = G$.
+Algorithm~\ref{alg:A1} shows the projection algorithm according to the projection rules. %We can summarize from the control flow graph projection theorem that $G^*$ is a directed graph extracted from $G$ which consists of $N^*$. Apart from this, $G^*$ strictly keeps the reachable relationships among nodes in $N^*$ from $G$. Specifically, if $N^* = N$, then $P[G, N^*] = G$.
 %
-Given the control flow graph $G = (N, E)$ of program $P$ as input. The algorithm returns $G$'s projection graph $G^*= (N^*, E^*)$ as output. Algorithm 1 can be divided into $3$ steps. Step$1$(line $1-2$) establishes the min-heap of $N$ according to the execution order of statements. Step$2$(line $3-9$) folds those unrelating to memory management paths. Step$3$(line $10-12$) adjusts the $\mathit{Red\_Black\_Tree}(N^*)$ and the $\mathit{Map}(N^*)$, and obtains the final projection graph $G^*$).
+Given the control flow graph $G = (N, E)$ of program $P$ as input. The algorithm returns $G$'s projection graph $G^*= (N^*, E^*)$ as output. Algorithm 1 can be divided into $3$ steps. Step$1$ (line $1-2$) establishes the min-heap of $N$ according to the execution order of statements. Step$2$(line $3-9$) folds those unrelating to memory management paths. Step$3$ (line $10-12$) adjusts the Red Black Tree ($\mathit{RBT}(N^*)$) and the $\mathit{Map}(N^*)$, and obtains the final projection graph $G^*$).
 % and $G^*=P[G, N^*]$. $N^* = A\cup B\cup F$. Moreover, 
-In this algorithm, $n.ind$ and $n.outd$ stand for the in-degree and out-degree of node $n$ respectively. $a$ means the node $a$ is in set $A$. $f$ means the node $f$ is in $F$. Lastly, whenever a loop is added to $G^*$ (even when the loop already exists), both the in-degree and the out-degree of the looping node are increased by one.
+In this algorithm, $n.ind$ and $n.outd$ stand for the in-degree and out-degree of node $n$ respectively; $a$ means the node $a$ is in set $A$. $f$ means the node $f$ is in $F$. Lastly, whenever a loop is added to $G^*$ (even when the loop already exists), both the in-degree and the out-degree of the looping node are increased by one.
 
 %The set $N$ contains all the nodes abstracted from the statements from procedure $P$. 
 Considering the complexity of the projection algorithm, the Red Black Tree is used to store the nodes in set $N$. Red Black Tree is a data structure, which is an approximate balanced tree with only two types of nodes: red nodes and black nodes. This type of data structure has the advantage of high search efficiency, due to that it is sequential which can avoid the disorder during the search process. 
@@ -95,7 +95,7 @@ Considering the complexity of the projection algorithm, the Red Black Tree is us
 In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements in procedure $P$) is implemented as a set of $Map$s. A $Map$ is a data structure stored in the form of key-value pairs. The elements in a $Map$ are the ordering relation between a node $n$ in set $N$ and its successor nodes (i.e., nodes in $\Gamma(n)$).
 
 \begin{algorithm}
-\caption{ControlFlowProjection ($G$)}\label{alg:cfp}
+\caption{ControlFlowProjection ($G$)}\label{alg:A1}
 \textbf{Input:} A control flow graph $G$ for program $P$.\\
 \textbf{Output:} Projection graph $G^*$ for the input control flow graph\\
 %\textbf{Begin}\\
@@ -121,7 +121,7 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 %\textbf{End}
 \end{algorithm}
 
-The projection algorithm is acceptable in the aspect of complexity. In this algorithm, this paper assumes that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
+The projection algorithm is acceptable in the aspect of complexity. In this algorithm, this paper assumes that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$ ($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
 
 \subsection{Detection Method}
 
