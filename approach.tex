@@ -22,7 +22,7 @@ Given two directed graphs $G = (N, E)$ and $G^* = (N^*, E^*)$. Let set $M$ conta
 \item
 $N^*\subseteq N$;
 \item
-If $\forall m,n\in N^*,(m\neq n), if m\in \Gamma(n)$ ($\Gamma(n)$ denotes the set of direct successor nodes of $n$), then there must be a connected path $\mu$ from $n$ to $m$ in $G$, formally $\exists \mu=(n, n_1,\ldots,n_l,m)$ in $G$ and $n_1\in\Gamma(n) \land  n_{i+1}\in\Gamma(n_i) \land n_n\in \Gamma(m)$ ($0\leq i\leq (n-1)$);
+If $\forall m,n\in N^*,(m\neq n), m\in \Gamma(n)$ ($\Gamma(n)$ denotes the set of direct successor nodes of $n$), then there must be a connected path $\mu$ from $n$ to $m$ in $G$, formally $\exists \mu=(n, n_1,\ldots,n_l,m)$ in $G$ and $n_1\in\Gamma(n) \land  n_{i+1}\in\Gamma(n_i) \land n_n\in \Gamma(m)$ ($0\leq i\leq (n-1)$);
 \item
 $\forall$ $n\in B$ in directed graph $G^*$, if $\forall m\in M: m\not\in \Gamma(n)$, then $\Gamma(n)=\Gamma(n)\cup\{n\}$. 
 \end{itemize}
