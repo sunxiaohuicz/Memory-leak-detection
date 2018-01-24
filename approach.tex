@@ -44,7 +44,7 @@ If the node $n\in N^*$, $n\in \Gamma(n)$, then the node $n$ is a closed node.
 
 Fig.~\ref{figure3} shows the CFG (G) of a piece of code. In this graph, there are $11$ elements forms set $N$, that is, $N = \{S_0, S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_{10}\}$. The memory block is allocated in $S_1$ ($S_1\in A$) and freed in $S_9$ ($S_9\in F$); $S_3$ is a looping branch node and $S_6$ is a conditional branch node ($B=\{S_3, S_6\}$); In node $S_7$, another pointer points to the memory block ($S_7\in A$); Others are unrelated to memory operation. Thus the cyclomatic complexity of this graph is $4$.
 
-Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projection Rule 2, we have $N*=A\cup B\cup F=\{S_1, S_3, S_6, S_7, S_9\}$. Following Rule $2$, we have the edges from $S_1$ to $S_3$, $S_3$ to $S_6$, $S_6$ to $S_7$ and $S_7$ to $S_9$. Following Rule $3$, $S_3$ is a closed node since all its direct successor nodes are not memory related nodes, thus we add a loop to $S_3$. There is no loop at $S_6$, because the direct successor $s_7$ is a memory related node.  
+Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projection Rule 1, we have $N^*=A\cup B\cup F=\{S_1, S_3, S_6, S_7, S_9\}$. Following Rule $2$, we have the edges from $S_1$ to $S_3$, $S_3$ to $S_6$, $S_6$ to $S_7$ and $S_7$ to $S_9$. Following Rule $3$, $S_3$ is a closed node since all its direct successor nodes are not memory related nodes, thus we add a loop to $S_3$. There is no loop at $S_6$, because the direct successor $s_7$ is a memory related node.  
 
 \begin{figure}[!h]
 \center
@@ -79,7 +79,7 @@ Or there is $\mu=(m,\ldots,n_1,\ldots,n_2,\ldots,n_k,\ldots,n)$, where $m$, $n$,
 
 In the former case, according to the rules of control flow graph projection, $m$ can immediately reach $n$ in $G^*$, i.e., $n\in \Gamma(m)$.
 %
-In the later case, let $\mu=m,\mu_1,n_1\mu_2, n_2,\cdots,\mu_k, n_k, \mu_{k+1}, n$, where $\mu_i=(n^i_{1},\ldots,n^i_{j_i}) (1\leq i\leq k+1)$, there are no nodes in each path $\mu_i$ from $N^*$ except end nodes. According to the projection rules, the nodes in each path $\mu_i$ will be deleted in $G^*$ such that there is a immediate edge between $m$ and $n_1$, between each $n_i$ and $n_{i+1} (1\leq i \leq k)$, and between $n_{k+1}$ and $n$, which forms a path $
+In the later case, let $\mu=(m,\mu_1,n_1,\mu_2, n_2,\cdots,\mu_k, n_k, \mu_{k+1}, n)$, where $\mu_i=(n^i_{1},\ldots,n^i_{j_i}) (1\leq i\leq k+1)$, there are no nodes in each path $\mu_i$ from $N^*$ except end nodes. According to the projection rules, the nodes in each path $\mu_i$ will be deleted in $G^*$ such that there is a immediate edge between $m$ and $n_1$, between each $n_i$ and $n_{i+1} (1\leq i \leq k)$, and between $n_{k+1}$ and $n$, which forms a path $
 \mu^*=(m, n_1, n_2, \ldots, n_{i}, n_{i+1}, \ldots, n_{k+1}, n)$ in $G^*$. 
 \end{proof}
 
