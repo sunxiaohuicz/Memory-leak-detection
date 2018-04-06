@@ -173,12 +173,12 @@ The projection algorithm is acceptable in the aspect of complexity. In this algo
 
 %There are only one loop in the traversal of $RBT$, so the time complexity of this algorithm is $O(log(N))$, and the space complexity of this algorithm is $S(N)$.
 
-\subsection{Optimization Strategy}
+%\subsection{Optimization Strategy}
 
-The control-flow-graph projection makes the detection process simple and intuitive. More importantly, all the cases of memory leaks mentioned in Section~\ref{sec:description} can be detected in the detection algorithm. However, this approach may result in a high false positive rate, since it does not analyze the specific value of conditional predicate in the valuating of control flow branches, in short, it has a low sensitivity to data flows. 
+%The control-flow-graph projection makes the detection process simple and intuitive. More importantly, all the cases of memory leaks mentioned in Section~\ref{sec:description} can be detected in the detection algorithm. However, this approach may result in a high false positive rate, since it does not analyze the specific value of conditional predicate in the valuating of control flow branches, in short, it has a low sensitivity to data flows. 
 %In Fig.~\ref{fig:7}, the statement $5$ will be marked with a $B$ node (control flow branching statement). Apart from this, the example code will be judged to have a suspected memory leak by using the algorithm above, since the buffer may not be freed in every branch. However, there are no memory leaks in this example. Specifically, the result of the condition is true when analyzing the conditional predicate of line $5$ (buffer != NULL), that is, the memory blocks are freed after being allocated. 
 
-In order to reduce such false positives, this paper combines symbolic execution\footnote{Symbolic execution.https://en.wikipedia.org/wiki/Symbolic\_execution.2017.} and constraint solving\footnote{Constraint solving. http://www.constraintsolving.com/. 2017.} during the execution of the algorithm to accurately evaluate the branching conditions.
+%In order to reduce such false positives, this paper combines symbolic execution\footnote{Symbolic execution.https://en.wikipedia.org/wiki/Symbolic\_execution.2017.} and constraint solving\footnote{Constraint solving. http://www.constraintsolving.com/. 2017.} during the execution of the algorithm to accurately evaluate the branching conditions.
 %
 %\begin{figure}[!h]
 %\small
@@ -196,10 +196,10 @@ In order to reduce such false positives, this paper combines symbolic execution\
 %\caption{A piece of code}\label{fig:7}
 %\end{figure}
 
-Symbolic execution simulates the execution of programs by symbolizing variables. Specifically, symbolic execution collects memory allocation and release points by backward traversal for the CFG. At the same time, at each of the control flow branch, conditions of the branch are added to the current path conditions. Finally, those paths related to memory allocation and release will be merged at the meeting node of the CFG, and then according to Hoare logic\footnote{Hoare logic. https://en.wikipedia.org/wiki/Hoare\_logic. 2017.}, our system carries constraint solving to the merged paths. Constraint solving is accompanied by the projection process.  
+%Symbolic execution simulates the execution of programs by symbolizing variables. Specifically, symbolic execution collects memory allocation and release points by backward traversal for the CFG. At the same time, at each of the control flow branch, conditions of the branch are added to the current path conditions. Finally, those paths related to memory allocation and release will be merged at the meeting node of the CFG, and then according to Hoare logic\footnote{Hoare logic. https://en.wikipedia.org/wiki/Hoare\_logic. 2017.}, our system carries constraint solving to the merged paths. Constraint solving is accompanied by the projection process.  
 %Therefore, symbolic execution and constraint solving can help to reduce similar false positives like the problem in this example.
 
-\subsection{System Workflow}
+\subsection{System Detecting Process}
 
 %\begin{figure}[!h]
 %\small
@@ -208,5 +208,6 @@ Symbolic execution simulates the execution of programs by symbolizing variables.
 %\caption{Framework flowchart for PML\_Checker}\label{fig:18}
 %\end{figure}
 
-The input data of PML\_Checker is C source code. After lexical analysis and syntax analysis, abstract syntax tree generates the original control flow graph, and it will be output to the system interface. Next, data flow analysis and symbolic execution extend the original CFG, constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG will be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and finally displays the test results. 
+The input data of PML\_Checker is C source code. After lexical analysis and syntax analysis, abstract syntax tree generates the original control flow graph. System captures the data flow information of each node based on the CFG, and after this process completed, system produces a new control flow graph from the memory allocation point to the release point, or a extended control-flow-graph. PML\_Checker projects the extended control-flow-graph according to the projection algorithm, then traverses the existing projection graph. Finally, the constraint solver solves the path conditions in the graph to determine whether the code exists memory leaks.
+%and it will be output to the system interface. Next, data flow analysis and symbolic execution extend the original CFG, constraint solving to the data flow conditions will find the dependencies from the memory allocation to deallocation, and the extended CFG will be output as a mid product. Then the projected CFG will be produced at the base of extended CFG by projection algorithm. At last, according to the detection method mentioned at the approach section, PML\_Checker detects memory leaks from the projected CFG, and finally displays the test results. 
 

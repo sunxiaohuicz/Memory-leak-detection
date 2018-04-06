@@ -42,6 +42,11 @@ M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
   \emph{Proc.\ 13th International Symposium on Static Analysis - {SAS}}, 2006,
   pp. 405--424.
 
+\bibitem{J14}
+X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
+  dissertation, College of Computer and Control Engineering, Nankai University,
+  Tianjin, China, 2014.
+
 \bibitem{XZX11}
 Z.~Xu, J.~Zhang, and Z.~Xu, ``Memory leak detection based on memory state
   transition graph,'' in \emph{Proc.\ the 18th Asia-Pacific Software

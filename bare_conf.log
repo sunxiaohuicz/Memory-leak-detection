@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  6 APR 2018 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  6 APR 2018 21:18
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -428,86 +428,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--122
 
  []
 
-[3 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>]
-Overfull \hbox (4.9379pt too wide) in paragraph at lines 181--181
-[][][]\OT1/ptm/m/n/8 Symbolic ex-e-cu-tion.https://en.wikipedia.org/wiki/Symbol
-ic[]execution.2017.| 
+[3 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>])
+(evaluation.tex
+Overfull \hbox (26.35855pt too wide) in paragraph at lines 72--111
+ [][] 
  []
 
-) (evaluation.tex
 
-LaTeX Warning: Citation `J14' on page 4 undefined on input line 11.
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 33--34
-[]\OT1/ptm/m/n/10 Second, this pa-per an-a-lyzes the ef-fec-tive-ness of the
+Overfull \hbox (27.83835pt too wide) in paragraph at lines 120--159
+ [][] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 35.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 48.
-
-
-Overfull \hbox (26.35855pt too wide) in paragraph at lines 66--105
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 271--296
  [][] 
  []
-
-
-Overfull \hbox (27.83835pt too wide) in paragraph at lines 114--153
- [][] 
- []
-
-<figure/fig8-fig12/fig10.png, id=34, 1047.915pt x 580.41844pt>
-File: figure/fig8-fig12/fig10.png Graphic file (type png)
-
-<use figure/fig8-fig12/fig10.png>
-Package pdftex.def Info: figure/fig8-fig12/fig10.png used on input line 157.
-(pdftex.def)             Requested size: 232.19843pt x 128.60466pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig8-fig12/fig11.png, id=35, 1057.9525pt x 715.67375pt>
-File: figure/fig8-fig12/fig11.png Graphic file (type png)
 
-<use figure/fig8-fig12/fig11.png>
-Package pdftex.def Info: figure/fig8-fig12/fig11.png used on input line 164.
-(pdftex.def)             Requested size: 232.19843pt x 157.0665pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./figure/fig8-fig12/fig10.png> <./figure/fig8-fig12/fig11.png>]
-Overfull \hbox (0.51808pt too wide) in paragraph at lines 257--282
- [][] 
- []
-
-
-Underfull \hbox (badness 2626) in paragraph at lines 294--297
-\OT1/ptm/m/n/10 Com-par-ing PML[]Checker to other three-tools, we have
- []
-
-
-Underfull \hbox (badness 3428) in paragraph at lines 294--297
-\OT1/ptm/m/n/10 the fol-low-ing ob-ser-va-tions. First, cal-cu-late the \OT1/pt
-m/m/it/10 NP \OT1/ptm/m/n/10 of
- []
-
-
-Underfull \hbox (badness 3919) in paragraph at lines 294--297
-\OT1/ptm/m/n/10 the test re-sults. \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (CppCheck
-) = 50%, \OT1/ptm/m/it/10 NP\OT1/ptm/m/n/10 (Splint) =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+Underfull \hbox (badness 10000) in paragraph at lines 308--312
 
  []
 
-[6]) (related.tex) (conclusion.tex) (bare_conf.bbl)
+[5]) (related.tex) (conclusion.tex) (bare_conf.bbl [6])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -519,33 +471,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (bare_conf.aux)
+[7
 
-LaTeX Warning: There were undefined references.
-
- ) 
+] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 5001 strings out of 493323
- 71886 string characters out of 3146850
- 198378 words of memory out of 3000000
- 8434 multiletter control sequences out of 15000+200000
- 45898 words of font info for 86 fonts, out of 3000000 for 9000
+ 4989 strings out of 493323
+ 71587 string characters out of 3146850
+ 189378 words of memory out of 3000000
+ 8424 multiletter control sequences out of 15000+200000
+ 47034 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,16n,49p,1989b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/c
-msy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/
-type1/urw/helvetic/uhvr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/M
-ikTex/fonts/type1/urw/times/utmbi8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a
-.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (7 pages, 359888 bytes).
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pf
+b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/Mi
+kTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.
+pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on bare_conf.pdf (7 pages, 255282 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

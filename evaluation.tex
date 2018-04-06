@@ -8,13 +8,26 @@ In general, this paper investigates the following research questions to evaluate
 \item[RQ3:] How does our approach perform in terms of effectiveness analysis for complex data types? 
 \end{description}
 
+\subsection{Experimental Setup}
+
 In our experiment, there are three state-of-the-art detection tools compared with PML\_Checker: CppCheck\footnote{CppCheck. trac.cppcheck.net/wiki. 2016.}, Splint\footnote{Splint. http://www.splint.org/. 2010.} and RL\_Detector~\cite{J14}. They are all open-source static detection tools, and have a good performance in detecting memory leaks.
 
 This experiment adopts two real-world repositories for evaluation: SPEC CPU 2000\footnote{SPEC. http://www.spec.org/cpu/. 2007.} and SIR\footnote{SIR. http://sir.unl.edu/content/sir.php. 2017.}. Specifically, we take $15$ programs with $581$ thousand lines code from SPEC CPU $2000$, and  $15$ programs with $267.9$ thousand lines code from SIR. 
 
 However, we can not count the false negatives of the two repositories, because of the large amount of code.In order to count false negatives of PML\_Checker, this experiment also uses artificial small code as test cases: SARD\footnote{NIST. https://samate.nist.gov/SARD/. 2016.} (Software Assurance Reference Dataset) and CC code. SARD is a public benchmark providing test cases. This experiment take $40$ memory-related test cases, including $20$ bad cases with memory errors and $20$ corresponding good cases with no errors. CC code is provided by this paper to verify PML\_Checker from two aspects: complex control flows and complex data types.
 A complex control flow refers to a control flow graph with more than one control flow branches, which is the focus of this paper. To make the experiment more convincing, this paper considers the complexity of data types. In our experiment, complex data types include data structure like linked list, struct, array and the combination of these data types. CC code presents $10$ small programs with different complex control flows, and $10$ small programs with different complex data types. Adhering to the principle of single case coverage scenarios minimized\footnote{Test Case Design. http://ecomputernotes.com/software-engineering/test-case-design. 2017.}, each case only covers one test scenario and includes only one memory leak. 
-\subsection{Performance on real-world repositories and public benchmarks}
+
+There are six metrics in our experiments for evaluation.
+\begin{itemize}
+\item \textit{TW:} The total number of the reported memory leaks.
+\item \textit{TL:} The total number of memory leaks contained in a program, and it takes the number of pointers pointing to memory blocks as the measurement standard.
+\item \textit{NF:} The number of false positives.
+%\item \textit{MLF:} The difference of \textit{TW} and \textit{NF}, which denotes the number of real memory leaks in the test results.
+\item \textit{FP:} The false positive rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{FP}=$\frac{\textit{NF}}{\textit{TW}}$.
+\item \textit{NP:} The false negative rate, a metric used to measure the accuracy. It can be calculated by the following formula: \textit{NP}=$\frac{\textit{TL-NF}}{\textit{TL}}$.
+\item \textit{RunTime:} The run time of each tool for C program.
+\end{itemize}
+\subsection{Experimental Results and Discussion}
 
 %The first research question is to compare the accuracy achieved by the four approaches, and the run-time recorded by the corresponding $4$ tools in terms of open benchmarks. There are two experiments.
 
@@ -22,39 +35,32 @@ A complex control flow refers to a control flow graph with more than one control
 
 \ 
 
-This section includes two-part experiments: experiment on large amount code (SPEC CPU $2000$ and SIR), experiment on small amount code (test cases from SARD).
 
-Table~\ref{tab:3} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:4} shows the test results on SIR. Compare PML\_Checker with other three tools, we have the following observations. 
+%Second, this paper analyzes the effectiveness of the PML\_Checker by comparing the MLF of test results. Test results from Table~\ref{tab:3} can be converted into MLF of test results by constructing a matrix. Specifically, the results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. This paper compresses this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results. The final matrix $D_1$ is as follows.
+%\[
+%\scriptsize
+%D_1=\left[
+%\begin{array}{cccccccccc}
+%0 & 0 & 35 & 2 & 1 & 0 & 0 & 20 & 3 & 0\\
+%0 & 0 & 1  &  1 & 1 & 0 & 0 & 12 & 1 & 1\\
+%0 & 0 & 22 & 4 & 0 & 3 & 0 & 18 & 0 & 1 \\
+%2 & 3 & 21 & 12 & 3& 0 & 8 & 20 & 2 & 1  
+%\end{array}
+%\right]^{T}
+%\]
 
-First,
-% calculate the \textit{FP} in Table~\ref{tab:3}. \textit{FP}(CppCheck) $\approx$ 11\%, \textit{FP}(Splint) = 44\%, \textit{FP}(RL\_Detector) = 9\%, \textit{FP}(PML\_Checker) = 13\%. Similarly, in Table~\ref{tab:5}, \textit{FP}(CppCheck) = 19\%, \textit{FP}(Splint) = 0.30\%, \textit{FP}(RL\_Detector) = 8\%, \textit{FP}(PML\_Checker) = 18\%.
-in the view of \textit{TW} from Table~\ref{tab:3} and Table~\ref{tab:4}, Splint reports most bugs, and PML\_Checker ranks second, while CppCheck reports the least bugs. However, in the view of \textit{FP}, the \textit{FP} of Splint is highest, and the \textit{FP} of the other three tools are acceptable.
-
-Second, this paper analyzes the effectiveness of the PML\_Checker by comparing the MLF of test results. Test results from Table~\ref{tab:3} can be converted into MLF of test results by constructing a matrix. Specifically, the results from Table~\ref{tab:4} can be abstracted to a sparse matrix consists of $15$ quaternions. This paper compresses this matrix by removing all the rows that test results are zero, and a row in the matrix corresponds to a row in the table of test results. The final matrix $D_1$ is as follows.
-\[
-\scriptsize
-D_1=\left[
-\begin{array}{cccccccccc}
-0 & 0 & 35 & 2 & 1 & 0 & 0 & 20 & 3 & 0\\
-0 & 0 & 1  &  1 & 1 & 0 & 0 & 12 & 1 & 1\\
-0 & 0 & 22 & 4 & 0 & 3 & 0 & 18 & 0 & 1 \\
-2 & 3 & 21 & 12 & 3& 0 & 8 & 20 & 2 & 1  
-\end{array}
-\right]^{T}
-\]
-
-Similarly, $D_2$ is the matrix abstracted from Table~\ref{tab:4}, and $D_2$ is shown as follow:
-\[
-\scriptsize
-D_2=\left[
-\begin{array}{ccccccccc}
-3 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 8 \\
-6 & 1 & 2 &  1 & 0 & 0 & 2 & 2 & 3\\
-12 & 1 & 0 & 0 & 3 & 3 & 0 & 0 & 7 \\
-15 & 1 & 2& 1 & 2 & 1 & 3 & 0 & 3  
-\end{array}
-\right]^{T}
-\]
+%Similarly, $D_2$ is the matrix abstracted from Table~\ref{tab:4}, and $D_2$ is shown as follow:
+%\[
+%\scriptsize
+%D_2=\left[
+%\begin{array}{ccccccccc}
+%3 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 8 \\
+%6 & 1 & 2 &  1 & 0 & 0 & 2 & 2 & 3\\
+%12 & 1 & 0 & 0 & 3 & 3 & 0 & 0 & 7 \\
+%15 & 1 & 2& 1 & 2 & 1 & 3 & 0 & 3  
+%\end{array}
+%\right]^{T}
+%\]
 
 \begin{table}[!h]
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -152,23 +158,29 @@ Total	 & 267.9	 & 21&4	   & 37  & 11 & 13 & 1   & 34  & 6\\
 \end{tabular}
 \end{table}
 
-\begin{figure}[!h]
-\center
-\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig10}
-\caption{The MLF of each tool on SPEC CPU 2000}
-\label{fig:10}
-\end{figure}
+This section includes two-part experiments: experiment on large amount code (SPEC CPU $2000$ and SIR), experiment on small amount code (test cases from SARD).
 
-\begin{figure}[!h]
-\center
-\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig11}
-\caption{The MLF of each tool on SIR}
-\label{fig:11}
-\end{figure}
+Table~\ref{tab:3} shows the test results on SPEC CPU $2000$ and Table~\ref{tab:4} shows the test results on SIR. Compare PML\_Checker with other three tools, we have the following observations. 
 
-In Fig.~\ref{fig:10}, the abscissa shows the name of the program corresponding to each row in the matrix, and the ordinate shows the value of corresponding MLF. This figure displays the number of memory leaks confirmed by manually checking, among the test results on the $15$ programs from SPEC CPU $2000$. We conclude from Fig.~\ref{fig:10} that PML\_Checker has a good detection result on the test sets relatively. There is a big difference from test results for \textit{gcc}. \textit{gcc} is larger than others in size. Therefore, we deduce that the scalability of the PML\_Checker and CppCheck for large scale test objects needs to be improved. 
+%Calculate the \textit{FP} in Table~\ref{tab:3}. \textit{FP}(CppCheck) $\approx$ 11\%, \textit{FP}(Splint) = 44\%, \textit{FP}(RL\_Detector) = 9\%, \textit{FP}(PML\_Checker) = 13\%. Similarly, in Table~\ref{tab:5}, \textit{FP}(CppCheck) = 19\%, \textit{FP}(Splint) = 0.30\%, \textit{FP}(RL\_Detector) = 8\%, \textit{FP}(PML\_Checker) = 18\%.
+In the view of \textit{TW} from Table~\ref{tab:3} and Table~\ref{tab:4}, Splint reports most bugs, and PML\_Checker ranks second, while CppCheck reports the least bugs. However, in the view of \textit{FP}, the \textit{FP} of Splint is highest, and the \textit{FP} of the other three tools are acceptable.
+%\begin{figure}[!h]
+%\center
+%\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig10}
+%\caption{The MLF of each tool on SPEC CPU 2000}
+%\label{fig:10}
+%\end{figure}
 
-In Fig.~\ref{fig:11}, due to the smaller amount code of SIR comparing to SPEC CPU 2000 and fewer \textit{TW} of each tool, the advantage of PML\_Checker is not obvious. But the analysis results between the two benchmarks are generally consistent. By testing on SPEC CPU $2000$ and SIR, PML\_Checker shows a good performance in testing memory leak.
+%\begin{figure}[!h]
+%\center
+%\includegraphics[width=0.45\textwidth]{figure/fig8-fig12/fig11}
+%\caption{The MLF of each tool on SIR}
+%\label{fig:11}
+%\end{figure}
+
+%In Fig.~\ref{fig:10}, the abscissa shows the name of the program corresponding to each row in the matrix, and the ordinate shows the value of corresponding MLF. This figure displays the number of memory leaks confirmed by manually checking, among the test results on the $15$ programs from SPEC CPU $2000$. We conclude from Fig.~\ref{fig:10} that PML\_Checker has a good detection result on the test sets relatively. There is a big difference from test results for \textit{gcc}. \textit{gcc} is larger than others in size. Therefore, we deduce that the scalability of the PML\_Checker and CppCheck for large scale test objects needs to be improved. 
+
+%In Fig.~\ref{fig:11}, due to the smaller amount code of SIR comparing to SPEC CPU 2000 and fewer \textit{TW} of each tool, the advantage of PML\_Checker is not obvious. But the analysis results between the two benchmarks are generally consistent. By testing on SPEC CPU $2000$ and SIR, PML\_Checker shows a good performance in testing memory leak.
 
 Table~\ref{tab:5} shows the test results on $40$ test cases from SARD. Compare PML\_Checker with other three Tools, we have the following observations.
 First,
@@ -249,7 +261,9 @@ Total     & 581.0    & 512.6 & 247.1 & 230.7\\
 \end{tabular}
 \end{table}
 
-\subsection{Effectiveness Analysis of Complex Control Flows}
+\subsubsection{Effectiveness Analysis of Complex Control Flows}
+
+\
 
 \begin{table}[!h]
 \center
@@ -291,12 +305,15 @@ nestingLoop& $\times$ & $\times$ & $\surd$ & $\surd$\\
 %First, all the $4$ tools did not detect the memory leak in C\_case2, because the memory leaks in C\_case2 are caused by allocating memory blocks in conditional branches. In this case, the program will be compiled failed, because the pointer pointing to memory blocks is not found during the execution of function ``free()". Therefore, this type of test case is often ignored in static analysis.
 
 %First, we calculated the \textit{NP} of the test results. In details, the false negative rate of CppCheck test results, that is \textit{NP}(CppCheck) is 5/9 $\approx$ 0.56. In the same way, \textit{NP}(Splint) = 0.78, \textit{NP}(RL\_Detector) = 0.22, while \textit{NP}(PML\_Checker) = 0. For the reason that the analysis method of PML\_Checker is based on the complex control flow, the results of PML\_Checker covered all the test cases about complex control flow in this experiment. In other words, the false negative rate of the CFG projection approach is lower than other approaches for detecting memory leaks in complex control flow, which reflects the effectiveness of this approach for complex control flow.
-Table~\ref{tab:7} lists the test results on $10$ small programs. Comparing PML\_Checker to other threetools, we have the following observations.
-First, calculate the \textit{NP} of the test results. \textit{NP}(CppCheck) = 50\%, \textit{NP}(Splint) = 70\%, \textit{NP}(RL\_Detector) = 20\%, \textit{NP}(PML\_Checker) = 0. PML\_Checker covered all the test cases about complex control flows. In other words, the results reflect the effectiveness of PML\_Checker on complex control flows.
+Table~\ref{tab:7} lists the test results on $10$ small programs. Comparing PML\_Checker to other three tools, we have the following observations.
+First,%calculate the \textit{NP} of the test results. \textit{NP}(CppCheck) = 50\%, \textit{NP}(Splint) = 70\%, \textit{NP}(RL\_Detector) = 20\%, \textit{NP}(PML\_Checker) = 0.
+PML\_Checker covered all the test cases about complex control flows. %In other words, the results reflect the effectiveness of PML\_Checker on complex control flows.
 Second, regarding the comparison of the approaches. Obviously, our approach has advantage of complex-control-flow detection. The regular match based approach matches the source code with the vulnerabilities in the process of detection. This approach is not sensitive and inflexible to complex control flow. The style and notation based approach improves the software quality by improving the programming style, and discoves the potential bugs of program. However, this kind of analysis is not complete, so it has a high false negative rate. The approach by constructing resources streamlined slices only makes a simple assumption for allocation and deallocation of resources within loop bodies. It reduces the number of loops to 1 and treats the loops the same as branches. Therefore, this approach can not pass the test cases on the chain\_loop structure (chainLoop1 and chainLoop2) in the experiment. \\
 
 
-\subsection{Effectiveness Analysis of Complex Data Types}
+\subsubsection{Effectiveness Analysis of Complex Data Types}
+
+\
 
 \begin{table}[!h]
 \center
@@ -337,7 +354,8 @@ arrsyStruct2  & $\surd$ & $\surd$ & $\surd$& $\surd$\\
 
 %First, the common high NP shows us the accuracy of pointer alias analysis on complex data flow is relatively lower for all the tools.
 Table~\ref{tab:8} lists the test results on $10$ small programs. Comparing our approach with other approaches, we have the following observations.
-First, calculate the \textit{NP} of the test results. \textit{NP}(CppCheck) = 80\%, \textit{NP}(Splint) = 40\%, \textit{NP}(RL\_Detector) = 70\%, \textit{NP}(PML\_Checker) = 20\%. The results of Splint and PML\_Checker show a higher effectiveness. Splint has a high effectiveness because it mainly checks the specifications in programs, since it is sensitive to different data types. PML\_Checker shows a high effectiveness, because it simplifies the analysis for complex data types in the process of abstracting the control flows.
+First, %calculate the \textit{NP} of the test results. \textit{NP}(CppCheck) = 80\%, \textit{NP}(Splint) = 40\%, \textit{NP}(RL\_Detector) = 70\%, \textit{NP}(PML\_Checker) = 20\%. 
+the results of Splint and PML\_Checker show a higher effectiveness. Splint has a high effectiveness because it mainly checks the specifications in programs, since it is sensitive to different data types. PML\_Checker shows a high effectiveness, because it simplifies the analysis for complex data types in the process of abstracting the control flows.
 Second, comparing PML\_Checker to Splint, Splint reports memory leaks on the latter three data types (linked list, struct and array\_struct), except the memory leaks in an array. Due to the programs that are provided in this paper are in small scale and simple data relationships, PML\_Checker shows a little advantage compared with Splint. For the former approaches, that is CppCheck and RL\_Detector, there is a large space to improve in analyzing the complex data types.
 
 \subsection{Summary}
