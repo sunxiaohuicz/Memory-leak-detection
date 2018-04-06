@@ -27,12 +27,6 @@ A.~Aggarwal and P.~Jalote, ``Integrating static and dynamic analysis for
   Computer Software and Applications Conference - {COMPSAC}}, 2006, pp.
   343--350.
 
-\bibitem{KJMP06}
-H.~Kim, J.~A. Joao, and O.~Mutlu, ``Diverge-merge processor {(DMP):} dynamic
-  predicated execution of complex control-flow graphs based on frequently
-  executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM} International
-  Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
-
 \bibitem{LCW13}
 M.~Li, Y.~Chen, L.~Wang, and G.~H. Xu, ``Dynamically validating static memory
   leak warnings,'' in \emph{Proc.\ 12th Annual International Symposium on
@@ -43,30 +37,10 @@ Y.~Sui, D.~Ye, and J.~Xue, ``Static memory leak detection using full-sparse
   value-flow analysis,'' in \emph{Proc.\ the 11th Annual International
   Symposium on Software Testing and Analysis - {ISSTA}}, 2012, pp. 254--264.
 
-\bibitem{XA05}
-Y.~Xie and A.~Aiken, ``Context- and path-sensitive memory leak detection,'' in
-  \emph{Proc.\ 10th European Software Engineering Conference held jointly with
-  13th {ACM} {SIGSOFT} International Symposium on Foundations of Software
-  Engineering}, 2005, pp. 115--125.
-
-\bibitem{ZW01}
-J.~Zhang and X.~Wang, ``A constraint solver and its application to path
-  feasibility analysis,'' \emph{International Journal of Software Engineering
-  and Knowledge Engineering}, no.~2, pp. 139--156, 2001.
-
 \bibitem{OR06}
 M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
   \emph{Proc.\ 13th International Symposium on Static Analysis - {SAS}}, 2006,
   pp. 405--424.
-
-\bibitem{J14}
-X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.
-  dissertation, College of Computer and Control Engineering, Nankai University,
-  Tianjin, China, 2014.
-
-\bibitem{EL02}
-D.~Evans and D.~Larochelle, ``Improving security using extensible lightweight
-  static analysis,'' \emph{IEEE Software}, vol.~19, no.~1, pp. 42--51, 2002.
 
 \bibitem{XZX11}
 Z.~Xu, J.~Zhang, and Z.~Xu, ``Memory leak detection based on memory state
@@ -89,20 +63,11 @@ D.~Yan, G.~Xu, S.~Yang, and A.~Rountev, ``Leakchecker: Practical static memory
   International Symposium on Code Generation and Optimization - {CGO}}, 2014,
   pp. 87--97.
 
-\bibitem{DWC12}
-L.~Dong, J.~Wang, and L.~Chen, ``Modular heap abstraction-based memory leak
-  detection for heap-manipulating programs,'' in \emph{Proc.\ the 19th
-  Asia-Pacific Software Engineering Conference - {APSEC}}, 2012, pp. 20--29.
-
-\bibitem{XR08}
-G.~Xu and A.~Rountev, ``Precise memory leak detection for java software using
-  container profiling,'' in \emph{Proc.\ the 30th international conference on
-  Software engineering - {ICSE}}, 2008, pp. 151--160.
-
-\bibitem{LXL15}
-Z.~Liu, B.~Xu, and D.~Liang, ``Semantics-based memory leak detection for c
-  programs,'' in \emph{Proc.\ the 12th International Conference on Fuzzy
-  Systems and Knowledge Discovery - {FSKD}}, 2015, pp. 2283--2287.
+\bibitem{KJMP06}
+H.~Kim, J.~A. Joao, and O.~Mutlu, ``Diverge-merge processor {(DMP):} dynamic
+  predicated execution of complex control-flow graphs based on frequently
+  executed paths,'' in \emph{Proc.\ 39th Annual {IEEE/ACM} International
+  Symposium on Microarchitecture - {MICRO}}, 2006, pp. 53--64.
 
 \bibitem{KFM13}
 J.~C. Kleinsorge, H.~Falk, and P.~Marwedel, ``Simple analysis of partial
@@ -110,43 +75,10 @@ J.~C. Kleinsorge, H.~Falk, and P.~Marwedel, ``Simple analysis of partial
   the 11th ACM International Conference on Embedded Software - {EMSOFT}}, 2013,
   p.~16.
 
-\bibitem{LLQ16}
-X.~Li, Y.~Liang, and H.~Q. etc., ``Symbolic execution of complex program driven
-  by machine learning based constraint solving,'' in \emph{Proc.\ the 31st
-  International Conference on Automated Software Engineering - {ASE}}, 2016,
-  pp. 554--559.
-
-\bibitem{MGDD14}
-J.~Mohapatra, S.~Gid, K.~Debasis, and S.~K. Das, ``Slicing complex c++ program
-  dynamically,'' in \emph{Proc.\ International Conference on Advanced
-  Communication Control and Computing Teclmologies - {ICACCCT}}, 2014, pp.
-  1765--1770.
-
 \bibitem{KK12}
 B.~Katzmarski and R.~Koschke, ``Program complexity metrics and programmer
   opinions,'' in \emph{Proc.\ 20th International Conference on Program
   Comprehension - {ICPC}}, 2012, pp. 17--26.
-
-\bibitem{DG14}
-D.~Dai and L.~V. Gool, ``Ensemble projection for semi-supervised image
-  classification,'' in \emph{Proc.\ International Conference on Computer Vision
-  - {ICCV}}, 2014, pp. 2072--2079.
-
-\bibitem{HWS15}
-Z.~Huang, R.~Wang, and S.~Shan, ``Projection metric learning on grassmann
-  manifold with application to video based face recognition,'' in \emph{Proc.\
-  Conference on Computer Vision and Pattern Recognition - {CVPR}}, 2015, pp.
-  140--149.
-
-\bibitem{NL10}
-D.~J. Nott and C.~Leng, ``Bayesian projection approaches to variable selection
-  in generalized linear models,'' \emph{Computational Statistics {\&} Data
-  Analysis}, vol.~54, no.~12, pp. 3227--3241, 2010.
-
-\bibitem{ZYC17}
-Q.~Zhang, L.~T. Yang, and Z.~Chen, ``Privacy-preserving double-projection deep
-  computation model with crowdsourcing on cloud for big data feature
-  learning,'' \emph{Internet of Things Journal}, no.~99, p.~1, 2017.
 
 \bibitem{D94}
 K.~Davis, ``Projection-based program analysis,'' Ph.D. dissertation, Department

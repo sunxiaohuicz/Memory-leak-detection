@@ -18,11 +18,11 @@ Since our approach is based on CFG, detecting memory leaks is essentially analyz
 
 As stated in Section~\ref{sec:intro}, when procedure $P$ has complex control flow branches, the pointers pointing to corresponding memory spaces may be freed in wrong order, and the allocation and deallocation of memory space may appear in different control flow branches. Thus increases the complexity of the control flow graph analysis, because of the complex branch guarding condition analysis. %In addition, high control flow complexity will result in more difficult paths analysis. 
 %The following definition defines the complex control flow.
-This paper formally defines the complex control flow as follows.
+%This paper formally defines the complex control flow as follows.
 
-\begin{definition}[Complex Control Flow]
-Given that a directed graph named $G= (N, E)$ is the control flow graph of a procedure $P$, where $N$ denotes the set of nodes and $E$ denotes the set of edges, the control flow is called \emph{complex control flow} when the cyclomatic complexity of $G$, denoted as $V(G)$, is no less than $2$. That is $V(G)=D+1\geq 2$, where $D$ denotes the number of conditional and loop branching nodes.
-\end{definition} 
+%\begin{definition}[Complex Control Flow]
+%Given that a directed graph named $G= (N, E)$ is the control flow graph of a procedure $P$, where $N$ denotes the set of nodes and $E$ denotes the set of edges, the control flow is called \emph{complex control flow} when the cyclomatic complexity of $G$, denoted as $V(G)$, is no less than $2$. That is $V(G)=D+1\geq 2$, where $D$ denotes the number of conditional and loop branching nodes.
+%\end{definition} 
 
 Fig.~\ref{fig:1} displays this generation of complex control flows. A simple control flow graph of procedure $P$ with memory allocation and deallocation is shown on the left. After adding the control flow branches, a complex control flow graph is shown on the right. Therefore, detection system needs to analyze whether the memory spaces are released in each branch after being allocated. It should be noted that this section only considers the cases that allocate or release memory spaces of the same pointer, and the case that memory spaces are not fully released does not exist. There are four cases corresponding to the values of the two branches in the complex control flow graph:
 \begin{enumerate}

@@ -113,8 +113,9 @@
 \maketitle
 
 \begin{abstract}
-One of the major software safety issues is memory leak. Moreover, detecting memory leak vulnerabilities is challenging in static analysis. Existing static detection tools find bugs by collecting programs' information in the process of scanning source code. However, the current detection tools are weak in efficiency and accuracy, especially when the targeted program contains complex branches. This paper proposes a projection-based approach to detect memory leaks in C source code with complex control flows. According to the features of memory allocation and deallocation in C source code, this approach projects the original control flow graph of a program to a simpler one, and it reduces the analysis complexity. 
-Besides, this paper implements a memory-leak detection tool---PML\_Checker, and evaluates the tool by comparing with three open-source static detection tools on both public benchmarks and study test cases. The experimental results show that PML\_Checker reports the most memory leak vulnerabilities among the four existing tools in C source code with complex control flows and complex data types, and PML\_Checker obtains higher efficiency and accuracy on public benchmarks.
+One of the major software safety issues is memory leak. Moreover, detecting memory leak vulnerabilities is challenging in static analysis. Existing static detection tools find bugs by collecting programs' information in the process of scanning source code. However, the current detection tools are weak in efficiency and accuracy, especially when the targeted program contains complex branches. This paper proposes a projection-based approach to detect memory leaks in C source code with complex control flows. 
+%According to the features of memory allocation and deallocation in C source code, this approach projects the original control flow graph of a program to a simpler one, and it reduces the analysis complexity. 
+Besides, this paper implements a memory-leak detection tool---PML\_Checker, and evaluates the tool by comparing with three open-source static detection tools on both public benchmarks and study test cases. The experimental results show that PML\_Checker reports the most memory leak vulnerabilities among the four existing tools with complex control flows and complex data types, and PML\_Checker obtains higher efficiency and accuracy on public benchmarks.
 \end{abstract}
 
 \begin{keywords}
@@ -124,7 +125,7 @@ memory leak, projection algorithm, static analysis
 \input{introduction}
 \input{description}
 \input{approach}
-\input{setup}
+%\input{setup}
 \input{evaluation}
 \input{related}
 \input{conclusion}
@@ -134,5 +135,5 @@ memory leak, projection algorithm, static analysis
 
 \end{document}
 
-\bibliography{Mdetection}
+%\bibliography{Mdetection}
 
