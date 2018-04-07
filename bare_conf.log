@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  6 APR 2018 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  7 APR 2018 16:16
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -358,18 +358,24 @@ G,.JBIG2,.JB2,.eps]
 )
 \c@lstlisting=\count130
 
+Overfull \hbox (30.67664pt too wide) in paragraph at lines 114--114
+ [] 
+ []
 
-LaTeX Warning: No \author given.
 
+Overfull \hbox (30.67664pt too wide) in paragraph at lines 114--114
+ [] 
+ []
 
-LaTeX Warning: No \author given.
-
-** ATTENTION: \keywords is deprecated (line 121). Use \IEEEkeywords instead.
+** ATTENTION: \keywords is deprecated (line 122). Use \IEEEkeywords instead.
 (introduction.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-) (description.tex [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+) (description.tex
+Underfull \vbox (badness 4543) has occurred while \output is active []
+
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
@@ -377,54 +383,54 @@ Underfull \hbox (badness 1616) in paragraph at lines 14--18
 []\OT1/ptm/m/n/10 This pa-per fo-cuses on the sec-ond view---reachability.
  []
 
-<figure/fig1-fig4/fig1.png, id=9, 438.8897pt x 234.8775pt>
+<figure/fig1-fig4/fig1.png, id=10, 438.8897pt x 234.8775pt>
 File: figure/fig1-fig4/fig1.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig1.png>
 Package pdftex.def Info: figure/fig1-fig4/fig1.png used on input line 41.
 (pdftex.def)             Requested size: 232.19843pt x 124.26585pt.
 
-<figure/fig1-fig4/fig2.png, id=11, 613.54219pt x 127.22531pt>
+<figure/fig1-fig4/fig2.png, id=12, 613.54219pt x 127.22531pt>
 File: figure/fig1-fig4/fig2.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig2.png>
 Package pdftex.def Info: figure/fig1-fig4/fig2.png used on input line 48.
 (pdftex.def)             Requested size: 232.19843pt x 48.1481pt.
 ) (approach.tex [2 <./figure/fig1-fig4/fig1.png> <./figure/fig1-fig4/fig2.png>]
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 20.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 19.
  (E:\MikTex\tex\latex\psnfss\ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-Underfull \hbox (badness 1472) in paragraph at lines 45--46
+Underfull \hbox (badness 1472) in paragraph at lines 44--46
 []\OT1/ptm/m/n/10 Fig. 3[] shows the CFG (G) of a piece of code. In
  []
 
-<figure/fig1-fig4/fig_3.png, id=22, 477.28313pt x 51.94406pt>
+<figure/fig1-fig4/fig_3.png, id=23, 477.28313pt x 51.94406pt>
 File: figure/fig1-fig4/fig_3.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_3.png>
-Package pdftex.def Info: figure/fig1-fig4/fig_3.png used on input line 51.
+Package pdftex.def Info: figure/fig1-fig4/fig_3.png used on input line 49.
 (pdftex.def)             Requested size: 258.0pt x 28.07869pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 51--52
+Overfull \hbox (6.0pt too wide) in paragraph at lines 49--50
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/fig1-fig4/fig_4.png, id=23, 321.45094pt x 48.93282pt>
+<figure/fig1-fig4/fig_4.png, id=24, 321.45094pt x 48.93282pt>
 File: figure/fig1-fig4/fig_4.png Graphic file (type png)
 
 <use figure/fig1-fig4/fig_4.png>
-Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 58.
+Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 56.
 (pdftex.def)             Requested size: 180.60315pt x 27.49327pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--122
+Underfull \hbox (badness 10000) in paragraph at lines 97--120
 
  []
 
@@ -439,15 +445,8 @@ Overfull \hbox (27.83835pt too wide) in paragraph at lines 120--159
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [4]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (0.51808pt too wide) in paragraph at lines 271--296
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 269--294
  [][] 
  []
 
@@ -455,11 +454,11 @@ Overfull \hbox (0.51808pt too wide) in paragraph at lines 271--296
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--312
+Underfull \hbox (badness 10000) in paragraph at lines 306--310
 
  []
 
-[5]) (related.tex) (conclusion.tex) (bare_conf.bbl [6])
+[5]) (related.tex) (conclusion.tex) (bare_conf.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -471,31 +470,29 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7
-
-] (bare_conf.aux) ) 
+[6] (bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
  4989 strings out of 493323
  71587 string characters out of 3146850
- 189378 words of memory out of 3000000
+ 180378 words of memory out of 3000000
  8424 multiletter control sequences out of 15000+200000
  47034 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,49p,1989b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/Mi
-kTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8a.
-pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on bare_conf.pdf (7 pages, 255282 bytes).
+ 39i,21n,49p,1989b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/MikTex/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/
+MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8
+a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on bare_conf.pdf (6 pages, 255562 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,9 @@
 %!TEX root=bare_conf.tex
 \section{Approach}\label{sec:approach}
-Similar to the CFG based static analysis, this paper also first constructs a detection model of C program. The detection model contains different kinds of memory leaks. The main difference from our approach is that, our approach performs projection in constructing the detection model, and it simplifies memory leak detection procedure based on the model.
+%Similar to the CFG based static analysis, this paper also first constructs a detection model of C program. The detection model contains different kinds of memory leaks. The main difference from our approach is that, 
+Our approach performs projection in constructing the detection model, and it simplifies memory leak detection procedure based on the model.
 
 \subsection{Projection Algorithm}
-
-This section describes a set of rules and an algorithm for projecting a control flow graph to a simply one. 
 
 %\begin{definition}[Projection Subject]
 %Projection subject is the control flow graph of the program to be analyzed, which is a directed graph $G=(N, E)$, where $N = \{n_1, n_2, \ldots, n_k\}$ denotes the set of nodes, and $E = \{e_1, e_2, \ldots, e_k\}$ denotes the set of edges. In the procedure $P$, each statement is a node $n$, and there is an edge $e$ between two statements executed in sequence. 
@@ -43,7 +42,6 @@ $\forall$ $n\in B$ in directed graph $G^*$, if $\forall m\in M: m\not\in \Gamma(
 % that is, the degree of the branch node plus one.
 
 Fig.~\ref{figure3} shows the CFG (G) of a piece of code. In this graph, there are $11$ elements forms set $N$, that is, $N = \{S_0, S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_{10}\}$. The memory block is allocated in $S_1$ ($S_1\in A$) and freed in $S_9$ ($S_9\in F$); $S_3$ is a looping branch node and $S_6$ is a conditional branch node ($B=\{S_3, S_6\}$); In node $S_7$, another pointer points to the memory block ($S_7\in A$); Others are unrelated to memory operation. Thus the cyclomatic complexity of this graph is $4$.
-
 Fig.~\ref{fig:4} shows the projection graph $(G^*)$ of $G$. Following the projection Rule 1, we have $N^*=A\cup B\cup F=\{S_1, S_3, S_6, S_7, S_9\}$. Following Rule $2$, we have the edges from $S_1$ to $S_3$, $S_3$ to $S_6$, $S_6$ to $S_7$ and $S_7$ to $S_9$. Following Rule $3$, $S_3$ is a closed node since all its direct successor nodes are not memory related nodes, thus we add a loop to $S_3$. There is no loop at $S_6$, because the direct successor $s_7$ is a memory related node.  
 
 \begin{figure}[!h]
@@ -121,7 +119,7 @@ In the algorithm, the set $E$ in graph $G$ (the execution sequence of statements
 %\textbf{End}
 \end{algorithm}
 
-The projection algorithm is acceptable in the aspect of complexity. In this algorithm, this paper assumes that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$ ($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
+%The projection algorithm is acceptable in the aspect of complexity. In this algorithm, this paper assumes that the number of edges is linear in N, all the time complexity of Step1, Step2 and Step3 are $O(log(N))$, and the space complexity of the three steps are $S(N)$ ($S(N)$ is linear). Therefore, the time complexity of this algorithm is $O(log(N))$ and the space complexity of this algorithm is $S(N)$.
 
 %\subsection{Detection Method}
 
