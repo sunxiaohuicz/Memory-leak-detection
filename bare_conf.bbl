@@ -27,20 +27,25 @@ A.~Aggarwal and P.~Jalote, ``Integrating static and dynamic analysis for
   Computer Software and Applications Conference - {COMPSAC}}, 2006, pp.
   343--350.
 
-\bibitem{LCW13}
-M.~Li, Y.~Chen, L.~Wang, and G.~H. Xu, ``Dynamically validating static memory
-  leak warnings,'' in \emph{Proc.\ 12th Annual International Symposium on
-  Software Testing and Analysis, {ISSTA}}, 2013, pp. 112--122.
-
 \bibitem{SYX12}
 Y.~Sui, D.~Ye, and J.~Xue, ``Static memory leak detection using full-sparse
   value-flow analysis,'' in \emph{Proc.\ the 11th Annual International
   Symposium on Software Testing and Analysis - {ISSTA}}, 2012, pp. 254--264.
 
+\bibitem{SLR077}
+S.~Cherem, L.~Princehouse, and R.~Rugina, ``Practical memory leak detection
+  using guarded value-flow analysis,'' in \emph{Proc.\ 28thACM SIGPLAN
+  Conference on Programming Language Design and Implementation - {PLDI}},
+  480-491, p. 2007.
+
 \bibitem{OR06}
 M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in
   \emph{Proc.\ 13th International Symposium on Static Analysis - {SAS}}, 2006,
   pp. 405--424.
+
+\bibitem{DD02}
+D.~Evans and D.~Larochelle, ``Improving security using extensible lightweight
+  static analysis,'' \emph{IEEE Software}, pp. 42--51, 2002.
 
 \bibitem{J14}
 X.-J. Ji, ``Research on the static analysis of resource leak fault,'' Ph.D.

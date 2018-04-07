@@ -1,9 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Database file #1: Mdetection.bib
-Repeated entry---line 333 of file Mdetection.bib
- : @inproceedings{LCW13
- :                     ,
+You're missing a field name---line 266 of file Mdetection.bib
+ : 
+ : %  author    = {Xin Li and
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Repeated entry---line 370 of file Mdetection.bib
  : @inproceedings{SYX12
