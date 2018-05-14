@@ -35,8 +35,8 @@ Y.~Sui, D.~Ye, and J.~Xue, ``Static memory leak detection using full-sparse
 \bibitem{SLR077}
 S.~Cherem, L.~Princehouse, and R.~Rugina, ``Practical memory leak detection
   using guarded value-flow analysis,'' in \emph{Proc.\ 28thACM SIGPLAN
-  Conference on Programming Language Design and Implementation - {PLDI}},
-  480-491, p. 2007.
+  Conference on Programming Language Design and Implementation - {PLDI}}, 2007,
+  pp. 480--491.
 
 \bibitem{OR06}
 M.~Orlovich and R.~Rugina, ``Memory leak analysis by contradiction,'' in

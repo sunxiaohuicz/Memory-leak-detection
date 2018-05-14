@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  13 MAY 2018 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.9)  14 MAY 2018 10:57
 entering extended mode
 **./bare_conf.tex
 (bare_conf.tex
@@ -421,23 +421,23 @@ Package pdftex.def Info: figure/fig1-fig4/fig_4.png used on input line 56.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--120
+Underfull \hbox (badness 10000) in paragraph at lines 96--119
 
  []
 
 [3 <./figure/fig1-fig4/fig_3.png> <./figure/fig1-fig4/fig_4.png>])
 (evaluation.tex
-Overfull \hbox (26.35855pt too wide) in paragraph at lines 72--111
+Overfull \hbox (26.35855pt too wide) in paragraph at lines 71--110
  [][] 
  []
 
 
-Overfull \hbox (27.83835pt too wide) in paragraph at lines 120--159
+Overfull \hbox (27.83835pt too wide) in paragraph at lines 119--158
  [][] 
  []
 
 [4]
-Overfull \hbox (0.51808pt too wide) in paragraph at lines 269--294
+Overfull \hbox (0.51808pt too wide) in paragraph at lines 268--293
  [][] 
  []
 
@@ -445,7 +445,12 @@ Overfull \hbox (0.51808pt too wide) in paragraph at lines 269--294
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--310
+Underfull \hbox (badness 4132) in paragraph at lines 305--307
+\OT1/ptm/m/n/10 ob-ser-va-tions. First, PML[]Checker cov-ered all the test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
 
@@ -465,7 +470,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  4991 strings out of 493323
  71614 string characters out of 3146850
- 180378 words of memory out of 3000000
+ 181378 words of memory out of 3000000
  8426 multiletter control sequences out of 15000+200000
  47034 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -481,7 +486,7 @@ blic/amsfonts/cm/cmti10.pfb><E:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/
 MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmbi8
 a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 256165 bytes).
+Output written on bare_conf.pdf (6 pages, 256149 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
